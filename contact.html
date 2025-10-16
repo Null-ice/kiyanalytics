@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Kiy Analytics</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_new.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index_new.html">Kiy Analytics</a>
+      <nav class="nav">
+        <a href="index_new.html" class="nav-link">Home</a>
+        <a href="offerings.html" class="nav-link">Offerings</a>
+        <a href="pricing_new.html" class="nav-link">Pricing</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container contact-intro">
+      <h1>Contact</h1>
+      <p class="lead">Short intro: tell us a little about your project and we'll follow up with next steps.</p>
+    </section>
+
+    <section class="container contact-grid">
+      <div class="contact-card">
+        <h3>Get in touch</h3>
+        <form class="contact-form" method="post" action="mailto:cnull@kiyanalytics.com" enctype="text/plain">
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" required>
+          </label>
+
+          <label>
+            Message
+            <textarea name="message" rows="6" placeholder="Project details, timeline, budget (optional)" required></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <a class="btn btn-ghost" href="mailto:cnull@kiyanalytics.com">Email: cnull@kiyanalytics.com</a>
+          </div>
+        </form>
+      </div>
+
+      <aside class="contact-info">
+        <h4>Prefer direct email?</h4>
+        <p><a href="mailto:cnull@kiyanalytics.com" class="text-link">cnull@kiyanalytics.com</a></p>
+
+        <h4>What to include</h4>
+        <ul>
+          <li>Short description of your challenge</li>
+          <li>Target outcomes & deadlines</li>
+          <li>Any existing data sources or tech stack</li>
+        </ul>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Kiy Analytics. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
