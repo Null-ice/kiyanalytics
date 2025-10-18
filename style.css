@@ -143,17 +143,18 @@ body{
   grid-template-columns: repeat(auto-fit, minmax(320px, auto));
   gap: 1.5rem;
   margin: 2rem 0 3rem;
-  justify-content: center;  /* centers the grid as a group */
+  justify-content: center;   /* centers the grid as a group */
+  justify-items: center;     /* centers each card */
 }
-@media(min-width:920px){ .cards{ grid-template-columns: repeat(3, 1fr); } }
 
-.card{
+.card {
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
   border-radius: var(--radius);
-  padding:1.5rem;
+  padding: 1.5rem;
   box-shadow: 0 8px 30px rgba(2,6,23,0.6);
   border: 1px solid rgba(255,255,255,0.03);
   transition: transform .18s var(--ease), box-shadow .18s var(--ease);
+  max-width: 340px;          /* consistent card width */
 }
 .card:hover{ transform: translateY(-6px); box-shadow: 0 18px 48px rgba(2,6,23,0.7); }
 .card h3{ margin:0 0 0.5rem; }
@@ -218,6 +219,3 @@ a:focus, button:focus, input:focus, textarea:focus{
   box-shadow: 0 0 0 4px rgba(59,130,246,0.12);
   outline: none;
 }
-
-
-
