@@ -138,11 +138,12 @@ body{
 .stat-label{ color:var(--muted); font-size:0.9rem; }
 
 /* Cards (used on offerings/pricing) */
-.cards{
-  display:grid;
-  grid-template-columns: 1fr;
-  gap:1rem;
-  margin:2rem 0 3rem;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 2rem 0 3rem;
+  justify-content: center; /* center the grid */
 }
 @media(min-width:920px){ .cards{ grid-template-columns: repeat(3, 1fr); } }
 
@@ -217,3 +218,4 @@ a:focus, button:focus, input:focus, textarea:focus{
   box-shadow: 0 0 0 4px rgba(59,130,246,0.12);
   outline: none;
 }
+
