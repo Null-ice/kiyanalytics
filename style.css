@@ -298,23 +298,23 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 
 /* === Ensure pricing cards align evenly === */
-.pricing-cards {
+.cards {
   display: flex;
   align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
 }
 
-.pricing-card {
+/* Make each pricing tier stretch equally and keep button at bottom */
+.card.tier {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
 
-/* Keep the button at the bottom of each card */
-.pricing-card button,
-.pricing-card .pricing-button {
+/* Keep the button anchored at the bottom */
+.card.tier .btn {
   margin-top: auto;
 }
-
-
