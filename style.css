@@ -318,3 +318,20 @@ a:focus, button:focus, input:focus, textarea:focus{
 .cards.container .card {
   flex: 0 1 320px;
 }
+
+/* === Offerings: Center card grid === */
+.cards-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.cards-wrapper .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 2rem 0 3rem;
+}
