@@ -304,3 +304,17 @@ a:focus, button:focus, input:focus, textarea:focus{
   box-shadow: 0 0 0 4px rgba(59,130,246,0.12);
   outline: none;
 }
+
+/* === Fix for Offerings page card centering === */
+.cards.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 2rem auto 3rem;
+}
+.cards.container .card {
+  flex: 0 1 320px;
+}
