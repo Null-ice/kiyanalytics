@@ -305,20 +305,6 @@ a:focus, button:focus, input:focus, textarea:focus{
   outline: none;
 }
 
-/* === Fix for Offerings page card centering === */
-.cards.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  gap: 1.5rem;
-  max-width: 1100px;
-  margin: 2rem auto 3rem;
-}
-.cards.container .card {
-  flex: 0 1 320px;
-}
-
 /* === Offerings: Center card grid === */
 .cards-wrapper {
   width: 100%;
@@ -335,3 +321,4 @@ a:focus, button:focus, input:focus, textarea:focus{
   max-width: 1100px;
   margin: 2rem 0 3rem;
 }
+
