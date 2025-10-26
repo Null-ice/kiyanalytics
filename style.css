@@ -362,3 +362,58 @@ a:focus, button:focus, input:focus, textarea:focus{
   transform: scale(1.04);
   box-shadow: 0 10px 30px rgba(59,130,246,0.2);
 }
+
+/* === Home Page CTA Fix === */
+.cta-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 4rem 8%;
+  text-align: left;
+}
+
+.cta-bottom h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+
+.cta-bottom p {
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+  max-width: 700px;
+}
+
+.blue-btn {
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.9rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+  text-decoration: none;
+  width: auto;
+}
+
+.blue-btn:hover {
+  background: linear-gradient(90deg, #1e40af, #2563eb);
+  box-shadow: 0 6px 25px rgba(37, 99, 235, 0.45);
+}
+
+/* Prevent stretch on mobile */
+@media (max-width: 768px) {
+  .cta-bottom {
+    align-items: flex-start;
+  }
+
+  .blue-btn {
+    width: auto;
+    align-self: flex-start;
+  }
+}
