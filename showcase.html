@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kiy Analytics - Showcase</title>
 
-  <!-- Fonts and stylesheet -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -13,10 +12,10 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand">Kiy Analytics</a>
-      <nav class="nav">
+      <nav class="nav" aria-label="Primary">
         <a href="index.html" class="nav-link">Home</a>
         <a href="offerings.html" class="nav-link">Offerings</a>
-        <a href="showcase.html" class="nav-link active">Showcase</a>
+        <a href="showcase.html" class="nav-link active" aria-current="page">Showcase</a>
         <a href="pricing.html" class="nav-link">Pricing</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
@@ -31,59 +30,74 @@
 
     <section class="container showcase">
 
-      <!-- ================= Tabular Modeling ================= -->
+      <!-- Tabular Modeling -->
       <div class="project">
         <div class="project-meta">
           <h2>Tabular Modeling</h2>
           <p class="muted">Explore results of our best-in-class tabular modeling.</p>
         </div>
 
-        <!--
-          👉 WIDTH CONTROL: set per-image width using w-### classes or inline styles
-             e.g., class="showcase-figure w-380" or style="width: 420px"
-          👉 HEIGHT CONTROL (optional uniform height): add 'equal-heights' to this .image-row
-             and set the height in CSS ".equal-heights .showcase-figure img { height: ... }"
-        -->
         <div class="image-row">
-          <figure class="showcase-figure w-380">
-            <img src="images/microstructure_snapshots.png" alt="Order Book and Closing Auction data sample (TSLA)">
+          <!-- Example: manually sized -->
+          <figure class="showcase-figure custom-size" style="width: 380px;">
+            <img
+              src="images/microstructure_snapshots.png"
+              style="width: 380px; height: 260px;"
+              alt="Sample of input Order Book and Closing Auction data for TSLA"
+              loading="lazy">
             <figcaption>Sample of input Order Book and Closing Auction data (TSLA)</figcaption>
           </figure>
 
-          <figure class="showcase-figure w-500">
-            <img src="images/tsla_predicted_vs_actual.png" alt="Predicted vs actual closing price for TSLA during validation">
+          <!-- Example: another manual size -->
+          <figure class="showcase-figure custom-size" style="width: 500px;">
+            <img
+              src="images/tsla_predicted_vs_actual.png"
+              style="width: 500px; height: 320px;"
+              alt="Predicted vs actual TSLA closing price in validation period"
+              loading="lazy">
             <figcaption>Predicted vs actual closing price in validation period (TSLA)</figcaption>
           </figure>
         </div>
       </div>
 
-      <!-- ================= Image Modeling ================= -->
+      <!-- Image Modeling -->
       <div class="project">
         <div class="project-meta">
           <h2>Image Modeling</h2>
           <p class="muted">Discover examples of complex image prediction.</p>
         </div>
 
-        <!-- Add 'equal-heights' here if you want them to align to a fixed height -->
         <div class="image-row">
-          <figure class="showcase-figure w-300">
-            <img src="images/model-example1.png" alt="Sample of input image data">
+          <figure class="showcase-figure custom-size" style="width: 300px;">
+            <img
+              src="images/model-example1.png"
+              style="width: 300px; height: 300px;"
+              alt="Sample of input image data"
+              loading="lazy">
             <figcaption>Sample of input data</figcaption>
           </figure>
 
-          <figure class="showcase-figure w-380">
-            <img src="images/label_final_final.png" alt="Ground-truth label for sample volume">
+          <figure class="showcase-figure custom-size" style="width: 380px;">
+            <img
+              src="images/label_final_final.png"
+              style="width: 380px; height: 380px;"
+              alt="Ground truth label for sample volume"
+              loading="lazy">
             <figcaption>Correct label for sample volume</figcaption>
           </figure>
 
-          <figure class="showcase-figure w-380">
-            <img src="images/pred_final_final.png" alt="Predicted image volume output">
+          <figure class="showcase-figure custom-size" style="width: 380px;">
+            <img
+              src="images/pred_final_final.png"
+              style="width: 380px; height: 380px;"
+              alt="Predicted image volume result"
+              loading="lazy">
             <figcaption>Predicted image volume</figcaption>
           </figure>
         </div>
       </div>
 
-      <!-- ================= VQA ================= -->
+      <!-- VQA -->
       <div class="project">
         <div class="project-meta">
           <h2>Visual Question Answering (VQA)</h2>
@@ -91,13 +105,21 @@
         </div>
 
         <div class="image-row">
-          <figure class="showcase-figure w-400">
-            <img src="images/fake_doc_3.png" alt="Low-resolution complex document image example">
+          <figure class="showcase-figure custom-size" style="width: 400px;">
+            <img
+              src="images/fake_doc_3.png"
+              style="width: 400px; height: 280px;"
+              alt="Low-resolution, complex input document image"
+              loading="lazy">
             <figcaption>Sample of low-resolution, complex input image</figcaption>
           </figure>
 
-          <figure class="showcase-figure w-500">
-            <img src="images/vqa2.png" alt="Example questions and answers produced by the VQA model">
+          <figure class="showcase-figure custom-size" style="width: 500px;">
+            <img
+              src="images/vqa2.png"
+              style="width: 500px; height: 350px;"
+              alt="Example VQA questions and answers for the input image"
+              loading="lazy">
             <figcaption>Example questions and answer results for this image</figcaption>
           </figure>
         </div>
