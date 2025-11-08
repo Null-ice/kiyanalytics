@@ -412,3 +412,16 @@ a:focus, button:focus, input:focus, textarea:focus{
     min-width: 280px;
   }
 }
+
+/* Allow per-image manual sizing */
+.showcase-figure.custom-size {
+  flex: 0 0 auto;     /* Stop flex from auto-resizing the block */
+  width: auto;        /* Let your values take effect */
+}
+
+/* When manually sizing images */
+.showcase-figure.custom-size img {
+  width: unset !important;
+  height: unset !important;
+  object-fit: contain;   /* optional: keeps ratio if heights differ */
+}
