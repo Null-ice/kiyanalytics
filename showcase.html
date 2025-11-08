@@ -4,12 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kiy Analytics - Showcase</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Site Header -->
+  <!-- Header -->
   <header class="site-header">
-    <div class="header-inner container">
+    <div class="container header-inner">
       <a href="index.html" class="brand">Kiy Analytics</a>
       <nav class="nav">
         <a href="index.html" class="nav-link">Home</a>
@@ -20,89 +22,68 @@
       </nav>
     </div>
   </header>
-  
-  <!-- Hero Section -->
-  <section class="page-hero">
-    <div class="container">
-      <h1 class="page-title">Showcase</h1>
-      <p class="page-sub">
-        Examples of our tabular modeling, image modeling, and LLM Vision Question Answering solutions.
-      </p>
-    </div>
-  </section>
 
-  <!-- Showcase Sections -->
-  <main class="container">
+  <main>
+    <!-- Page Intro (consistent with other tabs) -->
+    <section class="container offerings-intro">
+      <h1>Showcase</h1>
+      <p class="lead">Examples of our tabular modeling, image modeling, and VQA solutions.</p>
+    </section>
 
-    <!-- Tabular Modeling -->
-    <section id="strategy" class="showcase-section">
-      <h2>Tabular Modeling</h2>
-      <p class="lead">Explore results of our best in class tabular modeling.</p>
-      <div class="showcase-grid">
+    <!-- === CARD GRID for each Showcase Group === -->
+    <section class="cards-wrapper">
+      <div class="cards">
 
-        <figure>
+        <!-- Tabular Modeling -->
+        <article class="card">
+          <h3>Tabular Modeling</h3>
+          <p class="muted">Explore results of our best-in-class tabular modeling.</p>
           <img src="images/microstructure_snapshots.png" alt="Strategy Example 1" width="500" height="190" />
-
-          <figcaption>Sample of input Order Book and Closing Auction data. (TSLA)</figcaption>
-        </figure>
-
-        <figure>
+          <p class="muted">Sample of input Order Book and Closing Auction data. (TSLA)</p>
           <img src="images/tsla_predicted_vs_actual.png" alt="Strategy Example 2" width="500" height="190" />
-          <figcaption>Predicted vs actual closing price in validation period. (TSLA)</figcaption>
-        </figure>
+          <p class="muted">Predicted vs actual closing price in validation period. (TSLA)</p>
+        </article>
 
-      </div>
-    </section>
-
-    <!-- Image Modeling -->
-    <section id="modeling" class="showcase-section">
-      <h2>Image Modeling</h2>
-      <p class="lead">Discover examples of complex image prediction.</p>
-
-      <div class="showcase-grid">
-
-        <figure>
+        <!-- Image Modeling -->
+        <article class="card">
+          <h3>Image Modeling</h3>
+          <p class="muted">Discover examples of complex image prediction.</p>
           <img src="images/model-example1.png" alt="Model Example 1" width="400" height="200" />
-          <figcaption>Sample of input data.</figcaption>
-        </figure>
-
-        <figure>
+          <p class="muted">Sample of input data.</p>
           <img src="images/label_final_final.png" alt="Model Example 2" width="400" height="200" />
-          <figcaption>Correct label for sample volume.</figcaption>
-        </figure>
-
-        <figure>
+          <p class="muted">Correct label for sample volume.</p>
           <img src="images/pred_final_final.png" alt="Model Example 3" width="400" height="200" />
-          <figcaption>Predicted image volume.</figcaption>
-        </figure>
+          <p class="muted">Predicted image volume.</p>
+        </article>
 
-      </div>
-    </section>
-
-    <!-- LLM VQA -->
-    <section id="vqa" class="showcase-section">
-      <h2>Visual Question Answering (VQA)</h2>
-      <p class="lead">See how our VQA systems understand and respond to image-based questions.</p>
-      <div class="showcase-grid">
-
-        <figure>
+        <!-- LLM VQA -->
+        <article class="card">
+          <h3>Visual Question Answering (VQA)</h3>
+          <p class="muted">Our VQA systems interpret images and respond intelligently.</p>
           <img src="images/fake_doc_3.png" alt="VQA Example 1" width="500" height="525" />
-          <figcaption>Sample of low resolution, low quality, complex image.</figcaption>
-        </figure>
-
-        <figure>
+          <p class="muted">Sample of low-resolution, complex input image.</p>
           <img src="images/vqa2.png" alt="VQA Example 2" width="500" height="525" />
-          <figcaption>Example questions and answer results for this image.</figcaption>
-        </figure>
+          <p class="muted">Example questions and answer results for this image.</p>
+        </article>
 
       </div>
     </section>
 
+    <!-- Callout (same as other pages) -->
+    <section class="container callout">
+      <div class="callout-inner">
+        <div>
+          <h3>Interested in building your own showcase?</h3>
+          <p>Our team can help you visualize and deploy your models for maximum impact.</p>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="footer-inner container">
+    <div class="container footer-inner">
       <p>© 2025 Kiy Analytics. All rights reserved.</p>
     </div>
   </footer>
