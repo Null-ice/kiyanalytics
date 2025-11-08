@@ -5,27 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kiy Analytics - Showcase</title>
   <link rel="stylesheet" href="style.css" />
+
   <style>
-    /* Use same spacing as cards, but for images */
+    /* Match card grid layout and spacing */
     .showcase-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 2rem; /* Matches card spacing */
+      gap: 2rem;
       margin-top: 2rem;
     }
 
+    /* Shared figure styles (match card proportions + hover glow) */
     .showcase-grid figure {
-      flex: 1 1 45%; /* 2 across for wide layouts */
-      max-width: 500px;
+      background: var(--card-bg, #1e1e1e);
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
       text-align: center;
+      overflow: hidden;
+      padding: 1rem;
+    }
+
+    .showcase-grid figure:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      background: rgba(255,255,255,0.05);
     }
 
     .showcase-grid img {
+      display: block;
       width: 100%;
       height: auto;
-      border-radius: 0.75rem;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+      border-radius: 0.5rem;
     }
 
     .showcase-grid figcaption {
@@ -34,10 +46,26 @@
       color: var(--muted-text, #aaa);
     }
 
-    /* Make 3 images per row for Image Modeling */
+    /* 2 images per row for Tabular + VQA */
+    #strategy .showcase-grid figure,
+    #vqa .showcase-grid figure {
+      flex: 1 1 calc(50% - 2rem);
+      max-width: 500px;
+    }
+
+    /* 3 images per row for Image Modeling */
     #modeling .showcase-grid figure {
-      flex: 1 1 30%;
+      flex: 1 1 calc(33.333% - 2rem);
       max-width: 400px;
+    }
+
+    /* Responsive behavior */
+    @media (max-width: 900px) {
+      #modeling .showcase-grid figure,
+      #strategy .showcase-grid figure,
+      #vqa .showcase-grid figure {
+        flex: 1 1 100%;
+      }
     }
   </style>
 </head>
