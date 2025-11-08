@@ -309,7 +309,7 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 
 /* ================================
-   Showcase (PROJECT layout, not cards)
+   Showcase (PROJECT layout) — Grid version
    ================================ */
 
 /* Section wrapper for projects */
@@ -342,86 +342,84 @@ a:focus, button:focus, input:focus, textarea:focus{
   margin: 0;
 }
 
-/* Image row: keep images on one line whenever possible */
+/* Use CSS Grid so items wrap naturally and avoid horizontal scroll */
 .image-row {
-  display: flex;
-  align-items: stretch;
-  gap: 1rem;
-  width: 100%;
-  flex-wrap: nowrap; /* prefer single row; allow overflow / scrolling on small screens */
-  overflow-x: auto;   /* horizontal scroll on narrow viewports */
-  padding-bottom: 0.25rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.4rem;            /* <-- greatly reduced buffer between items */
+  align-items: start;
+  overflow-x: clip;       /* <-- ensures no horizontal scrollbar */
+  padding-bottom: 0;
 }
 
 /* Each figure around an image */
 .showcase-figure {
-  flex: 0 0 calc((100% / 3) - 1rem); /* default: space for 3 items */
-  min-width: 220px;
-  background: transparent;
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+  border: 1px solid rgba(255,255,255,0.025);
   border-radius: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   transition: transform .18s var(--ease), box-shadow .18s var(--ease), background .18s var(--ease);
-  border: 1px solid rgba(255,255,255,0.025);
-  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
 }
 
-/* Make sure images fill figure width and keep aspect */
+/* Allow figure to fill grid cell unless manually sized */
+.showcase-figure { width: 100%; }
+
+/* Utility width classes to size individual figures (apply to <figure>) */
+.w-280 { width: 280px; }
+.w-300 { width: 300px; }
+.w-320 { width: 320px; }
+.w-360 { width: 360px; }
+.w-380 { width: 380px; }
+.w-400 { width: 400px; }
+.w-420 { width: 420px; }
+.w-500 { width: 500px; }
+.w-560 { width: 560px; }
+
+/* Images: fill the figure width and keep aspect ratio */
 .showcase-figure img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: cover;
+  object-fit: contain;   /* contains differing aspect ratios without cropping */
   border-bottom: 1px solid rgba(255,255,255,0.03);
   transition: transform .25s var(--ease);
 }
 
 /* Caption style */
 .showcase-figure figcaption {
-  padding: 0.6rem 0.8rem;
-  font-size: 0.9rem;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.88rem;
   color: var(--muted);
   text-align: center;
   background: rgba(255,255,255,0.01);
 }
 
-/* Hover: subtle "light box" behind image and slight lift */
-/* This gives the lightbox-like feel you asked for when hovering over images */
+/* Hover: subtle lightbox effect and lift */
 .showcase-figure:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   background: rgba(255,255,255,0.04);
-  box-shadow: 0 18px 48px rgba(2,6,23,0.6), 0 6px 20px rgba(59,130,246,0.06);
+  box-shadow: 0 14px 38px rgba(2,6,23,0.55), 0 5px 16px rgba(59,130,246,0.05);
 }
 .showcase-figure:hover img {
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
-/* If you want exactly 2 images to be sized larger, use utility classes in HTML (not applied by default) */
-/* Responsive behavior: on smaller screens use stacking and sizing adjustments */
+/* Optional: enforce equal heights (uncomment to use; may crop with object-fit:cover) */
+/*
+.equal-heights .showcase-figure img {
+  height: 280px;
+  width: 100%;
+  object-fit: cover;  // or 'contain' if you do not want cropping
+}
+*/
+
+/* Responsive refinements */
 @media (max-width: 980px) {
-  .showcase-figure { flex: 0 0 calc((100% / 2) - 1rem); } /* ~2 per row */
+  .image-row { gap: 0.4rem; }
 }
 @media (max-width: 640px) {
-  .image-row {
-    flex-wrap: nowrap;    /* keep horizontal scroll */
-  }
-  .showcase-figure {
-    flex: 0 0 85%;        /* large cards that the user can swipe horizontally */
-    min-width: 280px;
-  }
-}
-
-/* Allow per-image manual sizing */
-.showcase-figure.custom-size {
-  flex: 0 0 auto;     /* Stop flex from auto-resizing the block */
-  width: auto;        /* Let your values take effect */
-}
-
-/* When manually sizing images */
-.showcase-figure.custom-size img {
-  width: unset !important;
-  height: unset !important;
-  object-fit: contain;   /* optional: keeps ratio if heights differ */
+  .image-row { gap: 0.5rem; }
 }
