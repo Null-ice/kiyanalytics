@@ -176,7 +176,7 @@ body{
   border: 1px solid rgba(255,255,255,0.03);
   transition: transform .18s var(--ease), box-shadow .18s var(--ease);
   display: flex;
-  flex-direction: column; /* allows the button to anchor at bottom */
+  flex-direction: column;
 }
 .card:hover{
   transform: translateY(-6px);
@@ -186,7 +186,7 @@ body{
 .card p{ color:var(--muted); margin:0 0 1rem; }
 .card-icon{ color: var(--accent); margin-bottom:0.6rem; }
 
-/* Pricing tiers */
+/* Pricing */
 .tier {
   display:flex;
   flex-direction:column;
@@ -203,12 +203,9 @@ body{
   box-shadow: 0 12px 36px rgba(59,130,246,0.06);
 }
 
-/* Fix: keep pricing buttons bottom-aligned */
-.tier .btn {
-  margin-top: auto;
-}
+.tier .btn { margin-top: auto; }
 
-/* Callout strip */
+/* Callout */
 .cta-strip{
   padding:2rem 0;
   border-top:1px solid rgba(255,255,255,0.02);
@@ -222,7 +219,7 @@ body{
   flex-wrap:wrap;
 }
 
-/* Contact form */
+/* Contact */
 .contact-grid{
   display:grid;
   grid-template-columns: 1fr;
@@ -270,7 +267,7 @@ body{
   margin-top:0.6rem;
 }
 
-/* smaller utilities */
+/* Utilities */
 .lead{ color:var(--muted); margin-top:0.4rem; }
 .muted{ color:var(--muted); font-size:0.95rem; }
 .text-link{ color:var(--accent); text-decoration:none; font-weight:600; }
@@ -299,30 +296,13 @@ body{
   .cta-inner{ flex-direction:column; align-items:stretch; gap:1rem; }
 }
 
-/* small accessible focus states */
+/* Accessible focus */
 a:focus, button:focus, input:focus, textarea:focus{
   box-shadow: 0 0 0 4px rgba(59,130,246,0.12);
   outline: none;
 }
 
-/* === Offerings: Center card grid === */
-.cards-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.cards-wrapper .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  gap: 1.5rem;
-  max-width: 1100px;
-  margin: 2rem 0 3rem;
-}
-
-/* === Showcase Page Styles === */
+/* Showcase */
 .showcase-section {
   padding: 4rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.02);
@@ -349,21 +329,34 @@ a:focus, button:focus, input:focus, textarea:focus{
   margin-top: 2rem;
 }
 
-.showcase-grid img {
+/* === Added: Figure + Caption Support === */
+.showcase-grid figure {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-align: center;
+}
+
+.showcase-grid figure img {
   width: 100%;
-  height: auto;
   border-radius: 12px;
   background: var(--panel);
   box-shadow: var(--shadow);
   transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease);
 }
 
-.showcase-grid img:hover {
+.showcase-grid figure img:hover {
   transform: scale(1.04);
-  box-shadow: 0 10px 30px rgba(59,130,246,0.2);
+  box-shadow: 0 10px 30px rgba(59,130,246,0.25);
 }
 
-/* === Home Page CTA Fix === */
+.showcase-grid figure figcaption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+/* CTA bottom fix */
 .cta-bottom {
   display: flex;
   flex-direction: column;
@@ -406,7 +399,6 @@ a:focus, button:focus, input:focus, textarea:focus{
   box-shadow: 0 6px 25px rgba(37, 99, 235, 0.45);
 }
 
-/* Prevent stretch on mobile */
 @media (max-width: 768px) {
   .cta-bottom {
     align-items: flex-start;
