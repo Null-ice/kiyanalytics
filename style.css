@@ -342,13 +342,14 @@ a:focus, button:focus, input:focus, textarea:focus{
   margin: 0;
 }
 
-/* Use CSS Grid so items wrap naturally and avoid horizontal scroll */
+/* GRID: wraps naturally, no horizontal scroll.
+   👉 To make gaps larger/smaller, change `gap` here. */
 .image-row {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 0.4rem;            /* <-- greatly reduced buffer between items */
+  gap: 0.6rem;         /* ⬅️ SLIGHTLY LARGER GAPS (adjust this value) */
   align-items: start;
-  overflow-x: clip;       /* <-- ensures no horizontal scrollbar */
+  overflow-x: clip;    /* ensure no horizontal scrollbar */
   padding-bottom: 0;
 }
 
@@ -364,10 +365,10 @@ a:focus, button:focus, input:focus, textarea:focus{
   transition: transform .18s var(--ease), box-shadow .18s var(--ease), background .18s var(--ease);
 }
 
-/* Allow figure to fill grid cell unless manually sized */
+/* By default, a figure fills its grid cell. You can override with width classes or inline widths. */
 .showcase-figure { width: 100%; }
 
-/* Utility width classes to size individual figures (apply to <figure>) */
+/* 🔧 Width utility classes (apply to <figure> to set width individually) */
 .w-280 { width: 280px; }
 .w-300 { width: 300px; }
 .w-320 { width: 320px; }
@@ -378,12 +379,13 @@ a:focus, button:focus, input:focus, textarea:focus{
 .w-500 { width: 500px; }
 .w-560 { width: 560px; }
 
-/* Images: fill the figure width and keep aspect ratio */
+/* Images fill figure width and keep aspect ratio. 
+   👉 To force equal heights, see the ".equal-heights" helper below. */
 .showcase-figure img {
   width: 100%;
-  height: auto;
+  height: auto;           /* natural height (change with helper if needed) */
   display: block;
-  object-fit: contain;   /* contains differing aspect ratios without cropping */
+  object-fit: contain;    /* avoids cropping when sizes differ */
   border-bottom: 1px solid rgba(255,255,255,0.03);
   transition: transform .25s var(--ease);
 }
@@ -407,19 +409,21 @@ a:focus, button:focus, input:focus, textarea:focus{
   transform: scale(1.02);
 }
 
-/* Optional: enforce equal heights (uncomment to use; may crop with object-fit:cover) */
+/* 🔧 Optional helper: make all images in a row the same visual height.
+   Apply 'equal-heights' to the parent .image-row. 
+   Choose object-fit: cover (crops) or contain (no crop, may letterbox). */
 /*
 .equal-heights .showcase-figure img {
-  height: 280px;
+  height: 300px;         /* ⬅️ CHANGE HEIGHT HERE for uniform rows */
   width: 100%;
-  object-fit: cover;  // or 'contain' if you do not want cropping
+  object-fit: cover;     /* cover = crop edges; use contain to avoid cropping */
 }
 */
 
 /* Responsive refinements */
 @media (max-width: 980px) {
-  .image-row { gap: 0.33rem; }
+  .image-row { gap: 0.6rem; }
 }
 @media (max-width: 640px) {
-  .image-row { gap: 0.5rem; }
+  .image-row { gap: 0.7rem; }
 }
