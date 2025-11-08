@@ -309,7 +309,7 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 
 /* ================================
-   Showcase (PROJECT layout) — Grid version
+   Showcase (PROJECT layout, not cards)
    ================================ */
 
 /* Section wrapper for projects */
@@ -342,88 +342,84 @@ a:focus, button:focus, input:focus, textarea:focus{
   margin: 0;
 }
 
-/* GRID: wraps naturally, no horizontal scroll.
-   👉 To make gaps larger/smaller, change `gap` here. */
+/* Image row: keep images on one line whenever possible */
 .image-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 0.6rem;         /* ⬅️ SLIGHTLY LARGER GAPS (adjust this value) */
-  align-items: start;
-  overflow-x: clip;    /* ensure no horizontal scrollbar */
-  padding-bottom: 0;
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+  width: 100%;
+  flex-wrap: nowrap; /* prefer single row; allow overflow / scrolling on small screens */
+  overflow-x: auto;   /* horizontal scroll on narrow viewports */
+  padding-bottom: 0.25rem;
 }
 
 /* Each figure around an image */
 .showcase-figure {
-  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
-  border: 1px solid rgba(255,255,255,0.025);
+  flex: 0 0 calc((100% / 3) - 1rem); /* default: space for 3 items */
+  min-width: 220px;
+  background: transparent;
   border-radius: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   transition: transform .18s var(--ease), box-shadow .18s var(--ease), background .18s var(--ease);
+  border: 1px solid rgba(255,255,255,0.025);
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
 }
 
-/* By default, a figure fills its grid cell. You can override with width classes or inline widths. */
-.showcase-figure { width: 100%; }
-
-/* 🔧 Width utility classes (apply to <figure> to set width individually) */
-.w-280 { width: 280px; }
-.w-300 { width: 300px; }
-.w-320 { width: 320px; }
-.w-360 { width: 360px; }
-.w-380 { width: 380px; }
-.w-400 { width: 400px; }
-.w-420 { width: 420px; }
-.w-500 { width: 500px; }
-.w-560 { width: 560px; }
-
-/* Images fill figure width and keep aspect ratio. 
-   👉 To force equal heights, see the ".equal-heights" helper below. */
+/* Make sure images fill figure width and keep aspect */
 .showcase-figure img {
   width: 100%;
-  height: auto;           /* natural height (change with helper if needed) */
+  height: auto;
   display: block;
-  object-fit: contain;    /* avoids cropping when sizes differ */
+  object-fit: cover;
   border-bottom: 1px solid rgba(255,255,255,0.03);
   transition: transform .25s var(--ease);
 }
 
 /* Caption style */
 .showcase-figure figcaption {
-  padding: 0.45rem 0.6rem;
-  font-size: 0.88rem;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.9rem;
   color: var(--muted);
   text-align: center;
   background: rgba(255,255,255,0.01);
 }
 
-/* Hover: subtle lightbox effect and lift */
+/* Hover: subtle "light box" behind image and slight lift */
 .showcase-figure:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   background: rgba(255,255,255,0.04);
-  box-shadow: 0 14px 38px rgba(2,6,23,0.55), 0 5px 16px rgba(59,130,246,0.05);
+  box-shadow: 0 18px 48px rgba(2,6,23,0.6), 0 6px 20px rgba(59,130,246,0.06);
 }
 .showcase-figure:hover img {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
-/* 🔧 Optional helper: make all images in a row the same visual height.
-   Apply 'equal-heights' to the parent .image-row. 
-   Choose object-fit: cover (crops) or contain (no crop, may letterbox). */
-/*
-.equal-heights .showcase-figure img {
-  height: 300px;         /* ⬅️ CHANGE HEIGHT HERE for uniform rows */
-  width: 100%;
-  object-fit: cover;     /* cover = crop edges; use contain to avoid cropping */
-}
-*/
-
-/* Responsive refinements */
+/* Responsive behavior */
 @media (max-width: 980px) {
-  .image-row { gap: 0.6rem; }
+  .showcase-figure { flex: 0 0 calc((100% / 2) - 1rem); } /* ~2 per row */
 }
 @media (max-width: 640px) {
-  .image-row { gap: 0.7rem; }
+  .image-row {
+    flex-wrap: nowrap;    /* keep horizontal scroll */
+  }
+  .showcase-figure {
+    flex: 0 0 85%;        /* large cards that the user can swipe horizontally */
+    min-width: 280px;
+  }
+}
+
+/* Allow per-image manual sizing */
+.showcase-figure.custom-size {
+  flex: 0 0 auto;     /* Stop flex from auto-resizing the block */
+  width: auto;        /* Let your values take effect */
+}
+
+/* When manually sizing images */
+.showcase-figure.custom-size img {
+  width: unset !important;
+  height: unset !important;
+  object-fit: contain;   /* optional: keeps ratio if heights differ */
 }
