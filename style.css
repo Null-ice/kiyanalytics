@@ -17,7 +17,6 @@
   --shadow: 0 6px 20px rgba(2,6,23,0.6);
 }
 
-/* Global */
 * { box-sizing: border-box; }
 html,body { height:100%; }
 body{
@@ -100,15 +99,13 @@ body{
 
 /* Buttons */
 .btn{
-  display:inline-block; /* ensures anchors behave like buttons */
-  text-decoration:none; /* remove underline */
+  display:inline-block;
+  text-decoration:none;
   font-weight:600;
   padding:0.6rem 1rem;
   border-radius:10px;
   transition: transform .12s var(--ease), box-shadow .12s var(--ease);
   border:1px solid transparent;
-  cursor:pointer; /* show pointer on hover */
-  text-align:center;
 }
 .btn:active{ transform: translateY(1px); }
 .btn-primary{
@@ -116,10 +113,7 @@ body{
   color: white;
   box-shadow: 0 6px 18px rgba(59,130,246,0.12);
 }
-.btn-primary:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(59,130,246,0.14);
-}
+.btn-primary:hover{ transform: translateY(-2px); box-shadow: 0 12px 28px rgba(59,130,246,0.14); }
 .btn-ghost{
   color: var(--text);
   background: transparent;
@@ -131,27 +125,159 @@ body{
   color: var(--text);
 }
 
-/* Showcase layout (project, description, images in a row) */
-.showcase-project{
-  margin-bottom: 3rem;
+/* Overview section */
+.overview{ padding:3rem 0; }
+.grid-2{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:1.5rem;
 }
-.showcase-project h3{
-  margin-bottom: 0.5rem;
+@media(min-width:880px){
+  .grid-2{
+    grid-template-columns: 1fr 360px;
+    align-items:center;
+  }
 }
-.showcase-project p{
-  color: var(--muted);
-  margin-bottom: 0.5rem;
+
+.stat{
+  background:var(--panel);
+  padding:1rem;
+  border-radius:10px;
+  margin-bottom:0.75rem;
+  box-shadow:var(--shadow);
 }
-.showcase-images{
+.stats{ display:flex; gap:1rem; flex-direction:column; }
+.stat-value{ font-size:1.2rem; font-weight:700; color:var(--text); }
+.stat-label{ color:var(--muted); font-size:0.9rem; }
+
+/* Centered Cards (used across all tabs; kept for other pages) */
+.cards-wrapper {
+  width: 100%;
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+  justify-content: center;
 }
-.showcase-images img{
-  width: calc(33.333% - 0.66rem); /* 3 images per row */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 2rem 0 3rem;
+}
+.card {
+  flex: 0 1 320px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
   border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+  transition: transform .18s var(--ease), box-shadow .18s var(--ease);
+  display: flex;
+  flex-direction: column;
+}
+.card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 48px rgba(2,6,23,0.7);
+}
+.card h3{ margin:0 0 0.5rem; }
+.card p{ color:var(--muted); margin:0 0 1rem; }
+.card-icon{ color: var(--accent); margin-bottom:0.6rem; }
+
+/* For Showcase images inside card (kept for backward compatibility) */
+.card img {
+  width: 100%;
+  border-radius: var(--radius);
+  margin-bottom: 0.9rem;
   display: block;
 }
+
+/* Pricing */
+.tier {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  flex: 1;
+}
+.tier-header .muted{ color:var(--muted); font-size:0.95rem; margin-top:-0.3rem; }
+.tier-price{ font-size:1.6rem; font-weight:700; color:var(--text); }
+.per{ font-size:0.9rem; font-weight:500; color:var(--muted); margin-left:0.4rem; }
+.tier-list{ list-style:none; padding:0; margin:0; color:var(--muted); flex-grow:1; }
+.recommended{
+  border: 1px solid rgba(59,130,246,0.12);
+  transform: none;
+  box-shadow: 0 12px 36px rgba(59,130,246,0.06);
+}
+
+.tier .btn { margin-top: auto; }
+
+/* Callout */
+.cta-strip{
+  padding:2rem 0;
+  border-top:1px solid rgba(255,255,255,0.02);
+  border-bottom:1px solid rgba(255,255,255,0.02);
+}
+.cta-inner{
+  display:flex;
+  gap:1rem;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+/* Contact */
+.contact-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:1.25rem;
+  align-items:start;
+  padding:2rem 0;
+}
+@media(min-width:880px){
+  .contact-grid{ grid-template-columns: 1fr 320px; }
+}
+.contact-card{
+  background:var(--panel);
+  padding:1.25rem;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.03);
+}
+.contact-form label{
+  display:block;
+  margin-bottom:0.6rem;
+  font-weight:600;
+  font-size:0.92rem;
+  color:var(--text);
+}
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  margin-top:0.35rem;
+  padding:0.75rem;
+  border-radius:8px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.03);
+  color:var(--text);
+  outline:none;
+  font-weight:500;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+  color: rgba(255,255,255,0.35);
+  font-weight:400;
+}
+.form-actions{
+  display:flex;
+  gap:0.6rem;
+  align-items:center;
+  margin-top:0.6rem;
+}
+
+/* Utilities */
+.lead{ color:var(--muted); margin-top:0.4rem; }
+.muted{ color:var(--muted); font-size:0.95rem; }
+.text-link{ color:var(--accent); text-decoration:none; font-weight:600; }
+.note{ padding:1.25rem 0 3rem; }
 
 /* Footer */
 .site-footer{
@@ -167,11 +293,6 @@ body{
 }
 
 /* Responsive tweaks */
-@media (max-width:880px){
-  .showcase-images img{
-    width: 100%;
-  }
-}
 @media (max-width:640px){
   .container{ padding:1rem; }
   .header-inner{ gap:0.5rem; }
@@ -181,13 +302,113 @@ body{
   .cta-inner{ flex-direction:column; align-items:stretch; gap:1rem; }
 }
 
-/* Utilities */
-.lead{ color:var(--muted); margin-top:0.4rem; }
-.muted{ color:var(--muted); font-size:0.95rem; }
-.text-link{ color:var(--accent); text-decoration:none; font-weight:600; }
-
 /* Accessible focus */
 a:focus, button:focus, input:focus, textarea:focus{
   box-shadow: 0 0 0 4px rgba(59,130,246,0.12);
   outline: none;
+}
+
+/* ================================
+   Showcase (PROJECT layout, not cards)
+   ================================ */
+
+/* Section wrapper for projects */
+.showcase {
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
+}
+
+/* Each project block */
+.project {
+  display: block;
+  margin-bottom: 2.5rem;
+  gap: 1rem;
+}
+
+/* Project meta (title + short description) */
+.project-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+}
+.project-meta h2 {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.project-meta .muted {
+  margin: 0;
+}
+
+/* Image row: keep images on one line whenever possible */
+.image-row {
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+  width: 100%;
+  flex-wrap: nowrap; /* prefer single row; allow overflow / scrolling on small screens */
+  overflow-x: auto;   /* horizontal scroll on narrow viewports */
+  padding-bottom: 0.25rem;
+}
+
+/* Each figure around an image */
+.showcase-figure {
+  flex: 0 0 calc((100% / 3) - 1rem); /* default: space for 3 items */
+  min-width: 220px;
+  background: transparent;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transition: transform .18s var(--ease), box-shadow .18s var(--ease), background .18s var(--ease);
+  border: 1px solid rgba(255,255,255,0.025);
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+}
+
+/* Make sure images fill figure width and keep aspect */
+.showcase-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  transition: transform .25s var(--ease);
+}
+
+/* Caption style */
+.showcase-figure figcaption {
+  padding: 0.6rem 0.8rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+  background: rgba(255,255,255,0.01);
+}
+
+/* Hover: subtle "light box" behind image and slight lift */
+/* This gives the lightbox-like feel you asked for when hovering over images */
+.showcase-figure:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.04);
+  box-shadow: 0 18px 48px rgba(2,6,23,0.6), 0 6px 20px rgba(59,130,246,0.06);
+}
+.showcase-figure:hover img {
+  transform: scale(1.03);
+}
+
+/* If you want exactly 2 images to be sized larger, use utility classes in HTML (not applied by default) */
+/* Responsive behavior: on smaller screens use stacking and sizing adjustments */
+@media (max-width: 980px) {
+  .showcase-figure { flex: 0 0 calc((100% / 2) - 1rem); } /* ~2 per row */
+}
+@media (max-width: 640px) {
+  .image-row {
+    flex-wrap: nowrap;    /* keep horizontal scroll */
+  }
+  .showcase-figure {
+    flex: 0 0 85%;        /* large cards that the user can swipe horizontally */
+    min-width: 280px;
+  }
 }
