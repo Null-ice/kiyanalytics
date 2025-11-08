@@ -1,73 +1,106 @@
-<main>
-  <!-- Page Intro -->
-  <section class="container offerings-intro">
-    <h1>Showcase</h1>
-    <p class="lead">Examples of our tabular modeling, image modeling, and VQA solutions.</p>
-  </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kiy Analytics - Showcase</title>
 
-  <!-- === SHOWCASE SECTIONS === -->
-  <section class="showcase container">
-
-    <!-- TABULAR MODELING -->
-    <div class="project">
-      <h2>Tabular Modeling</h2>
-      <p class="muted">Explore results of our best-in-class tabular modeling.</p>
-
-      <div class="image-row">
-        <figure>
-          <img src="images/microstructure_snapshots.png" alt="Order Book Data">
-          <figcaption>Sample of input Order Book and Closing Auction data (TSLA).</figcaption>
-        </figure>
-
-        <figure>
-          <img src="images/tsla_predicted_vs_actual.png" alt="Predicted vs Actual">
-          <figcaption>Predicted vs actual closing price in validation period (TSLA).</figcaption>
-        </figure>
-      </div>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Kiy Analytics</a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="offerings.html" class="nav-link">Offerings</a>
+        <a href="showcase.html" class="nav-link active">Showcase</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- IMAGE MODELING -->
-    <div class="project">
-      <h2>Image Modeling</h2>
-      <p class="muted">Discover examples of complex image prediction.</p>
+  <main>
+    <!-- Page Intro (consistent with other tabs) -->
+    <section class="container offerings-intro">
+      <h1>Showcase</h1>
+      <p class="lead">Examples of our tabular modeling, image modeling, and VQA solutions.</p>
+    </section>
 
-      <div class="image-row">
-        <figure>
-          <img src="images/model-example1.png" alt="Model Example 1">
-          <figcaption>Sample of input data.</figcaption>
-        </figure>
+    <!-- === SHOWCASE PROJECTS (no card boxes) === -->
+    <section class="container showcase">
 
-        <figure>
-          <img src="images/label_final_final.png" alt="Model Example 2">
-          <figcaption>Correct label for sample volume.</figcaption>
-        </figure>
+      <!-- Tabular Modeling -->
+      <div class="project">
+        <div class="project-meta">
+          <h2>Tabular Modeling</h2>
+          <p class="muted">Explore results of our best-in-class tabular modeling.</p>
+        </div>
 
-        <figure>
-          <img src="images/pred_final_final.png" alt="Model Example 3">
-          <figcaption>Predicted image volume.</figcaption>
-        </figure>
+        <div class="image-row">
+          <figure class="showcase-figure">
+            <img src="images/microstructure_snapshots.png" alt="Order Book and Closing Auction data (TSLA)">
+            <figcaption>Sample of input Order Book and Closing Auction data (TSLA)</figcaption>
+          </figure>
+
+          <figure class="showcase-figure">
+            <img src="images/tsla_predicted_vs_actual.png" alt="Predicted vs actual closing price (TSLA)">
+            <figcaption>Predicted vs actual closing price in validation period (TSLA)</figcaption>
+          </figure>
+        </div>
       </div>
-    </div>
 
-    <!-- VQA -->
-    <div class="project">
-      <h2>Visual Question Answering (VQA)</h2>
-      <p class="muted">Our VQA systems interpret images and respond intelligently.</p>
+      <!-- Image Modeling -->
+      <div class="project">
+        <div class="project-meta">
+          <h2>Image Modeling</h2>
+          <p class="muted">Discover examples of complex image prediction.</p>
+        </div>
 
-      <div class="image-row">
-        <figure>
-          <img src="images/fake_doc_3.png" alt="VQA Input">
-          <figcaption>Sample of low-resolution, complex input image.</figcaption>
-        </figure>
+        <div class="image-row">
+          <figure class="showcase-figure">
+            <img src="images/model-example1.png" alt="Sample of input data">
+            <figcaption>Sample of input data</figcaption>
+          </figure>
 
-        <figure>
-          <img src="images/vqa2.png" alt="VQA Output">
-          <figcaption>Example questions and answer results for this image.</figcaption>
-        </figure>
+          <figure class="showcase-figure">
+            <img src="images/label_final_final.png" alt="Correct label for sample volume">
+            <figcaption>Correct label for sample volume</figcaption>
+          </figure>
+
+          <figure class="showcase-figure">
+            <img src="images/pred_final_final.png" alt="Predicted image volume">
+            <figcaption>Predicted image volume</figcaption>
+          </figure>
+        </div>
       </div>
-    </div>
 
-  </section>
+      <!-- LLM VQA -->
+      <div class="project">
+        <div class="project-meta">
+          <h2>Visual Question Answering (VQA)</h2>
+          <p class="muted">Our VQA systems interpret images and respond intelligently.</p>
+        </div>
+
+        <div class="image-row">
+          <figure class="showcase-figure">
+            <img src="images/fake_doc_3.png" alt="Low-resolution complex input image">
+            <figcaption>Sample of low-resolution, complex input image</figcaption>
+          </figure>
+
+          <figure class="showcase-figure">
+            <img src="images/vqa2.png" alt="VQA question/answer examples">
+            <figcaption>Example questions and answer results for this image</figcaption>
+          </figure>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -75,4 +108,5 @@
       <p>© 2025 Kiy Analytics. All rights reserved.</p>
     </div>
   </footer>
-</main>
+</body>
+</html>
