@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kiy Analytics - Showcase</title>
 
+  <!-- Fonts and stylesheet -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -30,35 +31,40 @@
 
     <section class="container showcase">
 
-      <!-- Tabular Modeling -->
+      <!-- ================= Tabular Modeling ================= -->
       <div class="project">
         <div class="project-meta">
           <h2>Tabular Modeling</h2>
           <p class="muted">Explore results of our best-in-class tabular modeling.</p>
         </div>
 
-        <!-- Grid: wraps automatically; no scrollbar -->
+        <!--
+          👉 WIDTH CONTROL: set per-image width using w-### classes or inline styles
+             e.g., class="showcase-figure w-380" or style="width: 420px"
+          👉 HEIGHT CONTROL (optional uniform height): add 'equal-heights' to this .image-row
+             and set the height in CSS ".equal-heights .showcase-figure img { height: ... }"
+        -->
         <div class="image-row">
-          <!-- Per-image sizing via width utility classes -->
           <figure class="showcase-figure w-380">
             <img src="images/microstructure_snapshots.png" alt="Order Book and Closing Auction data sample (TSLA)">
             <figcaption>Sample of input Order Book and Closing Auction data (TSLA)</figcaption>
           </figure>
 
           <figure class="showcase-figure w-500">
-            <img src="images/tsla_predicted_vs_actual.png" alt="Predicted vs actual closing price validation (TSLA)">
+            <img src="images/tsla_predicted_vs_actual.png" alt="Predicted vs actual closing price for TSLA during validation">
             <figcaption>Predicted vs actual closing price in validation period (TSLA)</figcaption>
           </figure>
         </div>
       </div>
 
-      <!-- Image Modeling -->
+      <!-- ================= Image Modeling ================= -->
       <div class="project">
         <div class="project-meta">
           <h2>Image Modeling</h2>
           <p class="muted">Discover examples of complex image prediction.</p>
         </div>
 
+        <!-- Add 'equal-heights' here if you want them to align to a fixed height -->
         <div class="image-row">
           <figure class="showcase-figure w-300">
             <img src="images/model-example1.png" alt="Sample of input image data">
@@ -66,7 +72,7 @@
           </figure>
 
           <figure class="showcase-figure w-380">
-            <img src="images/label_final_final.png" alt="Ground truth label for sample volume">
+            <img src="images/label_final_final.png" alt="Ground-truth label for sample volume">
             <figcaption>Correct label for sample volume</figcaption>
           </figure>
 
@@ -77,7 +83,7 @@
         </div>
       </div>
 
-      <!-- Visual Question Answering (VQA) -->
+      <!-- ================= VQA ================= -->
       <div class="project">
         <div class="project-meta">
           <h2>Visual Question Answering (VQA)</h2>
@@ -86,12 +92,12 @@
 
         <div class="image-row">
           <figure class="showcase-figure w-400">
-            <img src="images/fake_doc_3.png" alt="Low-resolution, complex document image">
+            <img src="images/fake_doc_3.png" alt="Low-resolution complex document image example">
             <figcaption>Sample of low-resolution, complex input image</figcaption>
           </figure>
 
           <figure class="showcase-figure w-500">
-            <img src="images/vqa2.png" alt="VQA example questions and answers">
+            <img src="images/vqa2.png" alt="Example questions and answers produced by the VQA model">
             <figcaption>Example questions and answer results for this image</figcaption>
           </figure>
         </div>
