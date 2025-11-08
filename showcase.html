@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand">Kiy Analytics</a>
@@ -24,13 +23,11 @@
   </header>
 
   <main>
-    <!-- Page Intro (consistent with other tabs) -->
     <section class="container offerings-intro">
       <h1>Showcase</h1>
       <p class="lead">Examples of our tabular modeling, image modeling, and VQA solutions.</p>
     </section>
 
-    <!-- === SHOWCASE PROJECTS (no card boxes) === -->
     <section class="container showcase">
 
       <!-- Tabular Modeling -->
@@ -41,17 +38,22 @@
         </div>
 
         <div class="image-row">
-          <figure class="showcase-figure">
-            <img src="images/microstructure_snapshots.png" alt="Order Book and Closing Auction data (TSLA)">
+          <!-- Example: manually sized -->
+          <figure class="showcase-figure custom-size" style="width: 380px;">
+            <img src="images/microstructure_snapshots.png"
+                 style="width: 380px; height: 260px;">
             <figcaption>Sample of input Order Book and Closing Auction data (TSLA)</figcaption>
           </figure>
 
-          <figure class="showcase-figure">
-            <img src="images/tsla_predicted_vs_actual.png" alt="Predicted vs actual closing price (TSLA)">
+          <!-- Example: another manual size -->
+          <figure class="showcase-figure custom-size" style="width: 500px;">
+            <img src="images/tsla_predicted_vs_actual.png"
+                 style="width: 500px; height: 320px;">
             <figcaption>Predicted vs actual closing price in validation period (TSLA)</figcaption>
           </figure>
         </div>
       </div>
+
 
       <!-- Image Modeling -->
       <div class="project">
@@ -61,24 +63,25 @@
         </div>
 
         <div class="image-row">
-          <figure class="showcase-figure">
-            <img src="images/model-example1.png" alt="Sample of input data">
+          <figure class="showcase-figure custom-size" style="width: 300px;">
+            <img src="images/model-example1.png" style="width: 300px; height: 300px;">
             <figcaption>Sample of input data</figcaption>
           </figure>
 
-          <figure class="showcase-figure">
-            <img src="images/label_final_final.png" alt="Correct label for sample volume">
+          <figure class="showcase-figure custom-size" style="width: 380px;">
+            <img src="images/label_final_final.png" style="width: 380px; height: 380px;">
             <figcaption>Correct label for sample volume</figcaption>
           </figure>
 
-          <figure class="showcase-figure">
-            <img src="images/pred_final_final.png" alt="Predicted image volume">
+          <figure class="showcase-figure custom-size" style="width: 380px;">
+            <img src="images/pred_final_final.png" style="width: 380px; height: 380px;">
             <figcaption>Predicted image volume</figcaption>
           </figure>
         </div>
       </div>
 
-      <!-- LLM VQA -->
+
+      <!-- VQA -->
       <div class="project">
         <div class="project-meta">
           <h2>Visual Question Answering (VQA)</h2>
@@ -86,23 +89,21 @@
         </div>
 
         <div class="image-row">
-          <figure class="showcase-figure">
-            <img src="images/fake_doc_3.png" alt="Low-resolution complex input image">
+          <figure class="showcase-figure custom-size" style="width: 400px;">
+            <img src="images/fake_doc_3.png" style="width: 400px; height: 280px;">
             <figcaption>Sample of low-resolution, complex input image</figcaption>
           </figure>
 
-          <figure class="showcase-figure">
-            <img src="images/vqa2.png" alt="VQA question/answer examples">
+          <figure class="showcase-figure custom-size" style="width: 500px;">
+            <img src="images/vqa2.png" style="width: 500px; height: 350px;">
             <figcaption>Example questions and answer results for this image</figcaption>
           </figure>
         </div>
       </div>
 
     </section>
-
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© 2025 Kiy Analytics. All rights reserved.</p>
