@@ -9,13 +9,14 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand">Kiy Analytics</a>
-      <nav class="nav" aria-label="Primary">
+      <nav class="nav">
         <a href="index.html" class="nav-link">Home</a>
         <a href="offerings.html" class="nav-link">Offerings</a>
-        <a href="showcase.html" class="nav-link active" aria-current="page">Showcase</a>
+        <a href="showcase.html" class="nav-link active">Showcase</a>
         <a href="pricing.html" class="nav-link">Pricing</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
@@ -23,11 +24,13 @@
   </header>
 
   <main>
+    <!-- Page Intro (consistent with other tabs) -->
     <section class="container offerings-intro">
       <h1>Showcase</h1>
       <p class="lead">Examples of our tabular modeling, image modeling, and VQA solutions.</p>
     </section>
 
+    <!-- === SHOWCASE PROJECTS (no card boxes) === -->
     <section class="container showcase">
 
       <!-- Tabular Modeling -->
@@ -38,23 +41,13 @@
         </div>
 
         <div class="image-row">
-          <!-- Example: manually sized -->
-          <figure class="showcase-figure custom-size" style="width: 380px;">
-            <img
-              src="images/microstructure_snapshots.png"
-              style="width: 380px; height: 260px;"
-              alt="Sample of input Order Book and Closing Auction data for TSLA"
-              loading="lazy">
+          <figure class="showcase-figure">
+            <img src="images/microstructure_snapshots.png" alt="Order Book and Closing Auction data (TSLA)">
             <figcaption>Sample of input Order Book and Closing Auction data (TSLA)</figcaption>
           </figure>
 
-          <!-- Example: another manual size -->
-          <figure class="showcase-figure custom-size" style="width: 500px;">
-            <img
-              src="images/tsla_predicted_vs_actual.png"
-              style="width: 500px; height: 320px;"
-              alt="Predicted vs actual TSLA closing price in validation period"
-              loading="lazy">
+          <figure class="showcase-figure">
+            <img src="images/tsla_predicted_vs_actual.png" alt="Predicted vs actual closing price (TSLA)">
             <figcaption>Predicted vs actual closing price in validation period (TSLA)</figcaption>
           </figure>
         </div>
@@ -68,36 +61,24 @@
         </div>
 
         <div class="image-row">
-          <figure class="showcase-figure custom-size" style="width: 300px;">
-            <img
-              src="images/model-example1.png"
-              style="width: 300px; height: 300px;"
-              alt="Sample of input image data"
-              loading="lazy">
+          <figure class="showcase-figure">
+            <img src="images/model-example1.png" alt="Sample of input data">
             <figcaption>Sample of input data</figcaption>
           </figure>
 
-          <figure class="showcase-figure custom-size" style="width: 380px;">
-            <img
-              src="images/label_final_final.png"
-              style="width: 380px; height: 380px;"
-              alt="Ground truth label for sample volume"
-              loading="lazy">
+          <figure class="showcase-figure">
+            <img src="images/label_final_final.png" alt="Correct label for sample volume">
             <figcaption>Correct label for sample volume</figcaption>
           </figure>
 
-          <figure class="showcase-figure custom-size" style="width: 380px;">
-            <img
-              src="images/pred_final_final.png"
-              style="width: 380px; height: 380px;"
-              alt="Predicted image volume result"
-              loading="lazy">
+          <figure class="showcase-figure">
+            <img src="images/pred_final_final.png" alt="Predicted image volume">
             <figcaption>Predicted image volume</figcaption>
           </figure>
         </div>
       </div>
 
-      <!-- VQA -->
+      <!-- LLM VQA -->
       <div class="project">
         <div class="project-meta">
           <h2>Visual Question Answering (VQA)</h2>
@@ -105,29 +86,23 @@
         </div>
 
         <div class="image-row">
-          <figure class="showcase-figure custom-size" style="width: 400px;">
-            <img
-              src="images/fake_doc_3.png"
-              style="width: 400px; height: 280px;"
-              alt="Low-resolution, complex input document image"
-              loading="lazy">
+          <figure class="showcase-figure">
+            <img src="images/fake_doc_3.png" alt="Low-resolution complex input image">
             <figcaption>Sample of low-resolution, complex input image</figcaption>
           </figure>
 
-          <figure class="showcase-figure custom-size" style="width: 500px;">
-            <img
-              src="images/vqa2.png"
-              style="width: 500px; height: 350px;"
-              alt="Example VQA questions and answers for the input image"
-              loading="lazy">
+          <figure class="showcase-figure">
+            <img src="images/vqa2.png" alt="VQA question/answer examples">
             <figcaption>Example questions and answer results for this image</figcaption>
           </figure>
         </div>
       </div>
 
     </section>
+
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© 2025 Kiy Analytics. All rights reserved.</p>
