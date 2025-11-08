@@ -194,6 +194,70 @@ body{
   display: block;
 }
 
+/* Showcase Layout (no cards) */
+.project {
+  margin-bottom: 3rem;
+}
+
+.project h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+  justify-content: flex-start;
+}
+
+.image-row figure {
+  flex: 1 1 320px;
+  background: var(--glass);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform .2s var(--ease), box-shadow .2s var(--ease);
+  box-shadow: var(--shadow);
+}
+
+.image-row img {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: transform .25s var(--ease);
+}
+
+.image-row figure:hover img {
+  transform: scale(1.03);
+}
+
+.image-row figure:hover {
+  box-shadow: 0 12px 36px rgba(59,130,246,0.2);
+  background: rgba(255,255,255,0.06);
+}
+
+.image-row figcaption {
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  text-align: center;
+  background: rgba(255,255,255,0.02);
+}
+
+@media (max-width: 720px) {
+  .image-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-row figure {
+    width: 100%;
+    max-width: 480px;
+  }
+}
+
 /* Pricing */
 .tier {
   display:flex;
