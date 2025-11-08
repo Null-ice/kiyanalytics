@@ -308,23 +308,6 @@ a:focus, button:focus, input:focus, textarea:focus{
   outline: none;
 }
 
-/* Callout (remove container padding only for this section) */
-.callout.container {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/* Create a real inner container to keep text aligned with the rest of the site */
-.callout-inner {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 2rem; /* same spacing as normal section */
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
 /* ================================
    Showcase (PROJECT layout, not cards)
    ================================ */
