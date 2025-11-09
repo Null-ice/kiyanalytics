@@ -1,9 +1,11 @@
-/* style.css
+/* style.css 
    Modern, deep-gray theme with electric-blue accents
    Shared stylesheet for index.html, offerings.html, pricing.html, contact.html, showcase.html
 */
 
-/* Variables */
+/* ===============================
+   Variables
+   =============================== */
 :root{
   --bg: #0b1220;
   --panel: #0f1724;
@@ -30,14 +32,18 @@ body{
   -webkit-tap-highlight-color: transparent;
 }
 
-/* layout helpers */
+/* ===============================
+   Layout Helpers
+   =============================== */
 .container{
   max-width: var(--container);
   margin: 0 auto;
   padding: 2rem;
 }
 
-/* Header */
+/* ===============================
+   Header
+   =============================== */
 .site-header{
   position: sticky;
   top:0;
@@ -72,10 +78,12 @@ body{
   transition: color .18s var(--ease), border-color .18s var(--ease);
   font-weight:500;
 }
-.nav-link:hover{ color:var(--text); border-color: rgba(59,130,246,0.12);}
+.nav-link:hover{ color:var(--text); border-color: rgba(59,130,246,0.12); }
 .nav-link.active{ color:var(--text); border-color: var(--accent); }
 
-/* Hero */
+/* ===============================
+   Hero
+   =============================== */
 .hero{
   padding:6.5rem 0 4rem;
   background: linear-gradient(160deg, rgba(59,130,246,0.06), rgba(30,58,138,0.12)),
@@ -97,7 +105,9 @@ body{
 }
 .hero-ctas{ display:flex; gap:0.75rem; margin-top:1rem; align-items:center; flex-wrap:wrap; }
 
-/* Buttons */
+/* ===============================
+   Buttons
+   =============================== */
 .btn{
   display:inline-block;
   text-decoration:none;
@@ -125,7 +135,9 @@ body{
   color: var(--text);
 }
 
-/* Overview section */
+/* ===============================
+   Overview Section
+   =============================== */
 .overview{ padding:3rem 0; }
 .grid-2{
   display:grid;
@@ -138,7 +150,6 @@ body{
     align-items:center;
   }
 }
-
 .stat{
   background:var(--panel);
   padding:1rem;
@@ -150,7 +161,9 @@ body{
 .stat-value{ font-size:1.2rem; font-weight:700; color:var(--text); }
 .stat-label{ color:var(--muted); font-size:0.9rem; }
 
-/* Centered Cards (used across all tabs; kept for other pages) */
+/* ===============================
+   Centered Cards
+   =============================== */
 .cards-wrapper {
   width: 100%;
   display: flex;
@@ -184,15 +197,9 @@ body{
 .card p{ color:var(--muted); margin:0 0 1rem; }
 .card-icon{ color: var(--accent); margin-bottom:0.6rem; }
 
-/* For Showcase images inside card (kept for backward compatibility) */
-.card img {
-  width: 100%;
-  border-radius: var(--radius);
-  margin-bottom: 0.9rem;
-  display: block;
-}
-
-/* Pricing */
+/* ===============================
+   Pricing
+   =============================== */
 .tier {
   display:flex;
   flex-direction:column;
@@ -210,7 +217,9 @@ body{
 }
 .tier .btn { margin-top: auto; }
 
-/* Callout */
+/* ===============================
+   CTA Strip
+   =============================== */
 .cta-strip{
   padding:2rem 0;
   border-top:1px solid rgba(255,255,255,0.02);
@@ -224,7 +233,9 @@ body{
   flex-wrap:wrap;
 }
 
-/* Contact */
+/* ===============================
+   Contact
+   =============================== */
 .contact-grid{
   display:grid;
   grid-template-columns: 1fr;
@@ -272,13 +283,14 @@ body{
   margin-top:0.6rem;
 }
 
-/* Utilities */
+/* ===============================
+   Utilities & Footer
+   =============================== */
 .lead{ color:var(--muted); margin-top:0.4rem; }
 .muted{ color:var(--muted); font-size:0.95rem; }
 .text-link{ color:var(--accent); text-decoration:none; font-weight:600; }
 .note{ padding:1.25rem 0 3rem; }
 
-/* Footer */
 .site-footer{
   padding:1.25rem 0;
   border-top:1px solid rgba(255,255,255,0.02);
@@ -291,7 +303,9 @@ body{
   font-size:0.95rem;
 }
 
-/* Responsive tweaks */
+/* ===============================
+   Responsive Tweaks
+   =============================== */
 @media (max-width:640px){
   .container{ padding:1rem; }
   .header-inner{ gap:0.5rem; }
@@ -301,48 +315,48 @@ body{
   .cta-inner{ flex-direction:column; align-items:stretch; gap:1rem; }
 }
 
-/* Accessible focus */
+/* ===============================
+   Accessible Focus
+   =============================== */
 a:focus, button:focus, input:focus, textarea:focus{
   box-shadow: 0 0 0 4px rgba(59,130,246,0.12);
   outline: none;
 }
 
-/* Callout (remove container padding only for this section) */
+/* ===============================
+   Callout Alignment
+   =============================== */
 .callout.container {
   padding-left: 0;
   padding-right: 0;
 }
-
-/* Create a real inner container to keep text aligned with the rest of the site */
 .callout-inner {
   max-width: var(--container);
   margin: 0 auto;
-  padding: 2rem; /* same spacing as normal section */
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
 }
 
-/* ================================
-   Showcase (PROJECT layout, not cards)
-   Option A: image has the card/shadow, caption is plain text below
-   ================================ */
+/* =======================================================
+   SHOWCASE SECTION — clean, flexible image rows
+   ======================================================= */
 
-/* Section wrapper for projects */
+/* Core tuning variables */
+:root {
+  --image-gap: 1.5rem;      /* space between images */
+  --image-buffer: 2rem;     /* left/right buffer */
+  --image-height: 260px;    /* default image height */
+}
+
 .showcase {
   padding-top: 1rem;
   padding-bottom: 2.5rem;
 }
 
-/* Each project block */
-.project {
-  display: block;
-  margin-bottom: 2.5rem;
-  gap: 1rem;
-}
-
-/* Project meta (title + short description) */
+/* Title / description above each row */
 .project-meta {
   display: flex;
   flex-direction: column;
@@ -355,116 +369,60 @@ a:focus, button:focus, input:focus, textarea:focus{
   font-weight: 700;
   color: var(--text);
 }
-.project-meta .muted {
-  margin: 0;
-}
+.project-meta .muted { margin: 0; }
 
+/* Image row */
 .image-row {
   display: flex;
-  align-items: stretch;
-  gap: 1rem;
-  width: 100%;
-  flex-wrap: wrap;      /* allow wrapping */
-  padding-bottom: 0.25rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;                 /* single row */
+  gap: var(--image-gap);
+  padding-left: var(--image-buffer);
+  padding-right: var(--image-buffer);
+  overflow-x: auto;                  /* scroll if overflow */
+  scrollbar-width: thin;
 }
 
-/* FIGURE: layout-only, no card visuals */
+/* Each image cell */
 .showcase-figure {
-  flex: 0 0 calc((100% / 3) - 1rem); /* default: space for 3 items */
-  min-width: 220px;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-
-  /* REMOVE shared card look from figure so caption doesn't feel attached */
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  overflow: visible;
-  box-shadow: none;
-  transform: none;
-  transition: none;
+  align-items: center;
 }
 
-/* IMAGE: gets the card visuals, radius, shadow, and hover */
+/* Image itself */
 .showcase-figure img {
-  display: block;
-  object-fit: fill;       /* charts/screenshots shouldn't be cropped; switch to 'cover' if you prefer cropping */
-  border: none;              /* no divider under the image */
-  border-radius: 10px;       /* rounded corners applied to the image only */
-  background: #0b1220;       /* avoid letterbox seams on dark theme when using 'contain' */
-  box-shadow: 0 18px 48px rgba(2,6,23,0.6), 0 6px 20px rgba(59,130,246,0.06);
-  transition: transform .25s var(--ease), box-shadow .25s var(--ease);
+  height: var(--image-height);
+  width: auto;
+  border-radius: var(--radius);
+  background: #0b1220;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
 }
-
-/* Hover effect on image (not on figure) */
 .showcase-figure img:hover {
   transform: scale(1.03);
-  box-shadow: 0 22px 56px rgba(2,6,23,0.65), 0 10px 26px rgba(59,130,246,0.08);
+  box-shadow: 0 18px 48px rgba(2,6,23,0.7);
 }
 
-/* CAPTION: plain text below image */
+/* Caption */
 .showcase-figure figcaption {
-  position: static;          /* normal flow */
-  background: transparent;   /* remove “dark strip” look */
-  border: none;
-  margin-top: 0.6rem;        /* space between image and text */
-  padding: 0;                /* no padded bar */
-  font-size: 0.95rem;
-  color: var(--muted);
+  margin-top: 0.6rem;
   text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
 }
 
-/* Responsive behavior */
-@media (max-width: 980px) {
-  .showcase-figure { flex: 0 0 calc((100% / 2) - 1rem); } /* ~2 per row */
-}
-@media (max-width: 640px) {
+/* Optional row modifiers */
+.image-row.small img { --image-height: 180px; }
+.image-row.medium img { --image-height: 260px; }
+.image-row.large img { --image-height: 400px; }
+
+/* Responsive wrap on smaller screens */
+@media (max-width: 800px) {
   .image-row {
-    flex-wrap: nowrap;    /* keep horizontal scroll */
+    flex-wrap: wrap;
+    justify-content: center;
   }
-  .showcase-figure {
-    flex: 0 0 85%;        /* large cards that the user can swipe horizontally */
-    min-width: 280px;
-  }
-}
-
-/* ===============================
-   Custom fixed image sizes (exact pixel control)
-   =============================== */
-
-/* First 2 plots (450 x 250) */
-.showcase-figure img#tab1,
-.showcase-figure img#tab2 {
-  width: 450px;
-  height: 250px;
-  object-fit: fill;
-}
-
-/* Next 3 images (200 x 200) */
-.showcase-figure img#img1,
-.showcase-figure img#img2,
-.showcase-figure img#img3 {
-  width: 200px;
-  height: 200px;
-  object-fit: fill;
-}
-
-/* Last 2 images (400 x 500) */
-.showcase-figure img#vqa1,
-.showcase-figure img#vqa2 {
-  width: 400px;
-  height: 500px;
-  object-fit: fill;
-}
-
-/* === Critical layout override (prevents overlap, NO scrollbars) === */
-.image-row.image-modeling {
-  flex-wrap: wrap;          /* allow line breaks */
-  justify-content: center;  /* center rows */
-  gap: 1.5rem;              /* spacing between items */
-}
-
-.image-row.image-modeling .showcase-figure {
-  flex: 0 0 auto;           /* width = image width, no forced columns */
 }
