@@ -371,16 +371,15 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 .project-meta .muted { margin: 0; }
 
-/* Image row */
 .image-row {
   display: flex;
-  flex-wrap: nowrap;       /* prevent wrapping */
-  overflow-x: auto;        /* enable horizontal scroll */
-  -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
   gap: var(--image-gap);
   padding-left: var(--image-buffer);
   padding-right: var(--image-buffer);
-  justify-content: flex-start; /* align items to the left when scrolling */
+  overflow-x: visible;       /* prevent cropping at edges */
 }
 
 /* Each image cell */
@@ -415,7 +414,7 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 
 /* Row modifiers */
-.image-row.small img { --image-height: 200px; }
+.image-row.small img { --image-height: 190px; }
 .image-row.medium img { --image-height: 170px; }
 .image-row.large img { --image-height: 450px; }
 
