@@ -346,8 +346,8 @@ a:focus, button:focus, input:focus, textarea:focus{
 
 /* Core tuning variables */
 :root {
-  --image-gap: 0.5rem;      /* space between images */
-  --image-buffer: 4rem;     /* left/right buffer */
+  --image-gap: 0.0rem;      /* space between images */
+  --image-buffer: 2rem;     /* left/right buffer */
   --image-height: 260px;    /* default image height */
 }
 
