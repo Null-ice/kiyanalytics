@@ -370,42 +370,40 @@ a:focus, button:focus, input:focus, textarea:focus{
   padding-bottom: 0.25rem;
 }
 
-/* Each figure around an image */
+/* Make sure the figure acts as a vertical stack */
 .showcase-figure {
-  flex: 0 0 calc((100% / 3) - 1rem); /* default: space for 3 items */
-  min-width: 220px;
-  background: transparent;
-  border-radius: 10px;
-  overflow: hidden;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  /* you already have this */
   align-items: stretch;
-  transition: transform .18s var(--ease), box-shadow .18s var(--ease), background .18s var(--ease);
+  overflow: hidden;
+  border-radius: 10px;
   border: 1px solid rgba(255,255,255,0.025);
   background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
 }
 
-/* Make sure images fill figure width and keep aspect */
+/* Image: block-level, responsive, no cropping */
 .showcase-figure img {
-  width: 100%;
-  height: auto;
   display: block;
-  object-fit: cover;
-  border-bottom: 1px solid rgba(255,255,255,0.03);
+  width: 100%;
+  height: auto;          /* preserves original aspect ratio */
+  object-fit: contain;   /* change from 'cover' to 'contain' if cropping is an issue */
+  border-bottom: 1px solid rgba(255,255,255,0.06); /* slightly stronger divider */
   transition: transform .25s var(--ease);
 }
 
-/* Caption style */
+/* Caption: clearly below the image */
 .showcase-figure figcaption {
-  padding: 0.6rem 0.8rem;
-  font-size: 0.9rem;
+  position: static;                 /* ensure normal flow */
+  padding: 0.65rem 0.8rem;
+  font-size: 0.92rem;
   color: var(--muted);
   text-align: center;
-  background: rgba(255,255,255,0.01);
+  background: rgba(255,255,255,0.02);
+  /* Optional extra divider to visually separate from image */
+  border-top: 1px solid rgba(255,255,255,0.04);
 }
 
-/* Hover: subtle "light box" behind image and slight lift */
-/* This gives the lightbox-like feel you asked for when hovering over images */
+/* Hover polish (unchanged behavior) */
 .showcase-figure:hover {
   transform: translateY(-6px);
   background: rgba(255,255,255,0.04);
