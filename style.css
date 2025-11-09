@@ -420,9 +420,14 @@ a:focus, button:focus, input:focus, textarea:focus{
 .image-row.large img { --image-height: 500px; }
 
 /* === Force smaller gaps for compact rows === */
-.image-row.small,
+.image-row.small {
+  gap: 1.0rem !important;
+}
 .image-row.medium {
-  gap: 0.2rem !important;
+  gap: 1.0rem !important;
+}
+.image-row.large {
+  gap: 2.0rem !important;
 }
 
 .showcase-figure {
