@@ -416,18 +416,18 @@ a:focus, button:focus, input:focus, textarea:focus{
 
 /* Row modifiers */
 .image-row.small img { --image-height: 225px; }
-.image-row.medium img { --image-height: 150px; }
+.image-row.medium img { --image-height: 170px; }
 .image-row.large img { --image-height: 500px; }
 
 /* === Force smaller gaps for compact rows === */
 .image-row.small {
-  gap: 1.0rem !important;
+  gap: 2.0rem !important;
 }
 .image-row.medium {
   gap: 1.0rem !important;
 }
 .image-row.large {
-  gap: 2.0rem !important;
+  gap: 4.0rem !important;
 }
 
 .showcase-figure {
