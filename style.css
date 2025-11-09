@@ -421,13 +421,13 @@ a:focus, button:focus, input:focus, textarea:focus{
 
 /* === Force smaller gaps for compact rows === */
 .image-row.small {
-  gap: 4.0rem !important;
+  gap: 3.0rem !important;
 }
 .image-row.medium {
   gap: 2.0rem !important;
 }
 .image-row.large {
-  gap: 8.0rem !important;
+  gap: 5.0rem !important;
 }
 
 .showcase-figure {
