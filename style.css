@@ -346,9 +346,9 @@ a:focus, button:focus, input:focus, textarea:focus{
 
 /* Core tuning variables */
 :root {
-  --image-gap: -1.0rem;      /* space between images */
-  --image-buffer: 1.5rem;     /* left/right buffer */
-  --image-height: 260px;    /* default image height */
+  --image-gap: 1rem;          /* tighter space between images */
+  --image-buffer: 2rem;       /* balanced left/right buffer */
+  --image-height: 260px;      /* default image height */
 }
 
 .showcase {
@@ -376,12 +376,11 @@ a:focus, button:focus, input:focus, textarea:focus{
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  flex-wrap: nowrap;                 /* single row */
+  flex-wrap: nowrap;
   gap: var(--image-gap);
   padding-left: var(--image-buffer);
   padding-right: var(--image-buffer);
-  overflow-x: auto;                  /* scroll if overflow */
-  scrollbar-width: thin;
+  overflow-x: visible;       /* prevent cropping at edges */
 }
 
 /* Each image cell */
@@ -412,17 +411,19 @@ a:focus, button:focus, input:focus, textarea:focus{
   text-align: center;
   font-size: 0.9rem;
   color: var(--muted);
+  max-width: 90%;
 }
 
-/* Optional row modifiers */
+/* Row modifiers */
 .image-row.small img { --image-height: 200px; }
-.image-row.medium img { --image-height: 300px; }
-.image-row.large img { --image-height: 500px; }
+.image-row.medium img { --image-height: 280px; } /* a touch smaller */
+.image-row.large img { --image-height: 400px; }
 
 /* Responsive wrap on smaller screens */
 @media (max-width: 800px) {
   .image-row {
     flex-wrap: wrap;
     justify-content: center;
+    overflow-x: visible;
   }
 }
