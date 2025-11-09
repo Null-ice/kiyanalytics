@@ -427,3 +427,5 @@ a:focus, button:focus, input:focus, textarea:focus{
     overflow-x: visible;
   }
 }
+
+.image-row.medium { gap: 0.7rem; }
