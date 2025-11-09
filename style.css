@@ -446,5 +446,5 @@ a:focus, button:focus, input:focus, textarea:focus{
 
 /* Extra spacing above these projects */
 .project.extra-top-space .project-meta h2 {
-  margin-top: 8rem;  /* adjust to how many “blank lines” you want */
+  margin-top: 5rem;  /* adjust to how many “blank lines” you want */
 }
