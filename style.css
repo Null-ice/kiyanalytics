@@ -371,6 +371,7 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 .project-meta .muted { margin: 0; }
 
+/* Image row */
 .image-row {
   display: flex;
   justify-content: center;
@@ -414,7 +415,7 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 
 /* Row modifiers */
-.image-row.small img { --image-height: 190px; }
+.image-row.small img { --image-height: 170px; }
 .image-row.medium img { --image-height: 170px; }
 .image-row.large img { --image-height: 450px; }
 
