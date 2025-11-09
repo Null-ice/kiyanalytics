@@ -415,7 +415,7 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 
 /* Row modifiers */
-.image-row.small img { --image-height: 200px; }
+.image-row.small img { --image-height: 220px; }
 .image-row.medium img { --image-height: 280px; } /* a touch smaller */
 .image-row.large img { --image-height: 400px; }
 
@@ -428,4 +428,4 @@ a:focus, button:focus, input:focus, textarea:focus{
   }
 }
 
-.image-row.medium { gap: 0.7rem; }
+.image-row.medium { gap: 0.4rem; }
