@@ -391,7 +391,7 @@ a:focus, button:focus, input:focus, textarea:focus{
   display: block;
   width: 100%;
   height: auto;
-  object-fit: contain;       /* charts/screenshots shouldn't be cropped; switch to 'cover' if you prefer cropping */
+  object-fit: fill;       /* charts/screenshots shouldn't be cropped; switch to 'cover' if you prefer cropping */
   border: none;              /* no divider under the image */
   border-radius: 10px;       /* rounded corners applied to the image only */
   background: #0b1220;       /* avoid letterbox seams on dark theme when using 'contain' */
