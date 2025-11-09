@@ -346,8 +346,8 @@ a:focus, button:focus, input:focus, textarea:focus{
 
 /* Core tuning variables */
 :root {
-  --image-gap: 1.5rem;      /* space between images */
-  --image-buffer: 2rem;     /* left/right buffer */
+  --image-gap: 0.5rem;      /* space between images */
+  --image-buffer: 4rem;     /* left/right buffer */
   --image-height: 260px;    /* default image height */
 }
 
@@ -415,9 +415,9 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 
 /* Optional row modifiers */
-.image-row.small img { --image-height: 180px; }
-.image-row.medium img { --image-height: 260px; }
-.image-row.large img { --image-height: 400px; }
+.image-row.small img { --image-height: 200px; }
+.image-row.medium img { --image-height: 300px; }
+.image-row.large img { --image-height: 500px; }
 
 /* Responsive wrap on smaller screens */
 @media (max-width: 800px) {
