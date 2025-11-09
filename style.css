@@ -435,23 +435,6 @@ a:focus, button:focus, input:focus, textarea:focus{
   padding: 0 !important;
 }
 
-/* Allow horizontal scrolling for sections if content overflows */
-.container, 
-.cards-wrapper, 
-.cards, 
-.image-row, 
-.grid-2, 
-.contact-grid {
-  overflow-x: auto;       /* enable horizontal scroll if needed */
-  -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
-}
-/* Prevent flex children from wrapping when scrolling */
-.cards, 
-.image-row, 
-.grid-2 {
-  flex-wrap: nowrap;
-}
-
 /* Responsive wrap on smaller screens */
 @media (max-width: 800px) {
   .image-row {
