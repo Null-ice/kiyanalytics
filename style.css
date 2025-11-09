@@ -415,8 +415,8 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 
 /* Row modifiers */
-.image-row.small img { --image-height: 210px; }
-.image-row.medium img { --image-height: 135px; }
+.image-row.small img { --image-height: 225px; }
+.image-row.medium img { --image-height: 150px; }
 .image-row.large img { --image-height: 500px; }
 
 /* Responsive wrap on smaller screens */
@@ -428,5 +428,5 @@ a:focus, button:focus, input:focus, textarea:focus{
   }
 }
 
-.image-row.small { gap: 0.2rem; }
-.image-row.medium { gap: 0.2rem; }
+.image-row.small { --image-gap: 0.2rem; }
+.image-row.medium { --image-gap: 0.2rem; }
