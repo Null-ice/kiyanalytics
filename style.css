@@ -359,14 +359,12 @@ a:focus, button:focus, input:focus, textarea:focus{
   margin: 0;
 }
 
-/* Image row: keep images on one line whenever possible */
 .image-row {
   display: flex;
   align-items: stretch;
   gap: 1rem;
   width: 100%;
-  flex-wrap: nowrap;         /* prefer single row; allow overflow / scrolling on small screens */
-  overflow-x: auto;          /* horizontal scroll on narrow viewports */
+  flex-wrap: wrap;      /* allow wrapping */
   padding-bottom: 0.25rem;
 }
 
@@ -431,4 +429,33 @@ a:focus, button:focus, input:focus, textarea:focus{
     flex: 0 0 85%;        /* large cards that the user can swipe horizontally */
     min-width: 280px;
   }
+}
+
+/* ===============================
+   Custom fixed image sizes
+   =============================== */
+
+/* First 2 plots (400 x 200) */
+#tab1,
+#tab2 {
+  width: 400px;
+  height: 200px;
+  object-fit: fill;
+}
+
+/* Next 3 images (300 x 300) */
+#img1,
+#img2,
+#img3 {
+  width: 300px;
+  height: 300px;
+  object-fit: fill;
+}
+
+/* Last 2 images (300 x 550) */
+#vqa1,
+#vqa2 {
+  width: 300px;
+  height: 550px;
+  object-fit: fill;
 }
