@@ -388,8 +388,6 @@ a:focus, button:focus, input:focus, textarea:focus{
 
 /* IMAGE: gets the card visuals, radius, shadow, and hover */
 .showcase-figure img {
-  width: auto;
-  height: auto;
   display: block;
   object-fit: fill;       /* charts/screenshots shouldn't be cropped; switch to 'cover' if you prefer cropping */
   border: none;              /* no divider under the image */
