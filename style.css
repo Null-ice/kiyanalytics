@@ -415,8 +415,8 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 
 /* Row modifiers */
-.image-row.small img { --image-height: 260px; }
-.image-row.medium img { --image-height: 170px; }
+.image-row.small img { --image-height: 240px; }
+.image-row.medium img { --image-height: 150px; }
 .image-row.large img { --image-height: 500px; }
 
 /* Responsive wrap on smaller screens */
