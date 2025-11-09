@@ -435,7 +435,6 @@ a:focus, button:focus, input:focus, textarea:focus{
   padding: 0 !important;
 }
 
-
 /* Responsive wrap on smaller screens */
 @media (max-width: 800px) {
   .image-row {
@@ -443,4 +442,9 @@ a:focus, button:focus, input:focus, textarea:focus{
     justify-content: center;
     overflow-x: visible;
   }
+}
+
+/* Extra spacing above these projects */
+.project.extra-top-space .project-meta h2 {
+  margin-top: 2rem;  /* adjust to how many “blank lines” you want */
 }
