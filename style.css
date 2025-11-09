@@ -419,6 +419,9 @@ a:focus, button:focus, input:focus, textarea:focus{
 .image-row.medium img { --image-height: 150px; }
 .image-row.large img { --image-height: 500px; }
 
+.image-row.small { --image-gap: 0.2rem; }
+.image-row.medium { --image-gap: 0.2rem; }
+
 /* Responsive wrap on smaller screens */
 @media (max-width: 800px) {
   .image-row {
@@ -427,6 +430,3 @@ a:focus, button:focus, input:focus, textarea:focus{
     overflow-x: visible;
   }
 }
-
-.image-row.small { --image-gap: 0.2rem; }
-.image-row.medium { --image-gap: 0.2rem; }
