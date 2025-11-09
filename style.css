@@ -435,27 +435,27 @@ a:focus, button:focus, input:focus, textarea:focus{
    Custom fixed image sizes (exact pixel control)
    =============================== */
 
-/* First 2 plots (500 x 250) */
+/* First 2 plots (450 x 250) */
 .showcase-figure img#tab1,
 .showcase-figure img#tab2 {
-  width: 500px;
+  width: 450px;
   height: 250px;
   object-fit: fill;
 }
 
-/* Next 3 images (300 x 250) */
+/* Next 3 images (200 x 200) */
 .showcase-figure img#img1,
 .showcase-figure img#img2,
 .showcase-figure img#img3 {
-  width: 300px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   object-fit: fill;
 }
 
-/* Last 2 images (400 x 550) */
+/* Last 2 images (400 x 500) */
 .showcase-figure img#vqa1,
 .showcase-figure img#vqa2 {
   width: 400px;
-  height: 550px;
+  height: 500px;
   object-fit: fill;
 }
