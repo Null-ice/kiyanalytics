@@ -374,13 +374,13 @@ a:focus, button:focus, input:focus, textarea:focus{
 /* Image row */
 .image-row {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap;       /* prevent wrapping */
+  overflow-x: auto;        /* enable horizontal scroll */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
   gap: var(--image-gap);
   padding-left: var(--image-buffer);
   padding-right: var(--image-buffer);
-  overflow-x: visible;       /* prevent cropping at edges */
+  justify-content: flex-start; /* align items to the left when scrolling */
 }
 
 /* Each image cell */
