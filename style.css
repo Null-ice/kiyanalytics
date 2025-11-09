@@ -388,9 +388,9 @@ a:focus, button:focus, input:focus, textarea:focus{
 
 /* IMAGE: gets the card visuals, radius, shadow, and hover */
 .showcase-figure img {
-  display: block;
-  width: 100%;
+  width: auto;
   height: auto;
+  display: block;
   object-fit: fill;       /* charts/screenshots shouldn't be cropped; switch to 'cover' if you prefer cropping */
   border: none;              /* no divider under the image */
   border-radius: 10px;       /* rounded corners applied to the image only */
@@ -432,29 +432,29 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 
 /* ===============================
-   Custom fixed image sizes
+   Custom fixed image sizes (exact pixel control)
    =============================== */
 
 /* First 2 plots (400 x 200) */
-#tab1,
-#tab2 {
+.showcase-figure img#tab1,
+.showcase-figure img#tab2 {
   width: 400px;
   height: 200px;
   object-fit: fill;
 }
 
 /* Next 3 images (300 x 300) */
-#img1,
-#img2,
-#img3 {
+.showcase-figure img#img1,
+.showcase-figure img#img2,
+.showcase-figure img#img3 {
   width: 300px;
   height: 300px;
   object-fit: fill;
 }
 
 /* Last 2 images (300 x 550) */
-#vqa1,
-#vqa2 {
+.showcase-figure img#vqa1,
+.showcase-figure img#vqa2 {
   width: 300px;
   height: 550px;
   object-fit: fill;
