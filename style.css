@@ -457,3 +457,14 @@ a:focus, button:focus, input:focus, textarea:focus{
   height: 500px;
   object-fit: fill;
 }
+
+/* === Critical layout override (prevents overlap, NO scrollbars) === */
+.image-row.image-modeling {
+  flex-wrap: wrap;          /* allow line breaks */
+  justify-content: center;  /* center rows */
+  gap: 1.5rem;              /* spacing between items */
+}
+
+.image-row.image-modeling .showcase-figure {
+  flex: 0 0 auto;           /* width = image width, no forced columns */
+}
