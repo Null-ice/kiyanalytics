@@ -419,8 +419,17 @@ a:focus, button:focus, input:focus, textarea:focus{
 .image-row.medium img { --image-height: 150px; }
 .image-row.large img { --image-height: 500px; }
 
-.image-row.small { --image-gap: 0.2rem; }
-.image-row.medium { --image-gap: 0.2rem; }
+/* === Force smaller gaps for compact rows === */
+.image-row.small,
+.image-row.medium {
+  gap: 0.2rem !important;
+}
+
+.showcase-figure {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
 
 /* Responsive wrap on smaller screens */
 @media (max-width: 800px) {
