@@ -448,3 +448,11 @@ a:focus, button:focus, input:focus, textarea:focus{
 .project.extra-top-space .project-meta h2 {
   margin-top: 5rem;  /* adjust to how many “blank lines” you want */
 }
+
+/* Home page callout fix */
+.callout .callout-inner.grid-2 {
+  display: grid !important;
+  grid-template-columns: 1fr 360px;
+  align-items: flex-start;
+  gap: 2rem;
+}
