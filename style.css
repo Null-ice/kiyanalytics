@@ -384,17 +384,11 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 
 /* Each image cell */
-
-.showcase-figure{
+.showcase-figure {
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  width: fit-content;
-}
-
-.showcase-figure :is(img, video){
-  display: block;          /* no inline gaps */
+  align-items: center;
 }
 
 /* Image itself */
@@ -412,21 +406,17 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 
 /* Caption */
-
-.showcase-figure figcaption{
+.showcase-figure figcaption {
   margin-top: 0.6rem;
   text-align: center;
   font-size: 0.9rem;
   color: var(--muted);
-  max-width: 80%;         /* never exceed the figure width */
-  inline-size: 80%;       /* same as width in LTR/RTL aware terms */
-  overflow-wrap: anywhere; /* wrap even long words/URLs */
-  word-break: break-word;  /* safety for narrow widths */
-  hyphens: auto;           /* nicer wrapping where supported */
+  max-width: 80%;
 }
 
 /*video items*/
 .showcase-figure video {
+
   height: var(--image-height);
   width: auto;
   border-radius: var(--radius);
@@ -460,6 +450,7 @@ a:focus, button:focus, input:focus, textarea:focus{
 .showcase-figure {
   margin: 0 !important;
   padding: 0 !important;
+
 }
 
 /* Responsive wrap on smaller screens */
