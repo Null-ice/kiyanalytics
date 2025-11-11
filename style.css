@@ -490,7 +490,7 @@ a:focus, button:focus, input:focus, textarea:focus{
 /* Choose a cell width appropriate to the row and content */
 .image-row.medium { 
   --image-height: 170px;   /* you already have this */
-  --cell-width: 270px;     /* tweak to taste */
+  --cell-width: 290px;     /* tweak to taste */
 }
 
 /* Make each figure occupy the same width */
