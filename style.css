@@ -385,6 +385,7 @@ a:focus, button:focus, input:focus, textarea:focus{
 
 /* Image itself */
 .showcase-figure img {
+  display: block;
   height: var(--image-height);
   width: auto;
   border-radius: var(--radius);
@@ -448,8 +449,8 @@ a:focus, button:focus, input:focus, textarea:focus{
   max-width: 100%;
   margin: 0 !important;
   padding: 0 !important;
+  inline-size: fit-content; /* NEW */
 }
-
 
 /* Responsive wrap on smaller screens */
 @media (max-width: 800px) {
