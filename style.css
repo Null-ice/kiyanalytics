@@ -443,7 +443,10 @@ a:focus, button:focus, input:focus, textarea:focus{
    --image-height: 170px; 
    --cell-width: 303px;
 }
-.image-row.medium video { --image-height: 170px; }
+.image-row.medium video { 
+   --image-height: 170px; 
+   --cell-width: 303px;
+}
 .image-row.large img { --image-height: 450px; }
 
 /* === Force smaller gaps for compact rows === */
