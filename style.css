@@ -383,14 +383,6 @@ a:focus, button:focus, input:focus, textarea:focus{
   overflow-x: visible;       /* prevent cropping at edges */
 }
 
-/* Each image cell */
-.showcase-figure {
-  flex: 0 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 /* Image itself */
 .showcase-figure img {
   height: var(--image-height);
@@ -416,6 +408,7 @@ a:focus, button:focus, input:focus, textarea:focus{
 
 /*video items*/
 .showcase-figure video {
+  display: block;
   height: var(--image-height);
   width: auto;
   border-radius: var(--radius);
@@ -447,9 +440,16 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 
 .showcase-figure {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: max-content;
+  max-width: 100%;
   margin: 0 !important;
   padding: 0 !important;
 }
+
 
 /* Responsive wrap on smaller screens */
 @media (max-width: 800px) {
