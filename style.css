@@ -411,12 +411,19 @@ a:focus, button:focus, input:focus, textarea:focus{
   text-align: center;
   font-size: 0.9rem;
   color: var(--muted);
-  max-width: 80%;
+  inline-size: clamp(24ch, 90%, 36ch);
+  margin-inline: auto;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-wrap: balance;
+}
+/* Make sure media defines the visual block cleanly max-width: 80%;*/
+.showcase-figure :is(img, video){
+  display: block;
 }
 
 /*video items*/
 .showcase-figure video {
-
   height: var(--image-height);
   width: auto;
   border-radius: var(--radius);
@@ -450,7 +457,6 @@ a:focus, button:focus, input:focus, textarea:focus{
 .showcase-figure {
   margin: 0 !important;
   padding: 0 !important;
-
 }
 
 /* Responsive wrap on smaller screens */
