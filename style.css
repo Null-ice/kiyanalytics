@@ -438,14 +438,17 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 
 /* Row modifiers */
-.image-row.small img { --image-height: 170px; }
+.image-row.small img {
+   --image-height: 170px; 
+   --cell-width: 400px;
+}
 .image-row.medium img { 
    --image-height: 170px; 
-   --cell-width: 290px;
+   --cell-width: 300px;
 }
 .image-row.medium video { 
    --image-height: 170px; 
-   --cell-width: 290px;
+   --cell-width: 300px;
 }
 .image-row.large img { --image-height: 450px; }
 
@@ -490,7 +493,7 @@ a:focus, button:focus, input:focus, textarea:focus{
 /* Choose a cell width appropriate to the row and content */
 .image-row.medium { 
   --image-height: 170px;   /* you already have this */
-  --cell-width: 290px;     /* tweak to taste */
+  --cell-width: 300px;     /* tweak to taste */
 }
 
 /* Make each figure occupy the same width */
