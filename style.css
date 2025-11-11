@@ -499,7 +499,7 @@ a:focus, button:focus, input:focus, textarea:focus{
   display: block;
   height: var(--image-height);
   width: 100%;
-  object-fit: contain; /* if you don't want cropping, change to 'contain' */
+  object-fit: cover; /* if you don't want cropping, change to 'contain' */
 }
 
 /* Caption: keep from overhanging while centered (from prior step) */
