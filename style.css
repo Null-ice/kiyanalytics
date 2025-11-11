@@ -414,9 +414,25 @@ a:focus, button:focus, input:focus, textarea:focus{
   max-width: 90%;
 }
 
+/*video items*/
+.showcase-figure video {
+  height: var(--image-height);
+  width: auto;
+  border-radius: var(--radius);
+  background: #0b1220;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+.showcase-figure video:hover {
+  transform: scale(1.03);
+  box-shadow: 0 18px 48px rgba(2,6,23,0.7);
+}
+
 /* Row modifiers */
 .image-row.small img { --image-height: 170px; }
 .image-row.medium img { --image-height: 170px; }
+.image-row.medium video { --image-height: 170px; }
 .image-row.large img { --image-height: 450px; }
 
 /* === Force smaller gaps for compact rows === */
