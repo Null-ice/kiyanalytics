@@ -441,11 +441,11 @@ a:focus, button:focus, input:focus, textarea:focus{
 .image-row.small img { --image-height: 170px; }
 .image-row.medium img { 
    --image-height: 170px; 
-   --cell-width: 303px;
+   --cell-width: 270px;
 }
 .image-row.medium video { 
    --image-height: 170px; 
-   --cell-width: 303px;
+   --cell-width: 270px;
 }
 .image-row.large img { --image-height: 450px; }
 
@@ -485,6 +485,12 @@ a:focus, button:focus, input:focus, textarea:focus{
   grid-template-columns: 1fr 360px;
   align-items: flex-start;
   gap: 2rem;
+}
+
+/* Choose a cell width appropriate to the row and content */
+.image-row.medium { 
+  --image-height: 170px;   /* you already have this */
+  --cell-width: 270px;     /* tweak to taste */
 }
 
 /* Make each figure occupy the same width */
