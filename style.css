@@ -486,3 +486,37 @@ a:focus, button:focus, input:focus, textarea:focus{
   align-items: flex-start;
   gap: 2rem;
 }
+
+/* Choose a cell width appropriate to the row and content */
+.image-row.medium { 
+  --image-height: 170px;   /* you already have this */
+  --cell-width: 360px;     /* tweak to taste */
+}
+
+/* Make each figure occupy the same width */
+.image-row.medium .showcase-figure{
+  width: var(--cell-width);
+  flex: 0 0 var(--cell-width);   /* no shrinking, no growing */
+  align-items: center;           /* keep caption centered */
+}
+
+/* Let the media scale to the cell width while respecting your height */
+.image-row.medium .showcase-figure :is(img, video){
+  display: block;
+  height: var(--image-height);
+  width: 100%;
+  object-fit: cover; /* if you don't want cropping, change to 'contain' */
+}
+
+/* Caption: keep from overhanging while centered (from prior step) */
+.showcase-figure figcaption{
+  margin-top: 0.6rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted);
+  inline-size: clamp(24ch, 90%, 36ch);
+  margin-inline: auto;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  text-wrap: balance;
+}
