@@ -487,12 +487,6 @@ a:focus, button:focus, input:focus, textarea:focus{
   gap: 2rem;
 }
 
-/* Choose a cell width appropriate to the row and content */
-.image-row.medium { 
-  --image-height: 170px;   /* you already have this */
-  --cell-width: 360px;     /* tweak to taste */
-}
-
 /* Make each figure occupy the same width */
 .image-row.medium .showcase-figure{
   width: var(--cell-width);
@@ -505,7 +499,7 @@ a:focus, button:focus, input:focus, textarea:focus{
   display: block;
   height: var(--image-height);
   width: 100%;
-  object-fit: cover; /* if you don't want cropping, change to 'contain' */
+  object-fit: contain; /* if you don't want cropping, change to 'contain' */
 }
 
 /* Caption: keep from overhanging while centered (from prior step) */
