@@ -492,7 +492,7 @@ a:focus, button:focus, input:focus, textarea:focus{
 
 .image-row.small {
   --image-height: 170px;
-  --cell-width: 460px;
+  --cell-width: 480px;
 }
 
 .image-row.small .showcase-figure {
