@@ -6,7 +6,7 @@
 /* ===============================
    Variables
    =============================== */
-:root{
+:root {
   --bg: #0b1220;
   --panel: #0f1724;
   --muted: #9ca3af;
@@ -21,7 +21,7 @@
 
 * { box-sizing: border-box; }
 html,body { height:100%; }
-body{
+body {
   margin:0;
   font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   background: var(--bg);
@@ -35,7 +35,7 @@ body{
 /* ===============================
    Layout Helpers
    =============================== */
-.container{
+.container {
   max-width: var(--container);
   margin: 0 auto;
   padding: 2rem;
@@ -44,7 +44,7 @@ body{
 /* ===============================
    Header
    =============================== */
-.site-header{
+.site-header {
   position: sticky;
   top:0;
   z-index:40;
@@ -52,25 +52,25 @@ body{
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(255,255,255,0.03);
 }
-.header-inner{
+.header-inner {
   display:flex;
   gap:1rem;
   align-items:center;
   justify-content:space-between;
 }
-.brand{
+.brand {
   font-weight:700;
   letter-spacing:0.2px;
   color:var(--text);
   text-decoration:none;
   font-size:1.05rem;
 }
-.nav{
+.nav {
   display:flex;
   gap:0.75rem;
   align-items:center;
 }
-.nav-link{
+.nav-link {
   color:var(--muted);
   text-decoration:none;
   padding:0.65rem 0.4rem;
@@ -78,37 +78,37 @@ body{
   transition: color .18s var(--ease), border-color .18s var(--ease);
   font-weight:500;
 }
-.nav-link:hover{ color:var(--text); border-color: rgba(59,130,246,0.12); }
-.nav-link.active{ color:var(--text); border-color: var(--accent); }
+.nav-link:hover { color:var(--text); border-color: rgba(59,130,246,0.12); }
+.nav-link.active { color:var(--text); border-color: var(--accent); }
 
 /* ===============================
    Hero
    =============================== */
-.hero{
+.hero {
   padding:6.5rem 0 4rem;
   background: linear-gradient(160deg, rgba(59,130,246,0.06), rgba(30,58,138,0.12)),
               radial-gradient(600px 300px at 10% 10%, rgba(59,130,246,0.07), transparent 20%),
               linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
   border-bottom: 1px solid rgba(255,255,255,0.02);
 }
-.hero-inner{ max-width:900px; margin:0 auto; text-align:left; padding:2rem 0; }
-.hero-title{
+.hero-inner { max-width:900px; margin:0 auto; text-align:left; padding:2rem 0; }
+.hero-title {
   font-size: clamp(1.8rem, 4.5vw, 3.2rem);
   margin:0 0 .6rem;
   font-weight:700;
   letter-spacing: -0.02em;
 }
-.hero-sub{
+.hero-sub {
   margin:0 0 1.25rem;
   color: var(--muted);
   font-weight: 400;
 }
-.hero-ctas{ display:flex; gap:0.75rem; margin-top:1rem; align-items:center; flex-wrap:wrap; }
+.hero-ctas { display:flex; gap:0.75rem; margin-top:1rem; align-items:center; flex-wrap:wrap; }
 
 /* ===============================
    Buttons
    =============================== */
-.btn{
+.btn {
   display:inline-block;
   text-decoration:none;
   font-weight:600;
@@ -117,19 +117,19 @@ body{
   transition: transform .12s var(--ease), box-shadow .12s var(--ease);
   border:1px solid transparent;
 }
-.btn:active{ transform: translateY(1px); }
-.btn-primary{
+.btn:active { transform: translateY(1px); }
+.btn-primary {
   background: linear-gradient(90deg, var(--accent), #2563eb);
   color: white;
   box-shadow: 0 6px 18px rgba(59,130,246,0.12);
 }
-.btn-primary:hover{ transform: translateY(-2px); box-shadow: 0 12px 28px rgba(59,130,246,0.14); }
-.btn-ghost{
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(59,130,246,0.14); }
+.btn-ghost {
   color: var(--text);
   background: transparent;
   border: 1px solid rgba(255,255,255,0.04);
 }
-.btn-outline{
+.btn-outline {
   background: transparent;
   border: 1px solid rgba(255,255,255,0.06);
   color: var(--text);
@@ -138,28 +138,28 @@ body{
 /* ===============================
    Overview Section
    =============================== */
-.overview{ padding:3rem 0; }
-.grid-2{
+.overview { padding:3rem 0; }
+.grid-2 {
   display:grid;
   grid-template-columns: 1fr;
   gap:1.5rem;
 }
 @media(min-width:880px){
-  .grid-2{
+  .grid-2 {
     grid-template-columns: 1fr 360px;
     align-items:center;
   }
 }
-.stat{
+.stat {
   background:var(--panel);
   padding:1rem;
   border-radius:10px;
   margin-bottom:0.75rem;
   box-shadow:var(--shadow);
 }
-.stats{ display:flex; gap:1rem; flex-direction:column; }
-.stat-value{ font-size:1.2rem; font-weight:700; color:var(--text); }
-.stat-label{ color:var(--muted); font-size:0.9rem; }
+.stats { display:flex; gap:1rem; flex-direction:column; }
+.stat-value { font-size:1.2rem; font-weight:700; color:var(--text); }
+.stat-label { color:var(--muted); font-size:0.9rem; }
 
 /* ===============================
    Centered Cards
@@ -189,13 +189,13 @@ body{
   display: flex;
   flex-direction: column;
 }
-.card:hover{
+.card:hover {
   transform: translateY(-6px);
   box-shadow: 0 18px 48px rgba(2,6,23,0.7);
 }
-.card h3{ margin:0 0 0.5rem; }
-.card p{ color:var(--muted); margin:0 0 1rem; }
-.card-icon{ color: var(--accent); margin-bottom:0.6rem; }
+.card h3 { margin:0 0 0.5rem; }
+.card p { color:var(--muted); margin:0 0 1rem; }
+.card-icon { color: var(--accent); margin-bottom:0.6rem; }
 
 /* ===============================
    Pricing
@@ -206,13 +206,12 @@ body{
   align-items:flex-start;
   flex: 1;
 }
-.tier-header .muted{ color:var(--muted); font-size:0.95rem; margin-top:-0.3rem; }
-.tier-price{ font-size:1.6rem; font-weight:700; color:var(--text); }
-.per{ font-size:0.9rem; font-weight:500; color:var(--muted); margin-left:0.4rem; }
-.tier-list{ list-style:none; padding:0; margin:0; color:var(--muted); flex-grow:1; }
-.recommended{
+.tier-header .muted { color:var(--muted); font-size:0.95rem; margin-top:-0.3rem; }
+.tier-price { font-size:1.6rem; font-weight:700; color:var(--text); }
+.per { font-size:0.9rem; font-weight:500; color:var(--muted); margin-left:0.4rem; }
+.tier-list { list-style:none; padding:0; margin:0; color:var(--muted); flex-grow:1; }
+.recommended {
   border: 1px solid rgba(59,130,246,0.12);
-  transform: none;
   box-shadow: 0 12px 36px rgba(59,130,246,0.06);
 }
 .tier .btn { margin-top: auto; }
@@ -220,12 +219,12 @@ body{
 /* ===============================
    CTA Strip
    =============================== */
-.cta-strip{
+.cta-strip {
   padding:2rem 0;
   border-top:1px solid rgba(255,255,255,0.02);
   border-bottom:1px solid rgba(255,255,255,0.02);
 }
-.cta-inner{
+.cta-inner {
   display:flex;
   gap:1rem;
   justify-content:space-between;
@@ -236,7 +235,7 @@ body{
 /* ===============================
    Contact
    =============================== */
-.contact-grid{
+.contact-grid {
   display:grid;
   grid-template-columns: 1fr;
   gap:1.25rem;
@@ -244,15 +243,15 @@ body{
   padding:2rem 0;
 }
 @media(min-width:880px){
-  .contact-grid{ grid-template-columns: 1fr 320px; }
+  .contact-grid { grid-template-columns: 1fr 320px; }
 }
-.contact-card{
+.contact-card {
   background:var(--panel);
   padding:1.25rem;
   border-radius:12px;
   border:1px solid rgba(255,255,255,0.03);
 }
-.contact-form label{
+.contact-form label {
   display:block;
   margin-bottom:0.6rem;
   font-weight:600;
@@ -260,7 +259,7 @@ body{
   color:var(--text);
 }
 .contact-form input,
-.contact-form textarea{
+.contact-form textarea {
   width:100%;
   margin-top:0.35rem;
   padding:0.75rem;
@@ -271,12 +270,11 @@ body{
   outline:none;
   font-weight:500;
 }
-.contact-form input::placeholder,
-.contact-form textarea::placeholder{
+.contact-form ::placeholder {
   color: rgba(255,255,255,0.35);
   font-weight:400;
 }
-.form-actions{
+.form-actions {
   display:flex;
   gap:0.6rem;
   align-items:center;
@@ -286,17 +284,17 @@ body{
 /* ===============================
    Utilities & Footer
    =============================== */
-.lead{ color:var(--muted); margin-top:0.4rem; }
-.muted{ color:var(--muted); font-size:0.95rem; }
-.text-link{ color:var(--accent); text-decoration:none; font-weight:600; }
-.note{ padding:1.25rem 0 3rem; }
+.lead { color:var(--muted); margin-top:0.4rem; }
+.muted { color:var(--muted); font-size:0.95rem; }
+.text-link { color:var(--accent); text-decoration:none; font-weight:600; }
+.note { padding:1.25rem 0 3rem; }
 
-.site-footer{
+.site-footer {
   padding:1.25rem 0;
   border-top:1px solid rgba(255,255,255,0.02);
   margin-top:2rem;
 }
-.footer-inner{
+.footer-inner {
   display:flex;
   justify-content:center;
   color:var(--muted);
@@ -309,7 +307,7 @@ body{
 @media (max-width:640px){
   .container{ padding:1rem; }
   .header-inner{ gap:0.5rem; }
-  .nav{ display:flex; gap:0.5rem; }
+  .nav{ gap:0.5rem; }
   .hero{ padding:4rem 0 3rem; text-align:center; }
   .hero-inner{ padding:1rem; }
   .cta-inner{ flex-direction:column; align-items:stretch; gap:1rem; }
@@ -318,7 +316,7 @@ body{
 /* ===============================
    Accessible Focus
    =============================== */
-a:focus, button:focus, input:focus, textarea:focus{
+a:focus, button:focus, input:focus, textarea:focus {
   box-shadow: 0 0 0 4px rgba(59,130,246,0.12);
   outline: none;
 }
@@ -326,10 +324,7 @@ a:focus, button:focus, input:focus, textarea:focus{
 /* ===============================
    Callout Alignment
    =============================== */
-.callout.container {
-  padding-left: 0;
-  padding-right: 0;
-}
+.callout.container { padding-inline: 0; }
 .callout-inner {
   max-width: var(--container);
   margin: 0 auto;
@@ -343,12 +338,10 @@ a:focus, button:focus, input:focus, textarea:focus{
 /* =======================================================
    SHOWCASE SECTION — clean, flexible image rows
    ======================================================= */
-
-/* Core tuning variables */
 :root {
-  --image-gap: 1rem;          /* tighter space between images */
-  --image-buffer: 2rem;       /* balanced left/right buffer */
-  --image-height: 260px;      /* default image height */
+  --image-gap: 1rem;
+  --image-buffer: 2rem;
+  --image-height: 260px;
 }
 
 .showcase {
@@ -356,7 +349,7 @@ a:focus, button:focus, input:focus, textarea:focus{
   padding-bottom: 2.5rem;
 }
 
-/* Title / description above each row */
+/* Project titles */
 .project-meta {
   display: flex;
   flex-direction: column;
@@ -371,28 +364,30 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 .project-meta .muted { margin: 0; }
 
-/* Image row */
+/* Image rows */
 .image-row {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  flex-wrap: nowrap;
   gap: var(--image-gap);
-  padding-left: var(--image-buffer);
-  padding-right: var(--image-buffer);
-  overflow-x: visible;       /* prevent cropping at edges */
+  padding-inline: var(--image-buffer);
+  overflow-x: visible;
 }
 
-/* Each image cell */
+/* Figure container */
 .showcase-figure {
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-/* Image itself */
-.showcase-figure img {
+/* Shared hover & visuals */
+.showcase-figure img,
+.showcase-figure video {
+  display: block;
   height: var(--image-height);
   width: auto;
   border-radius: var(--radius);
@@ -400,12 +395,13 @@ a:focus, button:focus, input:focus, textarea:focus{
   box-shadow: 0 10px 30px rgba(2,6,23,0.6);
   transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
 }
-.showcase-figure img:hover {
+.showcase-figure img:hover,
+.showcase-figure video:hover {
   transform: scale(1.03);
   box-shadow: 0 18px 48px rgba(2,6,23,0.7);
 }
 
-/* Caption */
+/* Captions */
 .showcase-figure figcaption {
   margin-top: 0.6rem;
   text-align: center;
@@ -414,139 +410,55 @@ a:focus, button:focus, input:focus, textarea:focus{
   inline-size: clamp(24ch, 90%, 36ch);
   margin-inline: auto;
   overflow-wrap: anywhere;
-  word-break: break-word;
   text-wrap: balance;
 }
-/* Make sure media defines the visual block cleanly max-width: 80%;*/
-.showcase-figure :is(img, video){
-  display: block;
-}
 
-/*video items*/
-.showcase-figure video {
-  height: var(--image-height);
-  width: auto;
-  border-radius: var(--radius);
-  background: #0b1220;
-  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
-  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
-}
-
-.showcase-figure video:hover {
-  transform: scale(1.03);
-  box-shadow: 0 18px 48px rgba(2,6,23,0.7);
-}
-
-/* Row modifiers */
-.image-row.small img {
-   --image-height: 170px; 
-   --cell-width: 400px;
-}
-.image-row.medium img { 
-   --image-height: 170px; 
-   --cell-width: 300px;
-}
-.image-row.medium video { 
-   --image-height: 170px; 
-   --cell-width: 300px;
-}
-.image-row.large img { --image-height: 450px; }
-
-/* === Force smaller gaps for compact rows === */
-.image-row.small {
-  gap: 2.5rem !important;
-}
-.image-row.medium {
-  gap: 2.0rem !important;
-}
-.image-row.large {
-  gap: 4.0rem !important;
-}
-
-.showcase-figure {
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Responsive wrap on smaller screens */
-@media (max-width: 800px) {
-  .image-row {
-    flex-wrap: wrap;
-    justify-content: center;
-    overflow-x: visible;
-  }
-}
-
-/* Extra spacing above these projects */
-.project.extra-top-space .project-meta h2 {
-  margin-top: 5rem;  /* adjust to how many “blank lines” you want */
-}
-
-/* Home page callout fix */
-.callout .callout-inner.grid-2 {
-  display: grid !important;
-  grid-template-columns: 1fr 360px;
-  align-items: flex-start;
-  gap: 2rem;
-}
-
+/* Row size variants */
 .image-row.small {
   --image-height: 170px;
   --cell-width: 430px;
+  gap: 2.5rem !important;
+}
+.image-row.medium {
+  --image-height: 170px;
+  --cell-width: 300px;
+  gap: 2rem !important;
+}
+.image-row.large {
+  --image-height: 450px;
+  gap: 4rem !important;
 }
 
-.image-row.small .showcase-figure {
+/* Cell sizing */
+.image-row.small .showcase-figure,
+.image-row.medium .showcase-figure {
   width: var(--cell-width);
   flex: 0 0 var(--cell-width);
   align-items: center;
 }
 
-.image-row.small .showcase-figure img {
-  display: block;
-  height: var(--image-height);
+/* Uniform media fit */
+.image-row.small .showcase-figure img,
+.image-row.medium .showcase-figure :is(img, video) {
   width: 100%;
-  object-fit: cover; /* use 'contain' if you don’t want cropping */
-  border-radius: var(--radius);
-  background: #0b1220;
-  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
-  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
-}
-
-.image-row.small .showcase-figure img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 18px 48px rgba(2,6,23,0.7);
-}
-
-/* Choose a cell width appropriate to the row and content */
-.image-row.medium { 
-  --image-height: 170px;   /* you already have this */
-  --cell-width: 300px;     /* tweak to taste */
-}
-
-/* Make each figure occupy the same width */
-.image-row.medium .showcase-figure{
-  width: var(--cell-width);
-  flex: 0 0 var(--cell-width);   /* no shrinking, no growing */
-  align-items: center;           /* keep caption centered */
-}
-
-/* Let the media scale to the cell width while respecting your height */
-.image-row.medium .showcase-figure :is(img, video){
-  display: block;
   height: var(--image-height);
-  width: 100%;
-  object-fit: cover; /* if you don't want cropping, change to 'contain' */   
+  object-fit: cover; /* or 'contain' if you prefer no cropping */
 }
 
-/* Caption: keep from overhanging while centered (from prior step) */
-.showcase-figure figcaption{
-  margin-top: 0.6rem;
-  text-align: center;
-  font-size: 0.9rem;
-  color: var(--muted);
-  inline-size: clamp(24ch, 90%, 36ch);
-  margin-inline: auto;
-  overflow-wrap: anywhere;
-  word-break: break-word;
-  text-wrap: balance;
+/* Responsive wrap */
+@media (max-width:800px){
+  .image-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Extra spacing for top-separated projects */
+.project.extra-top-space .project-meta h2 { margin-top: 5rem; }
+
+.callout .callout-inner.grid-2 {
+  display: grid !important;
+  grid-template-columns: 1fr 360px;
+  align-items: flex-start;
+  gap: 2rem;
 }
