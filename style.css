@@ -490,6 +490,33 @@ a:focus, button:focus, input:focus, textarea:focus{
   gap: 2rem;
 }
 
+.image-row.small {
+  --image-height: 170px;
+  --cell-width: 400px;
+}
+
+.image-row.small .showcase-figure {
+  width: var(--cell-width);
+  flex: 0 0 var(--cell-width);
+  align-items: center;
+}
+
+.image-row.small .showcase-figure img {
+  display: block;
+  height: var(--image-height);
+  width: 100%;
+  object-fit: cover; /* use 'contain' if you don’t want cropping */
+  border-radius: var(--radius);
+  background: #0b1220;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+.image-row.small .showcase-figure img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 18px 48px rgba(2,6,23,0.7);
+}
+
 /* Choose a cell width appropriate to the row and content */
 .image-row.medium { 
   --image-height: 170px;   /* you already have this */
@@ -508,7 +535,7 @@ a:focus, button:focus, input:focus, textarea:focus{
   display: block;
   height: var(--image-height);
   width: 100%;
-  object-fit: cover; /* if you don't want cropping, change to 'contain' */
+  object-fit: cover; /* if you don't want cropping, change to 'contain' */   
 }
 
 /* Caption: keep from overhanging while centered (from prior step) */
