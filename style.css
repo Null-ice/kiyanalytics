@@ -389,14 +389,10 @@ a:focus, button:focus, input:focus, textarea:focus{
   display: flex;
   flex-direction: column;
   align-items: center;
-
-
 }
 
 /* Image itself */
 .showcase-figure img {
-
-
   height: var(--image-height);
   width: auto;
   border-radius: var(--radius);
@@ -496,8 +492,8 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 
 .image-row.small {
-  --image-height: 180px;
-  --cell-width: 375px;
+  --image-height: 170px;
+  --cell-width: 360px;
 }
 
 .image-row.small .showcase-figure {
