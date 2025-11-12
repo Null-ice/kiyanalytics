@@ -437,6 +437,21 @@ a:focus, button:focus, input:focus, textarea:focus{
   box-shadow: 0 18px 48px rgba(2,6,23,0.7);
 }
 
+/* Row modifiers */
+.image-row.small img {
+   --image-height: 170px; 
+   --cell-width: 400px;
+}
+.image-row.medium img { 
+   --image-height: 170px; 
+   --cell-width: 300px;
+}
+.image-row.medium video { 
+   --image-height: 170px; 
+   --cell-width: 300px;
+}
+.image-row.large img { --image-height: 450px; }
+
 /* === Force smaller gaps for compact rows === */
 .image-row.small {
   gap: 2.5rem !important;
@@ -475,20 +490,11 @@ a:focus, button:focus, input:focus, textarea:focus{
   gap: 2rem;
 }
 
-/* Row modifiers */
-.image-row.small img {
-   --image-height: 170px; 
-   --cell-width: 400px;
+/* Choose a cell width appropriate to the row and content */
+.image-row.medium { 
+  --image-height: 170px;   /* you already have this */
+  --cell-width: 300px;     /* tweak to taste */
 }
-.image-row.medium img { 
-   --image-height: 170px; 
-   --cell-width: 300px;
-}
-.image-row.medium video { 
-   --image-height: 170px; 
-   --cell-width: 300px;
-}
-.image-row.large img { --image-height: 450px; }
 
 /* Make each figure occupy the same width */
 .image-row.medium .showcase-figure{
