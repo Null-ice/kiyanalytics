@@ -490,6 +490,22 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 .image-row.large img { --image-height: 450px; }
 
+/* Force consistent width for small image rows */
+.image-row.small {
+  --cell-width: 400px;
+}
+.image-row.small .showcase-figure {
+  width: var(--cell-width);
+  flex: 0 0 var(--cell-width);
+  align-items: center;
+}
+.image-row.small .showcase-figure :is(img, video) {
+  display: block;
+  height: var(--image-height);
+  width: 100%;
+  object-fit: cover; 
+}
+
 /* Make each figure occupy the same width */
 .image-row.medium .showcase-figure{
   width: var(--cell-width);
