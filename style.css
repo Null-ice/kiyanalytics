@@ -506,7 +506,7 @@ a:focus, button:focus, input:focus, textarea:focus{
   display: block;
   height: var(--image-height);
   width: 100%;
-  object-fit: contain; /* use 'contain' if you don’t want cropping */
+  object-fit: cover; /* use 'contain' if you don’t want cropping */
   border-radius: var(--radius);
   background: #0b1220;
   box-shadow: 0 10px 30px rgba(2,6,23,0.6);
