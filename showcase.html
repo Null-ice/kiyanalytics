@@ -43,12 +43,13 @@
 
         <div class="image-row small">
           <figure class="showcase-figure">
-            <img src="images/microstructure_snapshots.png" alt="Order Book and Closing Auction data (TSLA)">
+            <!-- ADDED data-lightbox -->
+            <img src="images/microstructure_snapshots.png" alt="Order Book and Closing Auction data (TSLA)" data-lightbox>
             <figcaption>Sample of input Order Book and Closing Auction data (TSLA)</figcaption>
           </figure>
 
           <figure class="showcase-figure">
-            <img src="images/tsla_predicted_vs_actual.png" alt="Predicted vs actual closing price (TSLA)">
+            <img src="images/tsla_predicted_vs_actual.png" alt="Predicted vs actual closing price (TSLA)" data-lightbox>
             <figcaption>Predicted vs actual closing price in validation period (TSLA)</figcaption>
           </figure>
         </div>
@@ -63,7 +64,8 @@
 
         <div class="image-row medium">
           <figure class="showcase-figure">
-            <video autoplay loop muted playsinline>
+            <!-- ADDED data-lightbox -->
+            <video autoplay loop muted playsinline data-lightbox>
               <source src="images/slideshow.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
@@ -71,12 +73,12 @@
           </figure>
 
           <figure class="showcase-figure">
-            <img src="images/label_final_final.png" alt="Correct label for sample volume">
+            <img src="images/label_final_final.png" alt="Correct label for sample volume" data-lightbox>
             <figcaption>Correct label for sample</figcaption>
           </figure>
 
           <figure class="showcase-figure">
-            <img src="images/pred_final_final.png" alt="Predicted image volume">
+            <img src="images/pred_final_final.png" alt="Predicted image volume" data-lightbox>
             <figcaption>3D predicted image for sample</figcaption>
           </figure>
         </div>
@@ -91,12 +93,12 @@
 
         <div class="image-row large">
           <figure class="showcase-figure">
-            <img src="images/fake_doc_3.png" alt="Low-resolution complex input image">
+            <img src="images/fake_doc_3.png" alt="Low-resolution complex input image" data-lightbox>
             <figcaption>Sample of low-resolution, complex input image</figcaption>
           </figure>
 
           <figure class="showcase-figure">
-            <img src="images/fake_doc_3_answered.png" alt="VQA question/answer examples">
+            <img src="images/fake_doc_3_answered.png" alt="VQA question/answer examples" data-lightbox>
             <figcaption>Example questions and answer results for this image</figcaption>
           </figure>
         </div>
@@ -111,5 +113,16 @@
       <p>© 2025 Kiy Analytics. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Lightbox Modal Root (ADD THIS ONCE, before </body>) -->
+  <div class="lb-backdrop" data-lb-backdrop aria-hidden="true">
+    <div class="lb-dialog" role="dialog" aria-modal="true" aria-label="Media preview">
+      <button class="lb-close" type="button" data-lb-close aria-label="Close (Esc)">✕</button>
+      <div class="lb-stage" data-lb-stage></div>
+    </div>
+  </div>
+
+  <!-- Lightbox JS -->
+  <script src="lightbox.js" defer></script>
 </body>
 </html>
