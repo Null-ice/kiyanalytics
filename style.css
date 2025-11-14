@@ -21,8 +21,8 @@
   /* Showcase defaults */
   --image-gap: 1rem;
   --image-buffer: 2rem;
-  --image-height: clamp(180px, 22vw, 320px);
-  --image-width: clamp(240px, 28vw, 480px);
+  --image-height: clamp(170px, 28vw, 480px); /* was 320px max */
+  --image-width: clamp(240px, 36vw, 720px); 
 }
 
 * { box-sizing: border-box; }
@@ -387,19 +387,19 @@ a:focus, button:focus, input:focus, textarea:focus{
 /* Row modifiers */
 .image-row.small img,
 .image-row.small video {
-  --image-height: clamp(180px, 20vw, 280px);
-  --image-width: clamp(220px, 26vw, 400px);
+  --image-height: clamp(170px, 24vw, 360px);
+  --image-width: clamp(240px, 32vw, 540px);
 }
 
 .image-row.medium img,
 .image-row.medium video {
-  --image-height: clamp(180px, 22vw, 300px);
-  --image-width: clamp(240px, 28vw, 420px);
+  --image-height: clamp(170px, 28vw, 420px);
+  --image-width: clamp(280px, 36vw, 640px);
 }
 
 .image-row.large img {
-  --image-height: clamp(280px, 30vw, 480px);
-  --image-width: clamp(320px, 36vw, 640px);
+  --image-height: clamp(320px, 40vw, 640px);
+  --image-width: clamp(400px, 48vw, 960px);
 }
 
 /* Responsive wrap for smaller screens */
