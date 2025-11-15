@@ -22,8 +22,6 @@
   --image-gap: clamp(0.75rem, 2vw, 2rem);
   --image-buffer: clamp(1rem, 3vw, 2rem);
   --cell-min-small:  clamp(220px, 32vw, 360px);
-  --cell-min-medium: clamp(260px, 30vw, 420px);
-  --cell-min-large:  clamp(360px, 40vw, 640px);
 }
 
 * { box-sizing: border-box; }
@@ -44,8 +42,10 @@ body{
    =============================== */
 .container{
   max-width: var(--container);
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
+  overflow-x: hidden; /* Prevent accidental overflow */
 }
 
 /* ===============================
@@ -353,12 +353,12 @@ a:focus, button:focus, input:focus, textarea:focus{
 
 /* Medium rows: 3 items side by side on large screens */
 .image-row.medium {
-  grid-template-columns: repeat(3, minmax(var(--cell-min-medium), 1fr));
+  grid-template-columns: repeat(3, 1fr);
 }
 
 /* Large rows: 2 items side by side on large screens */
 .image-row.large {
-  grid-template-columns: repeat(2, minmax(var(--cell-min-large), 1fr));
+  grid-template-columns: repeat(2, 1fr);
 }
 
 /* Responsive: stack vertically on smaller screens */
@@ -371,15 +371,9 @@ a:focus, button:focus, input:focus, textarea:focus{
 
 /* Prevent overflow on very large screens */
 @media (min-width: 1200px) {
-  .image-row.medium {
-    grid-template-columns: repeat(3, 1fr);
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-  .image-row.large {
-    grid-template-columns: repeat(2, 1fr);
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .image-row {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
