@@ -522,3 +522,30 @@ a:focus, button:focus, input:focus, textarea:focus{
 body.lb-open { overflow: hidden; }
 
 .showcase-figure :is(img, video)[data-lightbox] { cursor: zoom-in; }
+
+/* ===============================
+   Floating Corner Chip
+   =============================== */
+.float-chip{
+  position: fixed;
+  right: clamp(.75rem, 2vw, 1rem);
+  bottom: clamp(.75rem, 3vw, 1.25rem);
+  z-index: 100;
+  padding: .55rem .8rem;
+  border-radius: 12px;
+  font-size: .9rem;
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(90deg, var(--accent), #2563eb);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 12px 28px rgba(59,130,246,0.22);
+  transition: transform .14s var(--ease), box-shadow .14s var(--ease);
+}
+.float-chip:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 18px 36px rgba(59,130,246,0.28);
+}
+.float-chip strong{ color: white; }
+@media (max-width: 640px){
+  .float-chip{ font-size: .86rem; }
+}
