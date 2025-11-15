@@ -339,16 +339,30 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 
 .image-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(var(--cell-min-medium), 1fr));
   gap: var(--image-gap);
   padding-left: var(--image-buffer);
   padding-right: var(--image-buffer);
 }
 
-.image-row.small  { grid-template-columns: repeat(auto-fit, minmax(var(--cell-min-small),  1fr)); }
-.image-row.medium { grid-template-columns: repeat(auto-fit, minmax(var(--cell-min-medium), 1fr)); }
-.image-row.large  { grid-template-columns: repeat(auto-fit, minmax(var(--cell-min-large),  1fr)); }
+/* Small rows: auto-fit for flexibility */
+.image-row.small {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--cell-min-small), 1fr));
+}
+
+/* Medium rows: force 3 items in one row */
+.image-row.medium {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, minmax(var(--cell-min-medium), 1fr));
+}
+
+/* Large rows: force 2 items in one row */
+.image-row.large {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(2, minmax(var(--cell-min-large), 1fr));
+}
 
 .showcase-figure {
   margin: 0;
@@ -389,6 +403,7 @@ a:focus, button:focus, input:focus, textarea:focus{
   .image-row {
     padding-left: clamp(0.75rem, 2vw, 1.25rem);
     padding-right: clamp(0.75rem, 2vw, 1.25rem);
+    grid-auto-flow: row; /* allow wrapping on small screens */
   }
 }
 
