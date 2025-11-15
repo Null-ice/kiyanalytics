@@ -331,7 +331,7 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 
 /* =======================================================
-   SHOWCASE SECTION — responsive grid with scroll
+   SHOWCASE SECTION — responsive grid
    ======================================================= */
 .showcase {
   padding-top: 1rem;
@@ -339,6 +339,7 @@ a:focus, button:focus, input:focus, textarea:focus{
 }
 
 .image-row {
+  display: grid;
   gap: var(--image-gap);
   padding-left: var(--image-buffer);
   padding-right: var(--image-buffer);
@@ -346,30 +347,25 @@ a:focus, button:focus, input:focus, textarea:focus{
 
 /* Small rows: auto-fit for flexibility */
 .image-row.small {
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(var(--cell-min-small), 1fr));
 }
 
-/* Medium rows: force 3 items in one row, scroll if needed */
+/* Medium rows: 3 items side by side on large screens */
 .image-row.medium {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: repeat(3, minmax(var(--cell-min-medium), auto));
-  overflow-x: auto;
-  justify-content: start;
-  gap: var(--image-gap);
-  scroll-snap-type: x mandatory;
+  grid-template-columns: repeat(3, minmax(var(--cell-min-medium), 1fr));
 }
 
-/* Large rows: force 2 items in one row, scroll if needed */
+/* Large rows: 2 items side by side on large screens */
 .image-row.large {
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: repeat(2, minmax(var(--cell-min-large), auto));
-  overflow-x: auto;
-  justify-content: start;
-  gap: var(--image-gap);
-  scroll-snap-type: x mandatory;
+  grid-template-columns: repeat(2, minmax(var(--cell-min-large), 1fr));
+}
+
+/* Responsive: stack vertically on smaller screens */
+@media (max-width: 900px) {
+  .image-row.medium,
+  .image-row.large {
+    grid-template-columns: 1fr; /* stack items vertically */
+  }
 }
 
 .showcase-figure {
@@ -378,7 +374,6 @@ a:focus, button:focus, input:focus, textarea:focus{
   display: flex;
   flex-direction: column;
   align-items: center;
-  scroll-snap-align: start;
 }
 
 .showcase-figure :is(img, video) {
@@ -406,14 +401,6 @@ a:focus, button:focus, input:focus, textarea:focus{
   overflow-wrap: anywhere;
   word-break: break-word;
   text-wrap: balance;
-}
-
-@media (max-width: 800px) {
-  .image-row {
-    padding-left: clamp(0.75rem, 2vw, 1.25rem);
-    padding-right: clamp(0.75rem, 2vw, 1.25rem);
-    grid-auto-flow: row; /* allow wrapping on small screens */
-  }
 }
 
 /* ===============================
