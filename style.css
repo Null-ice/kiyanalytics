@@ -343,6 +343,7 @@ a:focus, button:focus, input:focus, textarea:focus{
   gap: var(--image-gap);
   padding-left: var(--image-buffer);
   padding-right: var(--image-buffer);
+  overflow-x: hidden; /* prevent scrollbars */
 }
 
 /* Small rows: auto-fit for flexibility */
@@ -365,6 +366,20 @@ a:focus, button:focus, input:focus, textarea:focus{
   .image-row.medium,
   .image-row.large {
     grid-template-columns: 1fr; /* stack items vertically */
+  }
+}
+
+/* Prevent overflow on very large screens */
+@media (min-width: 1200px) {
+  .image-row.medium {
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .image-row.large {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
