@@ -10,7 +10,6 @@
 </head>
 <body>
 
-<!-- contact.html ONLY -->
 <style>
   .float-chip{ display: none !important; }
 </style>
@@ -31,15 +30,18 @@
 <main>
   <section class="container contact-intro">
     <h1>Contact</h1>
-    <p class="lead">Short intro: Tell us a little about your project and we'll follow up with guided next steps.</p>
+    <p class="lead">Tell us about your needs — we’ll follow up with recommended next steps.</p>
   </section>
 
   <section class="container contact-grid">
     <div class="contact-card">
       <h3>Get in touch</h3>
 
-      <!-- Updated Formspree Form -->
-      <form id="contact-form" class="contact-form" method="POST" action="https://formspree.io/f/mnnlolwy">
+      <form id="contact-form" class="contact-form" method="POST" action="https://formspree.io/f/mnnlolwy" data-netlify="false">
+        
+        <!-- Honeypot field (spam protection) -->
+        <input type="text" name="_gotcha" style="display:none">
+
         <label>
           Name
           <input type="text" name="name" placeholder="Your name" required>
@@ -52,7 +54,7 @@
 
         <label>
           Message
-          <textarea name="message" rows="6" placeholder="Project details, timeline, budget (optional)" required></textarea>
+          <textarea name="message" rows="6" placeholder="Describe the project & goals" required></textarea>
         </label>
 
         <div class="form-actions">
@@ -60,21 +62,18 @@
         </div>
       </form>
 
-      <!-- Inline success/error message -->
       <div id="form-status" style="display:none; margin-top:1rem; font-size:0.95rem;"></div>
-
     </div>
 
-    <!-- Sidebar -->
     <aside class="contact-info">
       <h4>Prefer direct email?</h4>
       <p><a href="mailto:business@kiyanalytics.com" class="text-link">business@kiyanalytics.com</a></p>
 
-      <h4>What to include</h4>
+      <h4>Helpful details to include</h4>
       <ul>
-        <li>Short overview of the need</li>
-        <li>Target outcomes & deadlines</li>
-        <li>Any existing data, tech stack, or additional information that makes your problem unique</li>
+        <li>Project overview & motivation</li>
+        <li>Desired outcomes & timeline</li>
+        <li>Relevant data, tech stack, or constraints</li>
       </ul>
     </aside>
   </section>
@@ -86,7 +85,6 @@
   </div>
 </footer>
 
-<!-- Inline AJAX handling for Formspree -->
 <script>
 const form = document.getElementById("contact-form");
 const statusDiv = document.getElementById("form-status");
@@ -105,15 +103,16 @@ form.addEventListener("submit", async function(event) {
     });
 
     if (response.ok) {
-      statusDiv.style.color = "#4ade80"; // soft green
+      statusDiv.style.color = "#4ade80";
       statusDiv.textContent = "Thank you! Your message has been sent.";
       statusDiv.style.display = "block";
       form.reset();
     } else {
-      statusDiv.style.color = "#f87171"; // soft red
+      statusDiv.style.color = "#f87171";
       statusDiv.textContent = "Oops! Something went wrong. Please try again.";
       statusDiv.style.display = "block";
     }
+
   } catch (error) {
     statusDiv.style.color = "#f87171";
     statusDiv.textContent = "Network error — please try again.";
