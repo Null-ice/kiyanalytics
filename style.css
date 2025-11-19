@@ -1,6 +1,6 @@
 /* style.css
    Modern, deep-gray theme with electric-blue accents
-   Shared stylesheet for index.html, offerings.html, pricing.html, contact.html, showcase.html
+   Shared stylesheet for index.html, offerings.html, products.html, contact.html, showcase.html
 */
 
 /* ===============================
@@ -189,7 +189,7 @@ body{
   width: 100%;
   display: flex;
   justify-content: center;
-  /* Pricing page buffer (option B-ready): can also scope via .page-pricing */
+  /* Products page buffer (option B-ready): can also scope via .page-products */
   /* padding-inline: clamp(1rem, 5vw, 1.5rem); */
 }
 .cards {
@@ -201,7 +201,7 @@ body{
   max-width: 1100px;
   margin: 2rem 0 3rem;
 
-  /* === Pricing buffer fix (Option A): always keep safe side gutters === */
+  /* === Products buffer fix (Option A): always keep safe side gutters === */
   padding-inline: clamp(0.75rem, 4vw, 1.25rem);
 }
 .card {
@@ -224,7 +224,7 @@ body{
 .card-icon{ color: var(--accent); margin-bottom:0.6rem; }
 
 /* ===============================
-   Pricing
+   Products
    =============================== */
 .tier {
   display:flex;
