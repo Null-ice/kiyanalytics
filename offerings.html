@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Kiy Analytics - What We Do</title>
 
+  <!-- Poppins font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,85 +14,121 @@
 <a class="float-chip" href="contact.html" aria-label="Only 2 project openings remaining. Contact us.">
   Only <strong>2</strong> openings remain!
 </a>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">Kiy Analytics</a>
-      <nav class="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="offerings.html" class="nav-link active">What We Do</a>
-        <a href="showcase.html" class="nav-link">Showcase</a>
-        <a href="products.html" class="nav-link">Solutions</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <section class="container offerings-intro">
-      <h1>What We Do</h1>
-      <p class="lead">Frameworks and services that move your organization forward.</p>
-    </section>
+<!-- ✅ Header with Hamburger Menu -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">Kiy Analytics</a>
 
-    <!-- === CENTERED CARD GRID === -->
-    <section class="cards-wrapper">
-      <div class="cards">
-        <article class="card">
-          <div class="card-icon">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
-              <path d="M3 12h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-              <path d="M6 6h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-              <path d="M9 18h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3>Data Science Strategy, Training, and Consulting</h3>
-          <p>Clear data science roadmaps - prioritize what's measurable, identify low-hanging wins, and plan for production.</p>
-          <p class="muted">Deliverables: Training, guidebooks, roadmap, KPIs, and implementation plans</p>
-        </article>
+    <!-- Hamburger button -->
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
 
-        <article class="card">
-          <div class="card-icon">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
-              <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/>
-              <path d="M7 12h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-              <path d="M7 16h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3>Custom Model Development</h3>
-          <p>From planning your use case, integrating custom metrics, feature engineering, model selection, validation, and integration strategy.</p>
-          <p class="muted">Deliverables: Trained model, validation report, and deployment guide</p>
-        </article>
+    <nav class="nav" id="primary-nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="offerings.html" class="nav-link active">What We Do</a>
+      <a href="showcase.html" class="nav-link">Showcase</a>
+      <a href="products.html" class="nav-link">Solutions</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </div>
+</header>
 
-        <article class="card">
-          <div class="card-icon">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
-              <path d="M3 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-              <path d="M3 12h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-              <path d="M3 17h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <h3>Custom Document Intelligence</h3>
-          <p>LLMs, RAG systems, OCR, or any blend in between like our custom Vision Question Answering solutions (VQA).</p>
-          <p class="muted">Deliverables: Custom language solutions for your tasks, retrieval, or VQA data output</p>
-        </article>
-      </div>
-    </section>
+<main>
+  <section class="container offerings-intro">
+    <h1>What We Do</h1>
+    <p class="lead">Frameworks and services that move your organization forward.</p>
+  </section>
 
-    <section class="container callout">
-      <div class="callout-inner">
-        <div>
-          <h3>Prefer a tailored package?</h3>
-          <p>We assemble teams for short pilots or long-term engagements fully dependent on your needs.</p>
+  <!-- === CENTERED CARD GRID === -->
+  <section class="cards-wrapper">
+    <div class="cards">
+      <article class="card">
+        <div class="card-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M3 12h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M6 6h12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M9 18h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
         </div>
-        <a class="btn btn-primary" href="contact.html">Request a proposal</a>
-      </div>
-    </section>
-  </main>
+        <h3>Data Science Strategy, Training, and Consulting</h3>
+        <p>Clear data science roadmaps - prioritize what's measurable, identify low-hanging wins, and plan for production.</p>
+        <p class="muted">Deliverables: Training, guidebooks, roadmap, KPIs, and implementation plans</p>
+      </article>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2025 Kiy Analytics. All rights reserved.</p>
+      <article class="card">
+        <div class="card-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="1.6"/>
+            <path d="M7 12h10" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M7 16h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Custom Model Development</h3>
+        <p>From planning your use case, integrating custom metrics, feature engineering, model selection, validation, and integration strategy.</p>
+        <p class="muted">Deliverables: Trained model, validation report, and deployment guide</p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M3 7h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M3 12h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M3 17h18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Custom Document Intelligence</h3>
+        <p>LLMs, RAG systems, OCR, or any blend in between like our custom Vision Question Answering solutions (VQA).</p>
+        <p class="muted">Deliverables: Custom language solutions for your tasks, retrieval, or VQA data output</p>
+      </article>
     </div>
-  </footer>
+  </section>
+
+  <section class="container callout">
+    <div class="callout-inner">
+      <div>
+        <h3>Prefer a tailored package?</h3>
+        <p>We assemble teams for short pilots or long-term engagements fully dependent on your needs.</p>
+      </div>
+      <a class="btn btn-primary" href="contact.html">Request a proposal</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2025 Kiy Analytics. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ✅ Hamburger Menu Script -->
+<script>
+const navToggle = document.querySelector('.nav-toggle');
+const nav = document.getElementById('primary-nav');
+
+const closeMenu = () => {
+  nav.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.textContent = '☰';
+};
+
+const openMenu = () => {
+  nav.classList.add('open');
+  navToggle.setAttribute('aria-expanded', 'true');
+  navToggle.textContent = '✖';
+};
+
+navToggle.addEventListener('click', () => {
+  if (nav.classList.contains('open')) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+});
+
+// Reset menu when resizing back to desktop
+window.matchMedia('(min-width: 881px)').addEventListener('change', e => {
+  if (e.matches) closeMenu();
+});
+</script>
 </body>
 </html>
-
