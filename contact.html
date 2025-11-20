@@ -21,9 +21,9 @@
     <a class="brand" href="index.html">Kiy Analytics</a>
 
     <!-- Hamburger button -->
-    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
 
-    <nav class="nav">
+    <nav class="nav" id="primary-nav">
       <a href="index.html" class="nav-link">Home</a>
       <a href="offerings.html" class="nav-link">What We Do</a>
       <a href="showcase.html" class="nav-link">Showcase</a>
@@ -44,7 +44,7 @@
       <h3>Get in touch</h3>
 
       <form id="contact-form" class="contact-form" method="POST" action="https://formspree.io/f/mnnlolwy" data-netlify="false">
-        <!-- Honeypot field (spam protection) -->
+        <!-- Honeypot field -->
         <input type="text" name="_gotcha" style="display:none">
 
         <label>
@@ -59,7 +59,7 @@
 
         <label>
           Message
-          <textarea name="message" rows="6" placeholder="Describe the project &amp; goals" required></textarea>
+          <textarea name="message" rows="6" placeholder="Describe the project & goals" required></textarea>
         </label>
 
         <div class="form-actions">
@@ -76,8 +76,8 @@
 
       <h4>Helpful details to include</h4>
       <ul>
-        <li>Project overview &amp; motivation</li>
-        <li>Desired outcomes &amp; timeline</li>
+        <li>Project overview & motivation</li>
+        <li>Desired outcomes & timeline</li>
         <li>Relevant data, tech stack, or constraints</li>
       </ul>
     </aside>
@@ -130,11 +130,24 @@ form.addEventListener("submit", async function(event) {
 <!-- Hamburger Menu Script -->
 <script>
 const navToggle = document.querySelector('.nav-toggle');
-const nav = document.querySelector('.nav');
+const nav = document.getElementById('primary-nav');
+
+const closeMenu = () => {
+  nav.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.textContent = '☰';
+};
+
+const openMenu = () => {
+  nav.classList.add('open');
+  navToggle.setAttribute('aria-expanded', 'true');
+  navToggle.textContent = '✖';
+};
 
 navToggle.addEventListener('click', () => {
-  nav.classList.toggle('open');
+  if (nav.classList.contains('open')) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
 });
-</script>
-
-</body>
