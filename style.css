@@ -168,7 +168,11 @@ body{
 @media(min-width:880px){
   .grid-2{
     grid-template-columns: 1fr 360px;
-    align-items:start;
+  }
+}
+@media(min-width:880px){
+  .callout-inner.grid-2 > div:first-child {
+    align-self: start; /* ✅ Forces the text block to stick to the top */
   }
 }
 .stat{
