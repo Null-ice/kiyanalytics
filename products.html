@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Kiy Analytics - Solutions</title>
 
-  <!-- Poppins font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -14,119 +13,93 @@
 <a class="float-chip" href="contact.html" aria-label="Only 2 project openings remaining. Contact us.">
   Only <strong>2</strong> openings remain!
 </a>
-
-<!-- Header with Hamburger Menu -->
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html">Kiy Analytics</a>
-
-    <!-- Hamburger button -->
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
-
-    <nav class="nav" id="primary-nav">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="offerings.html" class="nav-link">What We Do</a>
-      <a href="showcase.html" class="nav-link">Showcase</a>
-      <a href="products.html" class="nav-link active">Solutions</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <section class="container products-intro">
-    <h1>Solutions</h1>
-    <p class="lead">Transparent, predictable pricing. We provide fully customizable packages with straightforward itemized quotes.</p>
-  </section>
-
-  <!-- ✅ Centered Solutions cards -->
-  <section class="cards-wrapper">
-    <div class="cards">
-      <article class="card tier">
-        <div class="tier-header">
-          <h3>Starter</h3>
-          <p class="muted">Great for pilots</p>
-        </div>
-        <ul class="tier-list">
-          <li>2-week pilot</li>
-          <li>Basic prototype</li>
-          <li>Tailored value assessment</li>
-        </ul>
-        <a class="btn btn-primary" href="contact.html">Request Starter</a>
-     equest Scientist</a>
-      </article>
-    
-      <article class="card tier recommended">
-        <div class="tier-header">
-          <h3>Full Deliverable</h3>
-          <p class="muted">Production-ready</p>
-        </div>
-        <ul class="tier-list">
-          <li>10-week project</li>
-          <li>Use case planning</li>
-          <li>Model design</li>
-          <li>Deployment support</li>
-          <li>&nbsp;</li>
-        </ul>
-        contact.htmlRequest Project</a>
-      </article>
-    
-      <article class="card tier">
-        <div class="tier-header">
-          <h3>Enterprise</h3>
-          <p class="muted">Long-term or custom</p>
-        </div>
-        <ul class="tier-list">
-          <li>Full access to our dynamic teams</li>
-          <li>Custom milestones</li>
-        </ul>
-        contact.htmlRequest Custom</a>
-      </article>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Kiy Analytics</a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="offerings.html" class="nav-link">What We Do</a>
+        <a href="showcase.html" class="nav-link">Showcase</a>
+        <a href="products.html" class="nav-link active">Solutions</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
     </div>
-  </section>
+  </header>
 
-  <section class="container note">
-    <p class="muted">All listed options are common examples - final itemized quotes are based on compute, data transfer costs, and fixed weekly rate talent costs based on commitment duration.</p>
-  </section>
-</main>
+  <main>
+    <section class="container products-intro">
+      <h1>Solutions</h1>
+      <p class="lead">Transparent, predictable pricing. We provide fully customizable packages with straightforward itemized quotes.</p>
+    </section>
 
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <p>© 2025 Kiy Analytics. All rights reserved.</p>
-  </div>
-</footer>
+    <!-- ✅ Centered Solutions cards -->
+    <section class="cards-wrapper">
+      <div class="cards">
+        <article class="card tier">
+          <div class="tier-header">
+            <h3>Starter</h3>
+            <p class="muted">Great for pilots</p>
+          </div>
+          <ul class="tier-list">
+            <li>2-week pilot</li>
+            <li>Basic prototype</li>
+            <li>Tailored value assessment</li>
+          </ul>
+          <a class="btn btn-primary" href="contact.html">Request Starter</a>
+        </article>
 
-<!-- Hamburger Menu Script -->
-<script>
-const navToggle = document.querySelector('.nav-toggle');
-const nav = document.getElementById('primary-nav');
+        <article class="card tier recommended">
+          <div class="tier-header">
+            <h3>Expert Scientist</h3>
+            <p class="muted">Solo engagement</p>
+          </div>
+          <ul class="tier-list">
+            <li>10-week project</li>
+            <li>Borrow top talent</li>
+            <li>&nbsp;</li> <!-- optional extra space -->
+          </ul>
+          <a class="btn btn-primary" href="contact.html">Request Scientist</a>
+        </article>
 
-const closeMenu = () => {
-  nav.classList.remove('open');
-  navToggle.setAttribute('aria-expanded', 'false');
-  navToggle.textContent = '☰';
-};
+        <article class="card tier recommended">
+          <div class="tier-header">
+            <h3>Full Deliverable</h3>
+            <p class="muted">Production-ready</p>
+          </div>
+          <ul class="tier-list">
+            <li>10-week project</li>
+            <li>Use case planning</li>
+            <li>Model design</li>
+            <li>Deployment support</li>
+            <li>&nbsp;</li> <!-- extra blank line -->
+          </ul>
+          <a class="btn btn-primary" href="contact.html">Request Project</a>
+        </article>
 
-const openMenu = () => {
-  nav.classList.add('open');
-  navToggle.setAttribute('aria-expanded', 'true');
-  navToggle.textContent = '✖';
-};
+        <article class="card tier">
+          <div class="tier-header">
+            <h3>Enterprise</h3>
+            <p class="muted">Long-term or custom</p>
+          </div>
+          <ul class="tier-list">
+            <li>Full access to our dynamic teams</li>
+            <li>Custom milestones</li>
+          </ul>
+          <a class="btn btn-primary" href="contact.html">Request Custom</a>
+        </article>
+      </div>
+    </section>
 
-navToggle.addEventListener('click', () => {
-  if (nav.classList.contains('open')) {
-    closeMenu();
-  } else {
-    openMenu();
-  }
-});
+    <section class="container note">
+      <p class="muted">All listed options are common examples - final itemized quotes are based on compute, data transfer costs, and fixed weekly rate talent costs based on commitment duration. </p>
+    </section>
+  </main>
 
-// Reset menu on desktop resize
-const mq = window.matchMedia('(min-width: 881px)');
-mq.addEventListener('change', () => {
-  if (mq.matches) closeMenu();
-});
-</script>
-
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Kiy Analytics. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
+
 </html>
