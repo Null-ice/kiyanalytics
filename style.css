@@ -168,7 +168,7 @@ body{
 @media(min-width:880px){
   .grid-2{
     grid-template-columns: 1fr 360px;
-    align-items:center;
+    align-items:start;
   }
 }
 .stat{
