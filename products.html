@@ -21,9 +21,9 @@
     <a class="brand" href="index.html">Kiy Analytics</a>
 
     <!-- Hamburger button -->
-    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
 
-    <nav class="nav">
+    <nav class="nav" id="primary-nav">
       <a href="index.html" class="nav-link">Home</a>
       <a href="offerings.html" class="nav-link">What We Do</a>
       <a href="showcase.html" class="nav-link">Showcase</a>
@@ -53,19 +53,7 @@
           <li>Tailored value assessment</li>
         </ul>
         <a class="btn btn-primary" href="contact.html">Request Starter</a>
-      </article>
-    
-      <article class="card tier recommended">
-        <div class="tier-header">
-          <h3>Expert Scientist</h3>
-          <p class="muted">Solo engagement</p>
-        </div>
-        <ul class="tier-list">
-          <li>10-week project</li>
-          <li>Borrow top talent</li>
-          <li>&nbsp;</li>
-        </ul>
-        <a class="btn btn-primary" href="contact.html">Request Scientist</a>
+     equest Scientist</a>
       </article>
     
       <article class="card tier recommended">
@@ -80,7 +68,7 @@
           <li>Deployment support</li>
           <li>&nbsp;</li>
         </ul>
-        <a class="btn btn-primary" href="contact.html">Request Project</a>
+        contact.htmlRequest Project</a>
       </article>
     
       <article class="card tier">
@@ -92,7 +80,7 @@
           <li>Full access to our dynamic teams</li>
           <li>Custom milestones</li>
         </ul>
-        <a class="btn btn-primary" href="contact.html">Request Custom</a>
+        contact.htmlRequest Custom</a>
       </article>
     </div>
   </section>
@@ -111,11 +99,32 @@
 <!-- Hamburger Menu Script -->
 <script>
 const navToggle = document.querySelector('.nav-toggle');
-const nav = document.querySelector('.nav');
+const nav = document.getElementById('primary-nav');
+
+const closeMenu = () => {
+  nav.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.textContent = '☰';
+};
+
+const openMenu = () => {
+  nav.classList.add('open');
+  navToggle.setAttribute('aria-expanded', 'true');
+  navToggle.textContent = '✖';
+};
 
 navToggle.addEventListener('click', () => {
-  nav.classList.toggle('open');
-  navToggle.textContent = nav.classList.contains('open') ? '✖' : '☰'; // Toggle icon
+  if (nav.classList.contains('open')) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+});
+
+// Reset menu on desktop resize
+const mq = window.matchMedia('(min-width: 881px)');
+mq.addEventListener('change', () => {
+  if (mq.matches) closeMenu();
 });
 </script>
 
