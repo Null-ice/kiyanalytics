@@ -5,18 +5,24 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Kiy Analytics - Contact</title>
 
+  <!-- Poppins font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <style>
-  .float-chip{ display: none !important; }
+  .float-chip { display: none !important; }
 </style>
 
+<!-- Header with Hamburger Menu -->
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html">Kiy Analytics</a>
+
+    <!-- Hamburger button -->
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+
     <nav class="nav">
       <a href="index.html" class="nav-link">Home</a>
       <a href="offerings.html" class="nav-link">What We Do</a>
@@ -38,7 +44,6 @@
       <h3>Get in touch</h3>
 
       <form id="contact-form" class="contact-form" method="POST" action="https://formspree.io/f/mnnlolwy" data-netlify="false">
-        
         <!-- Honeypot field (spam protection) -->
         <input type="text" name="_gotcha" style="display:none">
 
@@ -54,7 +59,7 @@
 
         <label>
           Message
-          <textarea name="message" rows="6" placeholder="Describe the project & goals" required></textarea>
+          <textarea name="message" rows="6" placeholder="Describe the project &amp; goals" required></textarea>
         </label>
 
         <div class="form-actions">
@@ -71,8 +76,8 @@
 
       <h4>Helpful details to include</h4>
       <ul>
-        <li>Project overview & motivation</li>
-        <li>Desired outcomes & timeline</li>
+        <li>Project overview &amp; motivation</li>
+        <li>Desired outcomes &amp; timeline</li>
         <li>Relevant data, tech stack, or constraints</li>
       </ul>
     </aside>
@@ -85,6 +90,7 @@
   </div>
 </footer>
 
+<!-- Form submission script -->
 <script>
 const form = document.getElementById("contact-form");
 const statusDiv = document.getElementById("form-status");
@@ -121,7 +127,14 @@ form.addEventListener("submit", async function(event) {
 });
 </script>
 
+<!-- Hamburger Menu Script -->
+<script>
+const navToggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.nav');
+
+navToggle.addEventListener('click', () => {
+  nav.classList.toggle('open');
+});
+</script>
+
 </body>
-</html>
-
-
