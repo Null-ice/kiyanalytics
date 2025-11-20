@@ -14,29 +14,34 @@
 <a class="float-chip" href="contact.html" aria-label="Only 2 project openings remaining. Contact us.">
   Only <strong>2</strong> openings remain!
 </a>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">Kiy Analytics</a>
-      <nav class="nav">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="offerings.html" class="nav-link">What We Do</a>
-        <a href="showcase.html" class="nav-link">Showcase</a>
-        <a href="products.html" class="nav-link">Solutions</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
+
+<!-- ✅ Header with Hamburger Menu -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">Kiy Analytics</a>
+
+    <!-- Hamburger button -->
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+
+    <nav class="nav" id="primary-nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="offerings.html" class="nav-link">What We Do</a>
+      <a href="showcase.html" class="nav-link">Showcase</a>
+      <a href="products.html" class="nav-link">Solutions</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-inner container">
+      <h1 class="hero-title">Converting data into solutions</h1>
+      <p class="hero-sub">World leading data science for the masses.</p>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section class="hero">
-      <div class="hero-inner container">
-        <h1 class="hero-title">Converting data into solutions</h1>
-        <p class="hero-sub">World leading data science for the masses.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="container callout">
+  <section class="container callout">
     <div class="callout-inner grid-2">
       <div>
         <h2>What we do - simply</h2>
@@ -60,23 +65,52 @@
     </div>
   </section>
 
-
-    <section class="container callout">
-      <div class="callout-inner">
-        <div>
-          <h3>Ready to turn data into results?</h3>
-          <p>Contact us for a free consultation and a clear roadmap.</p>
-        </div>
-        <a href="contact.html" class="btn btn-primary">Get in touch</a>
+  <section class="container callout">
+    <div class="callout-inner">
+      <div>
+        <h3>Ready to turn data into results?</h3>
+        <p>Contact us for a free consultation and a clear roadmap.</p>
       </div>
-    </section>
-    </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2025 Kiy Analytics. All rights reserved.</p>
+      <a href="contact.html" class="btn btn-primary">Get in touch</a>
     </div>
-  </footer>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2025 Kiy Analytics. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ✅ Hamburger Menu Script -->
+<script>
+const navToggle = document.querySelector('.nav-toggle');
+const nav = document.getElementById('primary-nav');
+
+const closeMenu = () => {
+  nav.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.textContent = '☰';
+};
+
+const openMenu = () => {
+  nav.classList.add('open');
+  navToggle.setAttribute('aria-expanded', 'true');
+  navToggle.textContent = '✖';
+};
+
+navToggle.addEventListener('click', () => {
+  if (nav.classList.contains('open')) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+});
+
+// Reset menu when resizing back to desktop
+window.matchMedia('(min-width: 881px)').addEventListener('change', e => {
+  if (e.matches) closeMenu();
+});
+</script>
 </body>
 </html>
-
