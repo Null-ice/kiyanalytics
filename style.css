@@ -549,3 +549,36 @@ body.lb-open { overflow: hidden; }
 @media (max-width: 640px){
   .float-chip{ font-size: .86rem; }
 }
+
+/* Hide hamburger by default */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* Mobile: show hamburger, hide nav initially */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--panel);
+    padding: 1rem;
+    border-radius: var(--radius);
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    box-shadow: var(--shadow);
+  }
+
+  .nav.open {
+    display: flex;
+  }
