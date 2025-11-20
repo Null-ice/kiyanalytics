@@ -7,162 +7,126 @@
 
   <!-- Fonts & Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 <!-- Floating Availability Chip -->
 <a class="float-chip" href="contact.html" aria-label="Only 2 project openings remaining. Contact us.">
   Only <strong>2</strong> openings remain!
 </a>
-
-<!-- Header with Hamburger Menu -->
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="index.html" class="brand">Kiy Analytics</a>
-
-    <!-- Hamburger button -->
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
-
-    <nav class="nav" id="primary-nav">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="offerings.html" class="nav-link">What We Do</a>
-      <a href="showcase.html" class="nav-link active">Showcase</a>
-      <a href="products.html" class="nav-link">Solutions</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <!-- Intro -->
-  <section class="container offerings-intro">
-    <h1>Showcase</h1>
-    <p class="lead">Examples of our tabular modeling, image modeling, and VQA solutions.</p>
-  </section>
-
-  <!-- === SHOWCASE PROJECTS === -->
-  <section class="container showcase">
-
-    <!-- Tabular Modeling -->
-    <div class="project">
-      <div class="project-meta">
-        <h2>Tabular Modeling</h2>
-        <p class="muted">Explore results of our best-in-class tabular modeling.</p>
-      </div>
-
-      <div class="image-row small">
-        <figure class="showcase-figure">
-          <img src="images/microstructure_snapshots.png" alt="Order Book and Closing Auction data (TSLA)" data-lightbox>
-          <figcaption>Sample of input Order Book and Closing Auction data (TSLA)</figcaption>
-        </figure>
-
-        <figure class="showcase-figure">
-          <img src="images/tsla_predicted_vs_actual.png" alt="Predicted vs actual closing price (TSLA)" data-lightbox>
-          <figcaption>Predicted vs actual closing price in validation period (TSLA)</figcaption>
-        </figure>
-      </div>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">Kiy Analytics</a>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="offerings.html" class="nav-link">What We Do</a>
+        <a href="showcase.html" class="nav-link active">Showcase</a>
+        <a href="products.html" class="nav-link">Solutions</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- Image Modeling -->
-    <div class="project extra-top-space">
-      <div class="project-meta">
-        <h2>Image Modeling</h2>
-        <p class="muted">Discover examples of complex image prediction.</p>
+  <main>
+    <!-- Intro -->
+    <section class="container offerings-intro">
+      <h1>Showcase</h1>
+      <p class="lead">Examples of our tabular modeling, image modeling, and VQA solutions.</p>
+    </section>
+
+    <!-- === SHOWCASE PROJECTS === -->
+    <section class="container showcase">
+
+      <!-- Tabular Modeling -->
+      <div class="project">
+        <div class="project-meta">
+          <h2>Tabular Modeling</h2>
+          <p class="muted">Explore results of our best-in-class tabular modeling.</p>
+        </div>
+
+        <div class="image-row small">
+          <figure class="showcase-figure">
+            <!-- ADDED data-lightbox -->
+            <img src="images/microstructure_snapshots.png" alt="Order Book and Closing Auction data (TSLA)" data-lightbox>
+            <figcaption>Sample of input Order Book and Closing Auction data (TSLA)</figcaption>
+          </figure>
+
+          <figure class="showcase-figure">
+            <img src="images/tsla_predicted_vs_actual.png" alt="Predicted vs actual closing price (TSLA)" data-lightbox>
+            <figcaption>Predicted vs actual closing price in validation period (TSLA)</figcaption>
+          </figure>
+        </div>
       </div>
 
-      <div class="image-row medium">
-        <figure class="showcase-figure">
-          <video autoplay loop muted playsinline data-lightbox>
-            <source src="images/slideshow.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <figcaption>Sample of 3D Hierarchical Phase-Contrast Tomography (HiP-CT) data from human kidneys</figcaption>
-        </figure>
+      <!-- Image Modeling -->
+      <div class="project extra-top-space">
+        <div class="project-meta">
+          <h2>Image Modeling</h2>
+          <p class="muted">Discover examples of complex image prediction.</p>
+        </div>
 
-        <figure class="showcase-figure">
-          <img src="images/label_final_final.png" alt="Correct label for sample volume" data-lightbox>
-          <figcaption>Correct label for sample</figcaption>
-        </figure>
+        <div class="image-row medium">
+          <figure class="showcase-figure">
+            <!-- ADDED data-lightbox -->
+            <video autoplay loop muted playsinline data-lightbox>
+              <source src="images/slideshow.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>Sample of 3D Hierarchical Phase-Contrast Tomography (HiP-CT) data from human kidneys</figcaption>
+          </figure>
 
-        <figure class="showcase-figure">
-          <img src="images/pred_final_final.png" alt="Predicted image volume" data-lightbox>
-          <figcaption>3D predicted image for sample</figcaption>
-        </figure>
+          <figure class="showcase-figure">
+            <img src="images/label_final_final.png" alt="Correct label for sample volume" data-lightbox>
+            <figcaption>Correct label for sample</figcaption>
+          </figure>
+
+          <figure class="showcase-figure">
+            <img src="images/pred_final_final.png" alt="Predicted image volume" data-lightbox>
+            <figcaption>3D predicted image for sample</figcaption>
+          </figure>
+        </div>
       </div>
+
+      <!-- Visual Question Answering -->
+      <div class="project extra-top-space">
+        <div class="project-meta">
+          <h2>Visual Question Answering (VQA)</h2>
+          <p class="muted">Our VQA systems interpret images and respond intelligently.</p>
+        </div>
+
+        <div class="image-row large">
+          <figure class="showcase-figure">
+            <img src="images/fake_doc_3.png" alt="Low-resolution complex input image" data-lightbox>
+            <figcaption>Sample of low-resolution, complex input image</figcaption>
+          </figure>
+
+          <figure class="showcase-figure">
+            <img src="images/fake_doc_3_answered.png" alt="VQA question/answer examples" data-lightbox>
+            <figcaption>Example questions and answer results for this image</figcaption>
+          </figure>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2025 Kiy Analytics. All rights reserved.</p>
     </div>
+  </footer>
 
-    <!-- Visual Question Answering -->
-    <div class="project extra-top-space">
-      <div class="project-meta">
-        <h2>Visual Question Answering (VQA)</h2>
-        <p class="muted">Our VQA systems interpret images and respond intelligently.</p>
-      </div>
-
-      <div class="image-row large">
-        <figure class="showcase-figure">
-          <img src="images/fake_doc_3.png" alt="Low-resolution complex input image" data-lightbox>
-          <figcaption>Sample of low-resolution, complex input image</figcaption>
-        </figure>
-
-        <figure class="showcase-figure">
-          <img src="images/fake_doc_3_answered.png" alt="VQA question/answer examples" data-lightbox>
-          <figcaption>Example questions and answer results for this image</figcaption>
-        </figure>
-      </div>
+  <!-- Lightbox Modal Root (ADD THIS ONCE, before </body>) -->
+  <div class="lb-backdrop" data-lb-backdrop aria-hidden="true">
+    <div class="lb-dialog" role="dialog" aria-modal="true" aria-label="Media preview">
+      <button class="lb-close" type="button" data-lb-close aria-label="Close (Esc)">✕</button>
+      <div class="lb-stage" data-lb-stage></div>
     </div>
-
-  </section>
-</main>
-
-<!-- Footer -->
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <p>© 2025 Kiy Analytics. All rights reserved.</p>
   </div>
-</footer>
 
-<!-- Lightbox Modal Root -->
-<div class="lb-backdrop" data-lb-backdrop aria-hidden="true">
-  <div class="lb-dialog" role="dialog" aria-modal="true" aria-label="Media preview">
-    <button class="lb-close" type="button" data-lb-close aria-label="Close (Esc)">✕</button>
-    <div class="lb-stage" data-lb-stage></div>
-  </div>
-</div>
-
-<!-- Lightbox JS -->
-<script src="lightbox.js" defer></script>
-
-<!-- Hamburger Menu Script -->
-<script>
-const navToggle = document.querySelector('.nav-toggle');
-const nav = document.getElementById('primary-nav');
-
-const closeMenu = () => {
-  nav.classList.remove('open');
-  navToggle.setAttribute('aria-expanded', 'false');
-  navToggle.textContent = '☰';
-};
-
-const openMenu = () => {
-  nav.classList.add('open');
-  navToggle.setAttribute('aria-expanded', 'true');
-  navToggle.textContent = '✖';
-};
-
-navToggle.addEventListener('click', () => {
-  if (nav.classList.contains('open')) {
-    closeMenu();
-  } else {
-    openMenu();
-  }
-});
-
-// Reset menu on desktop resize
-const mq = window.matchMedia('(min-width: 881px)');
-mq.addEventListener('change', () => {
-  if (mq.matches) closeMenu();
-});
-</script>
-
+  <!-- Lightbox JS -->
+  <script src="lightbox.js" defer></script>
 </body>
 </html>
