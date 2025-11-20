@@ -7,7 +7,7 @@
 
   <!-- Fonts & Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <!-- Floating Availability Chip -->
@@ -21,9 +21,9 @@
     <a href="index.html" class="brand">Kiy Analytics</a>
 
     <!-- Hamburger button -->
-    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
 
-    <nav class="nav">
+    <nav class="nav" id="primary-nav">
       <a href="index.html" class="nav-link">Home</a>
       <a href="offerings.html" class="nav-link">What We Do</a>
       <a href="showcase.html" class="nav-link active">Showcase</a>
@@ -135,11 +135,32 @@
 <!-- Hamburger Menu Script -->
 <script>
 const navToggle = document.querySelector('.nav-toggle');
-const nav = document.querySelector('.nav');
+const nav = document.getElementById('primary-nav');
+
+const closeMenu = () => {
+  nav.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.textContent = '☰';
+};
+
+const openMenu = () => {
+  nav.classList.add('open');
+  navToggle.setAttribute('aria-expanded', 'true');
+  navToggle.textContent = '✖';
+};
 
 navToggle.addEventListener('click', () => {
-  nav.classList.toggle('open');
-  navToggle.textContent = nav.classList.contains('open') ? '✖' : '☰'; // Toggle icon
+  if (nav.classList.contains('open')) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+});
+
+// Reset menu on desktop resize
+const mq = window.matchMedia('(min-width: 881px)');
+mq.addEventListener('change', () => {
+  if (mq.matches) closeMenu();
 });
 </script>
 
