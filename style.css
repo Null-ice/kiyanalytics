@@ -299,7 +299,7 @@ body{
 }
 .contact-form input::placeholder,
 .contact-form textarea::placeholder{
-  color: rgba(255,255,255,0.35);
+  color: var(--accent);
   font-weight:400;
 }
 .form-actions{
