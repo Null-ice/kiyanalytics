@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Kiy Analytics - Solutions</title>
 
+  <!-- Poppins font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -13,95 +14,110 @@
 <a class="float-chip" href="contact.html" aria-label="Only 2 project openings remaining. Contact us.">
   Only <strong>2</strong> openings remain!
 </a>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">Kiy Analytics</a>
-      <nav class="nav">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="offerings.html" class="nav-link">What We Do</a>
-        <a href="showcase.html" class="nav-link">Showcase</a>
-        <a href="products.html" class="nav-link active">Solutions</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-      </nav>
+
+<!-- Header with Hamburger Menu -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">Kiy Analytics</a>
+
+    <!-- Hamburger button -->
+    <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="offerings.html" class="nav-link">What We Do</a>
+      <a href="showcase.html" class="nav-link">Showcase</a>
+      <a href="products.html" class="nav-link active">Solutions</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="container products-intro">
+    <h1>Solutions</h1>
+    <p class="lead">Transparent, predictable pricing. We provide fully customizable packages with straightforward itemized quotes.</p>
+  </section>
+
+  <!-- ✅ Centered Solutions cards -->
+  <section class="cards-wrapper">
+    <div class="cards">
+      <article class="card tier">
+        <div class="tier-header">
+          <h3>Starter</h3>
+          <p class="muted">Great for pilots</p>
+        </div>
+        <ul class="tier-list">
+          <li>2-week pilot</li>
+          <li>Basic prototype</li>
+          <li>Tailored value assessment</li>
+        </ul>
+        <a class="btn btn-primary" href="contact.html">Request Starter</a>
+      </article>
+    
+      <article class="card tier recommended">
+        <div class="tier-header">
+          <h3>Expert Scientist</h3>
+          <p class="muted">Solo engagement</p>
+        </div>
+        <ul class="tier-list">
+          <li>10-week project</li>
+          <li>Borrow top talent</li>
+          <li>&nbsp;</li>
+        </ul>
+        <a class="btn btn-primary" href="contact.html">Request Scientist</a>
+      </article>
+    
+      <article class="card tier recommended">
+        <div class="tier-header">
+          <h3>Full Deliverable</h3>
+          <p class="muted">Production-ready</p>
+        </div>
+        <ul class="tier-list">
+          <li>10-week project</li>
+          <li>Use case planning</li>
+          <li>Model design</li>
+          <li>Deployment support</li>
+          <li>&nbsp;</li>
+        </ul>
+        <a class="btn btn-primary" href="contact.html">Request Project</a>
+      </article>
+    
+      <article class="card tier">
+        <div class="tier-header">
+          <h3>Enterprise</h3>
+          <p class="muted">Long-term or custom</p>
+        </div>
+        <ul class="tier-list">
+          <li>Full access to our dynamic teams</li>
+          <li>Custom milestones</li>
+        </ul>
+        <a class="btn btn-primary" href="contact.html">Request Custom</a>
+      </article>
     </div>
-  </header>
+  </section>
 
-  <main>
-    <section class="container products-intro">
-      <h1>Solutions</h1>
-      <p class="lead">Transparent, predictable pricing. We provide fully customizable packages with straightforward itemized quotes.</p>
-    </section>
+  <section class="container note">
+    <p class="muted">All listed options are common examples - final itemized quotes are based on compute, data transfer costs, and fixed weekly rate talent costs based on commitment duration.</p>
+  </section>
+</main>
 
-    <!-- ✅ Centered Solutions cards -->
-    <section class="cards-wrapper">
-      <div class="cards">
-        <article class="card tier">
-          <div class="tier-header">
-            <h3>Starter</h3>
-            <p class="muted">Great for pilots</p>
-          </div>
-          <ul class="tier-list">
-            <li>2-week pilot</li>
-            <li>Basic prototype</li>
-            <li>Tailored value assessment</li>
-          </ul>
-          <a class="btn btn-primary" href="contact.html">Request Starter</a>
-        </article>
-      
-        <article class="card tier recommended">
-          <div class="tier-header">
-            <h3>Expert Scientist</h3>
-            <p class="muted">Solo engagement</p>
-          </div>
-          <ul class="tier-list">
-            <li>10-week project</li>
-            <li>Borrow top talent</li>
-            <li>&nbsp;</li> <!-- optional extra space -->
-          </ul>
-          <a class="btn btn-primary" href="contact.html">Request Scientist</a>
-        </article>
-      
-        <article class="card tier recommended">
-          <div class="tier-header">
-            <h3>Full Deliverable</h3>
-            <p class="muted">Production-ready</p>
-          </div>
-          <ul class="tier-list">
-            <li>10-week project</li>
-            <li>Use case planning</li>
-            <li>Model design</li>
-            <li>Deployment support</li>
-            <li>&nbsp;</li> <!-- extra blank line -->
-          </ul>
-          <a class="btn btn-primary" href="contact.html">Request Project</a>
-        </article>
-      
-        <article class="card tier">
-          <div class="tier-header">
-            <h3>Enterprise</h3>
-            <p class="muted">Long-term or custom</p>
-          </div>
-          <ul class="tier-list">
-            <li>Full access to our dynamic teams</li>
-            <li>Custom milestones</li>
-          </ul>
-          <a class="btn btn-primary" href="contact.html">Request Custom</a>
-        </article>
-      </div>
-    </section>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2025 Kiy Analytics. All rights reserved.</p>
+  </div>
+</footer>
 
-    <section class="container note">
-      <p class="muted">All listed options are common examples - final itemized quotes are based on compute, data transfer costs, and fixed weekly rate talent costs based on commitment duration. </p>
-    </section>
-  </main>
+<!-- Hamburger Menu Script -->
+<script>
+const navToggle = document.querySelector('.nav-toggle');
+const nav = document.querySelector('.nav');
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© 2025 Kiy Analytics. All rights reserved.</p>
-    </div>
-  </footer>
+navToggle.addEventListener('click', () => {
+  nav.classList.toggle('open');
+  navToggle.textContent = nav.classList.contains('open') ? '✖' : '☰'; // Toggle icon
+});
+</script>
+
 </body>
-
 </html>
-
-
