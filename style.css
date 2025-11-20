@@ -549,3 +549,50 @@ body.lb-open { overflow: hidden; }
 @media (max-width: 640px){
   .float-chip{ font-size: .86rem; }
 }
+
+/* === Hamburger Styling === */
+.nav-toggle {
+  display: none; /* hidden by default */
+  background: linear-gradient(90deg, var(--accent), #2563eb);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(59,130,246,0.18);
+}
+
+/* === Show hamburger and hide scroll nav on small screens === */
+@media (max-width: 880px) {
+  .nav-toggle {
+    display: block;
+  }
+  .nav {
+    display: none; /* hide scrollable nav */
+    flex-direction: column;
+    gap: 0.8rem;
+    background: var(--panel);
+    padding: 1rem;
+    border-radius: var(--radius);
+    position: absolute;
+    top: 100%;
+    right: 1rem;
+    box-shadow: var(--shadow);
+    z-index: 50;
+  }
+  .nav.open {
+    display: flex; /* show when toggled */
+  }
+}
+
+/* === Desktop: keep original nav === */
+@media (min-width: 881px) {
+  .nav {
+    display: flex !important;
+    overflow-x: auto; /* keep scroll if needed */
+  }
+  .nav-toggle {
+    display: none !important;
+  }
+}
