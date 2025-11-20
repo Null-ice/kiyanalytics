@@ -5,25 +5,19 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Kiy Analytics - Contact</title>
 
-  <!-- Poppins font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <style>
-  .float-chip { display: none !important; }
+  .float-chip{ display: none !important; }
 </style>
 
-<!-- Header with Hamburger Menu -->
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html">Kiy Analytics</a>
-
-    <!-- Hamburger button -->
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
-
-    <nav class="nav" id="primary-nav">
+    <nav class="nav">
       <a href="index.html" class="nav-link">Home</a>
       <a href="offerings.html" class="nav-link">What We Do</a>
       <a href="showcase.html" class="nav-link">Showcase</a>
@@ -44,7 +38,8 @@
       <h3>Get in touch</h3>
 
       <form id="contact-form" class="contact-form" method="POST" action="https://formspree.io/f/mnnlolwy" data-netlify="false">
-        <!-- Honeypot field -->
+
+        <!-- Honeypot field (spam protection) -->
         <input type="text" name="_gotcha" style="display:none">
 
         <label>
@@ -90,7 +85,6 @@
   </div>
 </footer>
 
-<!-- Form submission script -->
 <script>
 const form = document.getElementById("contact-form");
 const statusDiv = document.getElementById("form-status");
@@ -127,27 +121,5 @@ form.addEventListener("submit", async function(event) {
 });
 </script>
 
-<!-- Hamburger Menu Script -->
-<script>
-const navToggle = document.querySelector('.nav-toggle');
-const nav = document.getElementById('primary-nav');
-
-const closeMenu = () => {
-  nav.classList.remove('open');
-  navToggle.setAttribute('aria-expanded', 'false');
-  navToggle.textContent = '☰';
-};
-
-const openMenu = () => {
-  nav.classList.add('open');
-  navToggle.setAttribute('aria-expanded', 'true');
-  navToggle.textContent = '✖';
-};
-
-navToggle.addEventListener('click', () => {
-  if (nav.classList.contains('open')) {
-    closeMenu();
-  } else {
-    openMenu();
-  }
-});
+</body>
+</html>
