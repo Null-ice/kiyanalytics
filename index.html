@@ -10,20 +10,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Floating Availability Chip -->
-  <a class="float-chip" href="contact.html" aria-label="Only 2 project openings remaining. Contact us.">
-    Only <strong>2</strong> openings remain!
-  </a>
-
-  <!-- Header with Hamburger Menu -->
+<!-- Floating Availability Chip -->
+<a class="float-chip" href="contact.html" aria-label="Only 2 project openings remaining. Contact us.">
+  Only <strong>2</strong> openings remain!
+</a>
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="index.html">Kiy Analytics</a>
-
-      <!-- Hamburger button -->
-      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
-
-      <nav class="nav" id="primary-nav">
+      <nav class="nav">
         <a href="index.html" class="nav-link active">Home</a>
         <a href="offerings.html" class="nav-link">What We Do</a>
         <a href="showcase.html" class="nav-link">Showcase</a>
@@ -34,79 +28,58 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
     <section class="hero">
       <div class="hero-inner container">
         <h1 class="hero-title">Converting data into solutions</h1>
         <p class="hero-sub">World leading data science for the masses.</p>
-      </div>
-    </section>
-
-    <!-- Callout Section -->
-    <section class="container callout">
-      <div class="callout-inner grid-2">
-        <div>
-          <h2>What we do - simply</h2>
-          <p>We are a lean team of highly skilled data scientists who believe there’s a better way to do consulting. We build world-class ML and AI solutions and empower you to own them. Our purpose is to deliver high-quality solutions while equipping your team with the knowledge to sustain them. No more vendor dependence for data, metrics, or infrastructure - with savings we pass directly to you.</p>
-                 <div class="stat-label">Every product we deliver is fully explainable and documented</div>
-          </div>
-          <div class="stat">
-            <div class="stat-value">Freedom from Vendors</div>
-            <div class="stat-label">We build systems you own - infrastructure optional</div>
-          </div>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="offerings.html">Explore What We Do</a>
+          <a class="btn btn-primary" href="showcase.html">View Showcase</a>
+          <a class="btn btn-primary" href="products.html">See Solutions</a>
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
+    <section class="container callout">
+    <div class="callout-inner grid-2">
+      <div>
+        <h2>What we do - simply</h2>
+        <p>We are a lean team of highly skilled data scientists who believe there’s a better way to do consulting. We build world-class ML and AI solutions and empower you to own them. Our purpose is to deliver high-quality solutions while equipping your team with the knowledge to sustain them. No more vendor dependence for data, metrics, or infrastructure - with savings we pass directly to you.</p>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Data Science staff with Kaggle Competitions Master status</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">Zero Black Boxes</div>
+          <div class="stat-label">Every product we deliver is fully explainable and documented</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">Freedom from Vendors</div>
+          <div class="stat-label">We build systems you own - infrastructure optional</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
     <section class="container callout">
       <div class="callout-inner">
         <div>
           <h3>Ready to turn data into results?</h3>
           <p>Contact us for a free consultation and a clear roadmap.</p>
         </div>
-        contact.htmlGet in touch</a>
+        <a href="contact.html" class="btn btn-primary">Get in touch</a>
       </div>
     </section>
-  </main>
+    </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© 2025 Kiy Analytics. All rights reserved.</p>
     </div>
   </footer>
-
-  <!-- Hamburger Menu Script -->
-  <script>
-    const navToggle = document.querySelector('.nav-toggle');
-    const nav = document.getElementById('primary-nav');
-
-    const closeMenu = () => {
-      nav.classList.remove('open');
-      navToggle.setAttribute('aria-expanded', 'false');
-      navToggle.textContent = '☰';
-    };
-
-    const openMenu = () => {
-      nav.classList.add('open');
-      navToggle.setAttribute('aria-expanded', 'true');
-      navToggle.textContent = '✖';
-    };
-
-    navToggle.addEventListener('click', () => {
-      if (nav.classList.contains('open')) {
-        closeMenu();
-      } else {
-        openMenu();
-      }
-    });
-
-    // Reset menu on desktop resize
-    const mq = window.matchMedia('(min-width: 881px)');
-    mq.addEventListener('change', () => {
-      if (mq.matches) closeMenu();
-    });
-  </script>
 </body>
 </html>
