@@ -53,7 +53,7 @@ body{
    =============================== */
 .site-header {
   position: fixed;
-  top: env(safe-area-inset-top, 0); /* respect notch */
+  top: env(safe-area-inset-top, 0);
   left: 0;
   right: 0;
   width: 100%;
@@ -61,17 +61,17 @@ body{
   background: linear-gradient(180deg, rgba(11,18,32,0.6), rgba(11,18,32,0.35));
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(255,255,255,0.03);
-  padding-top: max(0px, env(safe-area-inset-top)); /* avoid overlap on iOS */
+  padding-top: max(0px, env(safe-area-inset-top));
 }
 
 .header-inner {
   display: flex;
   gap: 1rem;
   align-items: center;
-  justify-content: space-between; /* brand left, menu right */
-  max-width: var(--container);    /* keep content aligned with page */
-  margin: 0 auto;                 /* center header content */
-  padding: 0 2rem;                /* optional horizontal padding */
+  justify-content: space-between;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 1rem 2rem;   /* restored vertical padding to match old size */
 }
 
 .brand {
@@ -79,7 +79,7 @@ body{
   letter-spacing: 0.2px;
   color: var(--text);
   text-decoration: none;
-  font-size: 1.05rem;
+  font-size: 1.1rem;    /* restored font size */
 }
 
 /* === Mobile-scrollable nav (fix) === */
@@ -633,7 +633,8 @@ body.lb-open { overflow: hidden; }
 }
 
 @media (min-width: 881px) {
-  body {
-    padding-top: calc(3.5rem + env(safe-area-inset-top));
+  .nav-link {
+    padding: 0.8rem 0.5rem;  /* vertical padding slightly bigger than before */
+    font-size: 1rem;          /* restores old font size */
   }
 }
