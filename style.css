@@ -17,6 +17,7 @@
   --glass: rgba(255,255,255,0.03);
   --ease: cubic-bezier(.2,.9,.3,1);
   --shadow: 0 6px 20px rgba(2,6,23,0.6);
+  --header-height: 3.5rem; /* height of your fixed header */
 
   /* Showcase grid variables */
   --image-gap: clamp(0.75rem, 2vw, 2rem);
@@ -26,15 +27,16 @@
 
 * { box-sizing: border-box; }
 html,body { height:100%; }
-body{
-  margin:0;
+body {
+  margin: 0;
   font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   background: var(--bg);
   color: var(--text);
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
   -webkit-tap-highlight-color: transparent;
+  padding-top: calc(var(--header-height) + env(safe-area-inset-top));
 }
 
 /* ===============================
@@ -625,10 +627,6 @@ body.lb-open { overflow: hidden; }
 
   .nav.open {
     display: flex; /* show when toggled */
-  }
-
-  body {
-    padding-top: calc(3.5rem + env(safe-area-inset-top)); 
   }
 }
 
