@@ -226,8 +226,6 @@ body{
 }
 .card h3{
   margin:0 0 0.5rem;
-  font-size: 1.35rem;  
-  font-weight: 600; 
 }
 
 .card p{ color:var(--muted); margin:0 0 1rem; }
