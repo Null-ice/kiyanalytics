@@ -51,27 +51,35 @@ body{
 /* ===============================
    Header
    =============================== */
-.site-header{
+.site-header {
   position: fixed;
   top: env(safe-area-inset-top, 0); /* respect notch */
-  z-index:100;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 100;
   background: linear-gradient(180deg, rgba(11,18,32,0.6), rgba(11,18,32,0.35));
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(255,255,255,0.03);
   padding-top: max(0px, env(safe-area-inset-top)); /* avoid overlap on iOS */
 }
-.header-inner{
-  display:flex;
-  gap:1rem;
-  align-items:center;
-  justify-content:space-between;
+
+.header-inner {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between; /* brand left, menu right */
+  max-width: var(--container);    /* keep content aligned with page */
+  margin: 0 auto;                 /* center header content */
+  padding: 0 2rem;                /* optional horizontal padding */
 }
-.brand{
-  font-weight:700;
-  letter-spacing:0.2px;
-  color:var(--text);
-  text-decoration:none;
-  font-size:1.05rem;
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.05rem;
 }
 
 /* === Mobile-scrollable nav (fix) === */
