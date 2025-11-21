@@ -583,11 +583,24 @@ body.lb-open { overflow: hidden; }
   box-shadow: 0 6px 18px rgba(59,130,246,0.18);
 }
 
-/* === Show hamburger and hide scroll nav on small screens === */
+/* === Mobile header fix: always fixed + hamburger toggle === */
 @media (max-width: 880px) {
+  .site-header {
+    position: fixed;      /* was sticky */
+    top: 0;               /* stick to top */
+    left: 0;
+    right: 0;
+    z-index: 100;         /* above content */
+  }
+
+  .header-inner {
+    gap: 0.5rem;
+  }
+
   .nav-toggle {
     display: block;
   }
+
   .nav {
     display: none; /* hide scrollable nav */
     flex-direction: column;
@@ -599,20 +612,15 @@ body.lb-open { overflow: hidden; }
     top: 100%;
     right: 1rem;
     box-shadow: var(--shadow);
-    z-index: 50;
+    z-index: 101; /* above header content */
   }
+
   .nav.open {
     display: flex; /* show when toggled */
   }
-}
 
-/* === Desktop: keep original nav === */
-@media (min-width: 881px) {
-  .nav {
-    display: flex !important;
-    overflow-x: auto; /* keep scroll if needed */
-  }
-  .nav-toggle {
-    display: none !important;
+  /* optional: push page content below fixed header */
+  body {
+    padding-top: calc(3.5rem + env(safe-area-inset-top)); 
   }
 }
