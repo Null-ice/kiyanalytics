@@ -52,9 +52,9 @@ body{
    Header
    =============================== */
 .site-header{
-  position: sticky;
+  position: fixed;
   top: env(safe-area-inset-top, 0); /* respect notch */
-  z-index:40;
+  z-index:100;
   background: linear-gradient(180deg, rgba(11,18,32,0.6), rgba(11,18,32,0.35));
   backdrop-filter: blur(6px);
   border-bottom: 1px solid rgba(255,255,255,0.03);
@@ -619,8 +619,13 @@ body.lb-open { overflow: hidden; }
     display: flex; /* show when toggled */
   }
 
-  /* optional: push page content below fixed header */
   body {
     padding-top: calc(3.5rem + env(safe-area-inset-top)); 
+  }
+}
+
+@media (min-width: 881px) {
+  body {
+    padding-top: calc(3.5rem + env(safe-area-inset-top));
   }
 }
