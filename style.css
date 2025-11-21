@@ -226,14 +226,20 @@ body{
 }
 .card h3{
   margin:0 0 0.5rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;   /* consistent gap after title */
 }
-.card p{ color:var(--muted); margin:0 0 1rem; }
+.card p{ 
+   color:var(--muted); 
+   margin:0 0 1rem; 
+   margin-top: 0;
+   margin-bottom: 0.75rem;   /* consistent gap after title */
+}
 .card-icon{ color: var(--accent); margin-bottom:0.6rem; }
 
 /* Make Deliverables text white and slightly bigger */
 .card p.muted {
   color: #ffffff !important;   /* bright white */
-  font-size: 1.05rem;          /* slightly larger */
   opacity: 1;                  /* ensure it's not dimmed */
 }
 
