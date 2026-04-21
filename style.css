@@ -637,32 +637,31 @@ body.lb-open { overflow: hidden; }
   }
 }
 
-/*   Extra spacing on showcase tab with separations   */
 /* ===============================
-   Showcase Value Sections (NEW)
+   Showcase structure polish
    =============================== */
-.project-value {
-  margin-top: 1.5rem;
-  padding: 1rem 1.25rem;
-  border-left: 2px solid rgba(59,130,246,0.4);
-  background: rgba(255,255,255,0.02);
-  border-radius: 10px;
+
+.project {
+  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
-.project-value h3 {
-  margin: 0 0 0.4rem;
-  font-size: 1rem;
-  color: var(--text);
-  font-weight: 600;
+.project:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
-.project-value p {
-  margin: 0;
+/* Inline "Why this matters" line */
+.why {
+  margin-top: 1rem;
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.6;
 }
 
-.project {
-  margin-bottom: 6.5rem;
+.why strong {
+  color: var(--text);
+  font-weight: 600;
 }
