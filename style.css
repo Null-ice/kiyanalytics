@@ -655,7 +655,7 @@ body.lb-open { overflow: hidden; }
 
 /* Inline "Why this matters" line */
 .why {
-  margin-top: 1rem;
+  margin-top: 2.25rem;
   color: var(--muted);
   font-size: 0.95rem;
   line-height: 1.6;
