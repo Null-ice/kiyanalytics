@@ -662,3 +662,7 @@ body.lb-open { overflow: hidden; }
   font-size: 0.95rem;
   line-height: 1.6;
 }
+
+.project {
+  margin-bottom: 6.5rem;
+}
