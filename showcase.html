@@ -11,7 +11,7 @@
 
 <body>
 
-<!-- Floating Availability Chip -->
+<!-- Floating Chip -->
 <a class="float-chip" href="contact.html" aria-label="Only 2 project openings remaining. Contact us.">
   Only <strong>2</strong> openings remain!
 </a>
@@ -43,10 +43,10 @@
     </p>
   </section>
 
-  <!-- SHOWCASE -->
+  <!-- ================= SHOWCASE ================= -->
   <section class="container showcase">
 
-    <!-- ================= TABULAR ================= -->
+    <!-- Tabular -->
     <div class="project">
 
       <div class="project-meta">
@@ -68,19 +68,15 @@
         </figure>
       </div>
 
-      <div class="project-value">
-        <h3>Why this matters</h3>
-        <p>
-          Predicting survival outcomes in allogeneic Hematopoietic Cell Transplantation enables earlier risk identification,
-          improved clinical decision-making, and fairer treatment allocation across patient populations.
-          This directly supports more equitable healthcare outcomes and better use of limited medical resources.
-        </p>
-      </div>
+      <p class="why">
+        <strong>Why this matters -</strong>
+        Predicting survival outcomes in allogeneic Hematopoietic Cell Transplantation enables earlier risk identification, improved clinical decision-making, and fairer treatment allocation across patient populations. This directly supports more equitable healthcare outcomes and better use of limited medical resources.
+      </p>
 
     </div>
 
-    <!-- ================= IMAGE ================= -->
-    <div class="project extra-top-space">
+    <!-- Image -->
+    <div class="project">
 
       <div class="project-meta">
         <h2>Image Modeling</h2>
@@ -98,56 +94,49 @@
         </figure>
 
         <figure class="showcase-figure">
-          <img src="images/label_final_final.png" alt="Theoretical perfect label for sample volume" data-lightbox>
+          <img src="images/label_final_final.png" alt="Theoretical perfect label" data-lightbox>
           <figcaption>Theoretical perfect label for sample volume</figcaption>
         </figure>
 
         <figure class="showcase-figure">
-          <img src="images/pred_final_final.png" alt="Our predicted image volume" data-lightbox>
+          <img src="images/pred_final_final.png" alt="Predicted image volume" data-lightbox>
           <figcaption>Our 3D predicted label for sample</figcaption>
         </figure>
       </div>
 
-      <div class="project-value">
-        <h3>Why this matters</h3>
-        <p>
-          3D vessel segmentation turns raw medical imaging into structured biological understanding.
-          This enables researchers to quantify vascular structure, study disease progression, and analyze tissue behavior at scale—work that is not feasible manually.
-        </p>
-      </div>
+      <p class="why">
+        <strong>Why this matters -</strong>
+        3D vessel segmentation turns raw medical imaging into structured biological understanding. This enables researchers to quantify vascular structure, study disease progression, and analyze tissue behavior at scale—work that is not feasible manually.
+      </p>
 
     </div>
 
-    <!-- ================= VQA ================= -->
-    <div class="project extra-top-space">
+    <!-- VQA -->
+    <div class="project">
 
       <div class="project-meta">
         <h2>Vision Language Question Answering</h2>
         <p class="muted">
-          Our VQA systems interpret images and respond intelligently. Using this we can automate complex tasks, create modernized databases from your documents, and more. These processes utilize some of the worlds most powerful vision language models, built by our very own team.
+          Our VQA systems interpret images and respond intelligently. Using this we can automate complex tasks, create modernized databases from your documents, and more.
         </p>
       </div>
 
       <div class="image-row large">
         <figure class="showcase-figure">
-          <img src="images/fake_doc_3.png" alt="Low-resolution complex input image" data-lightbox>
+          <img src="images/fake_doc_3.png" alt="Input image" data-lightbox>
           <figcaption>Sample of low-resolution, complex input image</figcaption>
         </figure>
 
         <figure class="showcase-figure">
-          <img src="images/fake_doc_3_answered.png" alt="VQA question/answer examples" data-lightbox>
+          <img src="images/fake_doc_3_answered.png" alt="VQA output" data-lightbox>
           <figcaption>Q&A results for the sample image</figcaption>
         </figure>
       </div>
 
-      <div class="project-value">
-        <h3>Why this matters</h3>
-        <p>
-          Vision-language systems convert unstructured images and documents into structured databases and automated workflows.
-          This enables large-scale document understanding, operational automation, and decision support systems.
-          In real deployments, this has driven major workflow automation gains, reduced operational risk, and unlocked scalable data extraction pipelines.
-        </p>
-      </div>
+      <p class="why">
+        <strong>Why this matters -</strong>
+        Vision-language systems convert unstructured images and documents into structured databases and automated workflows. This enables large-scale document understanding, operational automation, and decision support systems.
+      </p>
 
     </div>
 
@@ -163,27 +152,22 @@
 
 <!-- Lightbox -->
 <div class="lb-backdrop" data-lb-backdrop aria-hidden="true">
-  <div class="lb-dialog">
-    <button class="lb-close" type="button" data-lb-close>✕</button>
+  <div class="lb-dialog" role="dialog" aria-modal="true">
+    <button class="lb-close" data-lb-close>✕</button>
     <div class="lb-stage" data-lb-stage></div>
   </div>
 </div>
 
 <script src="lightbox.js" defer></script>
 
-<!-- Hamburger -->
 <script>
 const navToggle = document.querySelector('.nav-toggle');
 const nav = document.getElementById('primary-nav');
 
 navToggle.addEventListener('click', () => {
-  nav.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', nav.classList.contains('open'));
-  navToggle.textContent = nav.classList.contains('open') ? '✖' : '☰';
-});
-
-window.matchMedia('(min-width: 881px)').addEventListener('change', e => {
-  if (e.matches) nav.classList.remove('open');
+  const open = nav.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', open);
+  navToggle.textContent = open ? '✖' : '☰';
 });
 </script>
 
