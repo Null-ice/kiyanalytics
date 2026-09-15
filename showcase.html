@@ -7,29 +7,21 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-
-  <style>
-    /* Confidentiality note directly under the intro */
-    .confidentiality-note {
-      border-left: 3px solid #3b82f6;
-      padding: 0.75rem 0 0.75rem 1rem;
-      margin-top: 1.5rem;
-    }
-    /* Anonymized client-context line under each project */
-    .client-context {
-      margin-top: 1rem;
-    }
-  </style>
 </head>
 
 <body>
+
+<!-- Floating Chip -->
+<a class="float-chip" href="contact.html" aria-label="Only 2 project openings remaining. Contact us.">
+  Only <strong>2</strong> openings remain!
+</a>
 
 <!-- Header -->
 <header class="site-header">
   <div class="container header-inner">
     <a href="index.html" class="brand">Kiy Analytics</a>
 
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
 
     <nav class="nav" id="primary-nav">
       <a href="index.html" class="nav-link">Home</a>
@@ -49,11 +41,6 @@
     <p class="lead">
       Examples of our tabular modeling, image modeling, and Vision Language Question Answering solutions. At Kiy Analytics we can make fully custom solutions across nearly any domain or input. We invite you to dream big and allow us to show what is possible in the world of data.
     </p>
-
-    <p class="muted confidentiality-note">
-      <strong>A note on the data shown here.</strong>
-      Every example below was built on public benchmark datasets, not client data. Our client work is covered by NDA, so we demonstrate the same techniques on open problems rather than publishing anything proprietary. Client references and detailed case studies are shared directly during our first call.
-    </p>
   </section>
 
   <!-- ================= SHOWCASE ================= -->
@@ -65,28 +52,25 @@
       <div class="project-meta">
         <h2>Tabular Modeling</h2>
         <p class="muted">
-          Explore results of our tabular modeling work. Taking your Excel-like tabular data and outputting predictions in any form: classifications, probabilities, enabling automation workflows, human-in-the-loop filtering systems, and more.
+          Explore results of our best-in-class tabular modeling. Taking your excel like tabular data and outputing predictions in any form: classifications, probabilities, enabling automation workflows, human in the loop filtering systems, and more.
         </p>
       </div>
 
       <div class="image-row small">
         <figure class="showcase-figure">
-          <img src="ure1_input_data.png
+          <img src="images/figure1_input_data.png" alt="Sample of input patient data" data-lightbox>
           <figcaption>Sample of input patient data</figcaption>
         </figure>
 
         <figure class="showcase-figure">
-          <img src="images/figure2_model_success.png" alt="Predicted risk vs actual event across demographics" data-lightbption>
+          <img src="images/figure2_model_success.png" alt="Predicted risk vs actual event across demographics" data-lightbox>
+          <figcaption>Predicted risk vs actual event across demographics</figcaption>
         </figure>
       </div>
 
       <p class="why">
         <strong>Why this matters -</strong>
-        Business-sensitive tabular modeling can help predict outcomes before they happen, which aids in identifying risks, improving decision-making, enabling automation, and more. This model predicting transplant survival risks directly supports more equitable healthcare outcomes and better use of limited medical resources, providing life-saving outcomes.
-      </p>
-
-      <p class="muted client-context">
-        <strong>In client work, this looks like:</strong> a regional health system using risk stratification to prioritize limited resources, delivered with a full validation report and deployment guide so their own analysts can retrain and extend the model.
+        Business sensitive tabular modeling can help predict outcomes before they happen which aids in identifying risks, improving decision-making, enabling automation, and more. This model predicting transplant survival risks directly supports more equitable healthcare outcomes and better use of limited medical resources providing life saving outcomes.
       </p>
 
     </div>
@@ -104,27 +88,25 @@
       <div class="image-row medium">
         <figure class="showcase-figure">
           <video autoplay loop muted playsinline data-lightbox>
-            <source src="images/slideshow.mp4"mp4">
+            <source src="images/slideshow.mp4" type="video/mp4">
           </video>
           <figcaption>Sample of unlabeled 3D CT scan data of human kidneys</figcaption>
         </figure>
 
         <figure class="showcase-figure">
-          <img src="images/label_final_final.png" alt="Theoretical perfect label" data-lightboxle volume</figcaption>
+          <img src="images/label_final_final.png" alt="Theoretical perfect label" data-lightbox>
+          <figcaption>Theoretical perfect label for sample volume</figcaption>
         </figure>
 
         <figure class="showcase-figure">
-          <img src="images/pred_final_final.png" alt=aption>Our 3D predicted label for sample</figcaption>
+          <img src="images/pred_final_final.png" alt="Predicted image volume" data-lightbox>
+          <figcaption>Our 3D predicted label for sample</figcaption>
         </figure>
       </div>
 
       <p class="why">
         <strong>Why this matters -</strong>
-        Hyper-accurate image predictions turn raw imaging data into structured understanding. This enables you to quantify, study, and analyze at scale in a way that is not feasible manually. In this instance, Kiy scientists are able to take mass unlabeled data and provide researchers with a biological mapping they can use to understand patients like never before, leading to treatment advancement, cost reduction, and lives saved.
-      </p>
-
-      <p class="muted client-context">
-        <strong>In client work, this looks like:</strong> a research group with thousands of unlabeled volumes and no feasible path to manual annotation, given a segmentation pipeline that produces structured output at scale along with the runbooks to operate it themselves.
+        Hyper accurate image predictions turn raw imaging data into structured understanding. In This enables you to quantify, study, and analyze at scale in a way that is not feasible manually. In this instance, Kiy scientists are able to take mass unlabeled data and provide researchers with a biological mapping they can use to understand patients like never before, leading to treatment advancement, cost reduction, and lives saved.
       </p>
 
     </div>
@@ -141,50 +123,37 @@
 
       <div class="image-row large">
         <figure class="showcase-figure">
-          images/fake_doc_3.png
+          <img src="images/fake_doc_3.png" alt="Input image" data-lightbox>
           <figcaption>Sample of low-resolution, complex input image</figcaption>
         </figure>
 
         <figure class="showcase-figure">
-          <img src="images/fake_doc_3_answered.png"<figcaption>Q&amp;A results for the sample image</figcaption>
+          <img src="images/fake_doc_3_answered.png" alt="VQA output" data-lightbox>
+          <figcaption>Q&A results for the sample image</figcaption>
         </figure>
       </div>
 
       <p class="why">
         <strong>Why this matters -</strong>
-        Vision-language systems convert unstructured image or language documents into structured databases and automated workflows. This enables large-scale document understanding, operational automation, and decision support systems across image or language data.
-      </p>
-
-      <p class="muted client-context">
-        <strong>In client work, this looks like:</strong> an enterprise operations team manually processing complex, low-quality document images, replaced by a queryable structured database. Kiy scientists have applied this approach to automation programs valued at approximately $50 million since January 2025. Figures and references available on request.
+        Vision-language systems convert unstructured image or language documents into structured databases and automated workflows. This enables large-scale document understanding, operational automation, and decision support systems across image or language data. Kiy scientists have turned this once world leading model into nearly $50 million in automation since January 2025. 
       </p>
 
     </div>
 
-  </section>
-
-  <section class="container callout">
-    <div class="callout-inner">
-      <div>
-        <h3>Want to see the client version?</h3>
-        <p>We walk through named references and detailed results on our first call.</p>
-      </div>
-      <a class="btn btn-primary" href="contact.html">Get in touch</a>
-    </div>
   </section>
 </main>
 
 <!-- Footer -->
 <footer class="site-footer">
   <div class="container footer-inner">
-    <p>&copy; 2026 Kiy Analytics. All rights reserved.</p>
+    <p>© 2026 Kiy Analytics. All rights reserved.</p>
   </div>
 </footer>
 
 <!-- Lightbox -->
 <div class="lb-backdrop" data-lb-backdrop aria-hidden="true">
   <div class="lb-dialog" role="dialog" aria-modal="true">
-    <button class="lb-close" data-lb-close>&#10005;</button>
+    <button class="lb-close" data-lb-close>✕</button>
     <div class="lb-stage" data-lb-stage></div>
   </div>
 </div>
@@ -198,7 +167,7 @@ const nav = document.getElementById('primary-nav');
 navToggle.addEventListener('click', () => {
   const open = nav.classList.toggle('open');
   navToggle.setAttribute('aria-expanded', open);
-  navToggle.innerHTML = open ? '&#10006;' : '&#9776;';
+  navToggle.textContent = open ? '✖' : '☰';
 });
 </script>
 
