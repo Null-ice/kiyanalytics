@@ -10,21 +10,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- Floating Availability Chip -->
-<a class="float-chip" href="contact.html" aria-label="Only 2 project openings remaining. Contact us.">
-  Only <strong>2</strong> openings remain!
-</a>
 
-<!-- ✅ Header with Hamburger Menu -->
+<!-- Header with Hamburger Menu -->
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html">Kiy Analytics</a>
 
     <!-- Hamburger button -->
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
 
     <nav class="nav" id="primary-nav">
-      <a href="index.html" class="nav-link">Home</a>
+      <a href="index.html" classk">Home</a>
       <a href="offerings.html" class="nav-link">What We Do</a>
       <a href="showcase.html" class="nav-link">Showcase</a>
       <a href="products.html" class="nav-link active">Solutions</a>
@@ -39,31 +35,35 @@
     <p class="lead">Transparent, predictable pricing. We provide fully customizable packages with straightforward itemized quotes.</p>
   </section>
 
-  <!-- ✅ Centered Solutions cards -->
+  <!-- Centered Solutions cards -->
   <section class="cards-wrapper">
     <div class="cards">
       <article class="card tier">
         <div class="tier-header">
           <h3>Starter</h3>
           <p class="muted">Great for pilots</p>
+          <!-- TODO: replace with your real figure -->
+          <p class="tier-price">Starting at $X,XXX</p>
         </div>
         <ul class="tier-list">
-          <li>-2 week pilot</li>
-          <li>-Basic prototype</li>
-          <li>-Tailored value assessment</li>
+          <li>2 week pilot</li>
+          <li>Basic prototype</li>
+          <li>Tailored value assessment</li>
         </ul>
         <a class="btn btn-primary" href="contact.html">Request Starter</a>
       </article>
 
-      <article class="card tier recommended">
+      <article class="card tier">
         <div class="tier-header">
           <h3>Expert Scientist</h3>
           <p class="muted">Solo engagement</p>
+          <!-- TODO: replace with your real figure -->
+          <p class="tier-price">Starting at $X,XXX / month</p>
         </div>
         <ul class="tier-list">
-          <li>-Borrow top talent</li>
-          <li>-Impact on a budget</li>
-          <li>&nbsp;</li>
+          <li>Borrow top talent</li>
+          <li>Impact on a budget</li>
+          <li>Flexible weekly commitment</li>
         </ul>
         <a class="btn btn-primary" href="contact.html">Request Scientist</a>
       </article>
@@ -72,12 +72,14 @@
         <div class="tier-header">
           <h3>Full Deliverable</h3>
           <p class="muted">Production-ready</p>
+          <!-- TODO: replace with your real figure -->
+          <p class="tier-price">Starting at $XX,XXX</p>
         </div>
         <ul class="tier-list">
-          <li>-Use case planning</li>
-          <li>-Model design</li>
-          <li>-Deployment support</li>
-          <li>&nbsp;</li>
+          <li>Use case planning</li>
+          <li>Model design</li>
+          <li>Deployment support</li>
+          <li>Validation report and runbooks</li>
         </ul>
         <a class="btn btn-primary" href="contact.html">Request Project</a>
       </article>
@@ -86,10 +88,12 @@
         <div class="tier-header">
           <h3>Enterprise</h3>
           <p class="muted">Long-term or custom</p>
+          <p class="tier-price">Custom quote</p>
         </div>
         <ul class="tier-list">
-          <li>-Full access to our dynamic teams</li>
-          <li>-Custom milestones</li>
+          <li>Full access to our dynamic teams</li>
+          <li>Custom milestones</li>
+          <li>Ongoing support and training</li>
         </ul>
         <a class="btn btn-primary" href="contact.html">Request Custom</a>
       </article>
@@ -98,16 +102,17 @@
 
   <section class="container note">
     <p class="muted">All listed options are common examples - final itemized quotes are based on compute, data transfer costs, and fixed weekly rate talent costs based on commitment duration.</p>
+    <p class="muted">Every engagement includes documentation and handoff so your team can run and maintain what we build. NDAs are standard, and BAAs are available where PHI is involved.</p>
   </section>
 </main>
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <p>© 2026 Kiy Analytics. All rights reserved.</p>
+    <p>&copy; 2026 Kiy Analytics. All rights reserved.</p>
   </div>
 </footer>
 
-<!-- ✅ Hamburger Menu Script -->
+<!-- Hamburger Menu Script -->
 <script>
 const navToggle = document.querySelector('.nav-toggle');
 const nav = document.getElementById('primary-nav');
@@ -115,13 +120,13 @@ const nav = document.getElementById('primary-nav');
 const closeMenu = () => {
   nav.classList.remove('open');
   navToggle.setAttribute('aria-expanded', 'false');
-  navToggle.textContent = '☰';
+  navToggle.innerHTML = '&#9776;';
 };
 
 const openMenu = () => {
   nav.classList.add('open');
   navToggle.setAttribute('aria-expanded', 'true');
-  navToggle.textContent = '✖';
+  navToggle.innerHTML = '&#10006;';
 };
 
 navToggle.addEventListener('click', () => {
@@ -139,5 +144,3 @@ window.matchMedia('(min-width: 881px)').addEventListener('change', e => {
 </script>
 </body>
 </html>
-
-
