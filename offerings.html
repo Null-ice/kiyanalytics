@@ -10,12 +10,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- Floating Availability Chip -->
-<a class="float-chip" href="contact.html" aria-label="Only 2 project openings remaining. Contact us.">
-  Only <strong>2</strong> openings remain!
-</a>
 
-<!-- ✅ Header with Hamburger Menu -->
+<!-- Header with Hamburger Menu -->
 <header class="site-header">
   <div class="container header-inner">
     <a class="brand" href="index.html">Kiy Analytics</a>
@@ -27,7 +23,7 @@
       <a href="index.html" class="nav-link">Home</a>
       <a href="offerings.html" class="nav-link active">What We Do</a>
       <a href="showcase.html" class="nav-link">Showcase</a>
-      <a href="products.html" class="nav-link">Solutions</a>
+      .html" class="nav-link">Solutions</a>
       <a href="contact.html" class="nav-link">Contact</a>
     </nav>
   </div>
@@ -83,6 +79,30 @@
     </div>
   </section>
 
+  <!-- === HOW WE DELIVER === -->
+  <section class="container callout">
+    <div class="callout-inner grid-2">
+      <div>
+        <h2>How We Deliver</h2>
+        <p>Winning a leaderboard and running a system in production are two different jobs. We do both, and every engagement ends with your team holding the keys.</p>
+      </div>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-value">Built to Ship</div>
+          <div class="stat-label">Reproducible pipelines, version-controlled code, and monitoring so models keep performing after handoff</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">Documented to Own</div>
+          <div class="stat-label">Validation reports, runbooks, and working sessions that transfer the system to your team</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">Confidential by Default</div>
+          <div class="stat-label">NDAs standard, BAAs where PHI is involved, and your data never leaves the environment you approve</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="container callout">
     <div class="callout-inner">
       <div>
@@ -100,7 +120,7 @@
   </div>
 </footer>
 
-<!-- ✅ Hamburger Menu Script -->
+<!-- Hamburger Menu Script -->
 <script>
 const navToggle = document.querySelector('.nav-toggle');
 const nav = document.getElementById('primary-nav');
@@ -132,5 +152,3 @@ window.matchMedia('(min-width: 881px)').addEventListener('change', e => {
 </script>
 </body>
 </html>
-
-
