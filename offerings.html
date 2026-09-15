@@ -17,13 +17,13 @@
     <a class="brand" href="index.html">Kiy Analytics</a>
 
     <!-- Hamburger button -->
-    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
 
     <nav class="nav" id="primary-nav">
       <a href="index.html" class="nav-link">Home</a>
       <a href="offerings.html" class="nav-link active">What We Do</a>
       <a href="showcase.html" class="nav-link">Showcase</a>
-      .html" class="nav-link">Solutions</a>
+      <a href="solutions.html" class="nav-link">Solutions</a>
       <a href="contact.html" class="nav-link">Contact</a>
     </nav>
   </div>
@@ -80,26 +80,48 @@
   </section>
 
   <!-- === HOW WE DELIVER === -->
-  <section class="container callout">
-    <div class="callout-inner grid-2">
-      <div>
-        <h2>How We Deliver</h2>
-        <p>Winning a leaderboard and running a system in production are two different jobs. We do both, and every engagement ends with your team holding the keys.</p>
-      </div>
-      <div class="stats">
-        <div class="stat">
-          <div class="stat-value">Built to Ship</div>
-          <div class="stat-label">Reproducible pipelines, version-controlled code, and monitoring so models keep performing after handoff</div>
+  <section class="container offerings-intro">
+    <h2>How We Deliver</h2>
+    <p class="lead">Winning a leaderboard and running a system in production are two different jobs. We do both, and every engagement ends with your team holding the keys.</p>
+  </section>
+
+  <section class="cards-wrapper">
+    <div class="cards">
+      <article class="card">
+        <div class="card-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M12 3v12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M8 7l4-4 4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 17v3h16v-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
-        <div class="stat">
-          <div class="stat-value">Documented to Own</div>
-          <div class="stat-label">Validation reports, runbooks, and working sessions that transfer the system to your team</div>
+        <h3>Built to Ship</h3>
+        <p>Reproducible pipelines, version-controlled code, and monitoring so models keep performing after handoff.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M6 3h9l4 4v14H6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M14 3v5h5" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M9 13h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M9 17h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+          </svg>
         </div>
-        <div class="stat">
-          <div class="stat-value">Confidential by Default</div>
-          <div class="stat-label">NDAs standard, BAAs where PHI is involved, and your data never leaves the environment you approve</div>
+        <h3>Documented to Own</h3>
+        <p>Validation reports, runbooks, and working sessions that transfer the system to your team.</p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden>
+            <path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
-      </div>
+        <h3>Confidential by Default</h3>
+        <p>NDAs standard, BAAs where PHI is involved, and your data never leaves the environment you approve.</p>
+      </article>
     </div>
   </section>
 
@@ -116,7 +138,7 @@
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <p>© 2026 Kiy Analytics. All rights reserved.</p>
+    <p>&copy; 2026 Kiy Analytics. All rights reserved.</p>
   </div>
 </footer>
 
@@ -128,13 +150,13 @@ const nav = document.getElementById('primary-nav');
 const closeMenu = () => {
   nav.classList.remove('open');
   navToggle.setAttribute('aria-expanded', 'false');
-  navToggle.textContent = '☰';
+  navToggle.innerHTML = '&#9776;';
 };
 
 const openMenu = () => {
   nav.classList.add('open');
   navToggle.setAttribute('aria-expanded', 'true');
-  navToggle.textContent = '✖';
+  navToggle.innerHTML = '&#10006;';
 };
 
 navToggle.addEventListener('click', () => {
