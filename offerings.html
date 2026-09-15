@@ -8,6 +8,12 @@
   <!-- Poppins font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Push the Deliverables line to the bottom of each card */
+    .cards .card { display: flex; flex-direction: column; }
+    .cards .card > p.muted:last-child { margin-top: auto; padding-top: 1rem; }
+  </style>
 </head>
 <body>
 
@@ -20,8 +26,7 @@
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
 
     <nav class="nav" id="primary-nav">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="offerings.html" class="nav-link active">What We Do</a>
+      <a href="index.html" class="nav-link">Home</erings.html" class="nav-link active">What We Do</a>
       <a href="showcase.html" class="nav-link">Showcase</a>
       <a href="products.html" class="nav-link">Solutions</a>
       <a href="contact.html" class="nav-link">Contact</a>
